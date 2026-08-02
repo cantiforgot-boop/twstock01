@@ -32,6 +32,12 @@
             <button class="tab-btn active" data-tab="realtime">
                 <i class="fa-solid fa-robot"></i> 即時選股機器人
             </button>
+            <button class="tab-btn" data-tab="institutional">
+                <i class="fa-solid fa-users"></i> 法人連買連賣
+            </button>
+            <button class="tab-btn" data-tab="margin-diag">
+                <i class="fa-solid fa-scale-balanced"></i> 資券籌碼診斷
+            </button>
             <button class="tab-btn" data-tab="history">
                 <i class="fa-solid fa-database"></i> 歷史選股與回測
             </button>
@@ -52,8 +58,11 @@
                             <h3>MACD 黃金交叉起漲點</h3>
                         </div>
                         <p class="strategy-desc">鎖定 5日均量 > 5000張、MA20 > MA60 多頭排列，且今日收盤高於 MA5，MACD 柱體首日由綠翻紅的強勢起漲股。</p>
-                        <div class="strategy-params">
-                            <span><i class="fa-solid fa-filter"></i> 流動性：5000張</span>
+                        <div class="strategy-params" style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                                <i class="fa-solid fa-filter"></i> <span>流動性過濾(張)：</span>
+                                <input type="number" id="param-long-vol" value="5000" min="100" style="width: 85px; padding: 0.2rem 0.4rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: #fff; font-size: 0.85rem; font-weight: bold; outline: none; margin-left: auto;">
+                            </div>
                             <span><i class="fa-solid fa-fire"></i> 乖離警示：5日>3% / 20日>10%</span>
                         </div>
                         <button class="btn btn-long" id="btn-run-long">
@@ -68,12 +77,34 @@
                             <h3>大趨勢偏空與反彈無力</h3>
                         </div>
                         <p class="strategy-desc">鎖定 5日均量 > 3000張、MA60 > MA20 空頭排列，且 MA20 > MA5 短線偏弱。選取 MACD 紅柱縮短 (狀態 A) 或由紅翻綠 (狀態 B) 的標的。</p>
-                        <div class="strategy-params">
-                            <span><i class="fa-solid fa-filter"></i> 流動性：3000張</span>
+                        <div class="strategy-params" style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                                <i class="fa-solid fa-filter"></i> <span>流動性過濾(張)：</span>
+                                <input type="number" id="param-short-vol" value="3000" min="100" style="width: 85px; padding: 0.2rem 0.4rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: #fff; font-size: 0.85rem; font-weight: bold; outline: none; margin-left: auto;">
+                            </div>
                             <span><i class="fa-solid fa-bolt"></i> 分類：狀態 A (主) / 狀態 B (備)</span>
                         </div>
                         <button class="btn btn-short" id="btn-run-short">
                             <i class="fa-solid fa-play"></i> 執行空方選股
+                        </button>
+                    </div>
+
+                    <!-- Margin Strategy Card -->
+                    <div class="card glass-card strategy-card margin" style="border-top: 4px solid #f39c12;">
+                        <div class="card-header">
+                            <span class="strategy-badge margin" style="background: rgba(243, 156, 18, 0.15); color: #f39c12;">籌碼策略</span>
+                            <h3>資券籌碼多空診斷</h3>
+                        </div>
+                        <p class="strategy-desc">每天傍晚自動抓取上市櫃資券信用交易數據。過濾出【主力點火資】（強勢）、【散戶套牢資】（弱勢風險）與【資券同增潛在軋空強勢股】。</p>
+                        <div class="strategy-params" style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                                <i class="fa-solid fa-filter"></i> <span>流動性過濾(張)：</span>
+                                <input type="number" id="param-margin-vol" value="1000" min="100" style="width: 85px; padding: 0.2rem 0.4rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: #fff; font-size: 0.85rem; font-weight: bold; outline: none; margin-left: auto;">
+                            </div>
+                            <span><i class="fa-solid fa-scale-balanced"></i> 指標：資券變化 + MA5/MA20</span>
+                        </div>
+                        <button class="btn btn-margin" id="btn-run-margin" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white;">
+                            <i class="fa-solid fa-play"></i> 執行資券籌碼分析
                         </button>
                     </div>
                 </div>
@@ -178,6 +209,17 @@
                             <span class="win-rate-badge short">做空成功率：<span id="stats-short-win">0%</span></span>
                         </div>
                     </div>
+
+                    <!-- Margin Overall Stats Card -->
+                    <div class="card glass-card stats-card margin">
+                        <div class="stats-icon margin" style="background: rgba(243, 156, 18, 0.15); color: #f39c12;"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div class="stats-info">
+                            <h4>籌碼策略 (T+5 平均)</h4>
+                            <h2 id="stats-margin-return" class="text-neutral">N/A</h2>
+                            <p>累計運行 <span id="stats-margin-runs">0</span> 次，選出 <span id="stats-margin-stocks">0</span> 檔個股</p>
+                            <span class="win-rate-badge margin" style="background: rgba(243, 156, 18, 0.15); color: #f39c12;">勝率：<span id="stats-margin-win">0%</span></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="stats-charts-row">
@@ -202,6 +244,416 @@
                     </div>
                 </div>
             </section>
+
+            <!-- TAB 4: Institutional Trading -->
+            <section id="institutional" class="tab-pane">
+                <!-- Top-Level Sub-Tabs -->
+                <nav class="sub-tabs main-sub-tabs" style="margin-bottom: 1.5rem; justify-content: flex-start; gap: 1rem;">
+                    <button class="sub-tab-btn active" data-sub-tab="inst-streak-panel">
+                        <i class="fa-solid fa-users-line"></i> 法人連買連賣
+                    </button>
+                    <button class="sub-tab-btn" data-sub-tab="inst-volume-panel">
+                        <i class="fa-solid fa-chart-simple"></i> 量能與均量分析
+                    </button>
+                </nav>
+
+                <div class="main-sub-tab-content">
+                    <!-- Sub-tab 1: Streak Screener -->
+                    <div id="inst-streak-panel" class="main-sub-tab-pane active">
+                        <div class="control-panel card glass-card">
+                    <div class="control-row">
+                        <div class="control-group">
+                            <label for="consecutive-days-select"><i class="fa-solid fa-calendar-days"></i> 連續交易天數：</label>
+                            <select id="consecutive-days-select" class="styled-select">
+                                <option value="3" selected>3 日連續買賣超</option>
+                                <option value="5">5 日連續買賣超</option>
+                                <option value="10">10 日連續買賣超</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="btn-refresh-inst">
+                            <i class="fa-solid fa-arrows-rotate"></i> 重新整理篩選
+                        </button>
+                    </div>
+                    <div class="dates-info" id="inst-dates-info">
+                        <!-- Dates checked will be displayed here -->
+                    </div>
+                </div>
+
+                <!-- Summary Cards Grid -->
+                <div class="stats-cards-grid" style="margin-top: 1rem;">
+                    <div class="card glass-card inst-summary-card both">
+                        <div class="stats-icon both" style="background: rgba(155, 89, 182, 0.15); color: #9b59b6; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 12px; font-size: 1.5rem;"><i class="fa-solid fa-handshake"></i></div>
+                        <div class="stats-info">
+                            <h4>外資投信同買 / 同賣</h4>
+                            <h2><span id="count-both-buy" style="color: #00f2fe;">0</span> / <span id="count-both-sell" style="color: #f54ea2;">0</span> 檔</h2>
+                            <p>外資與投信看法一致的共振個股</p>
+                        </div>
+                    </div>
+                    <div class="card glass-card inst-summary-card foreign">
+                        <div class="stats-icon foreign" style="background: rgba(52, 152, 219, 0.15); color: #3498db; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 12px; font-size: 1.5rem;"><i class="fa-solid fa-globe"></i></div>
+                        <div class="stats-info">
+                            <h4>外資連買 / 連賣</h4>
+                            <h2><span id="count-foreign-buy" style="color: #3498db;">0</span> / <span id="count-foreign-sell" style="color: #f54ea2;">0</span> 檔</h2>
+                            <p>外資連買/連賣天數達標個股</p>
+                        </div>
+                    </div>
+                    <div class="card glass-card inst-summary-card sitc">
+                        <div class="stats-icon sitc" style="background: rgba(46, 204, 113, 0.15); color: #2ecc71; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 12px; font-size: 1.5rem;"><i class="fa-solid fa-building-columns"></i></div>
+                        <div class="stats-info">
+                            <h4>投信連買 / 連賣</h4>
+                            <h2><span id="count-sitc-buy" style="color: #2ecc71;">0</span> / <span id="count-sitc-sell" style="color: #f54ea2;">0</span> 檔</h2>
+                            <p>投信連買/連賣天數達標個股</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-tabs for different categories -->
+                <div class="inst-sub-tabs-container" style="margin-top: 1.5rem;">
+                    <nav class="sub-tabs">
+                        <button class="sub-tab-btn active" data-sub-tab="inst-both">
+                            <i class="fa-solid fa-handshake"></i> 外投同向共振股
+                        </button>
+                        <button class="sub-tab-btn" data-sub-tab="inst-foreign">
+                            <i class="fa-solid fa-globe"></i> 外資連續軌跡
+                        </button>
+                        <button class="sub-tab-btn" data-sub-tab="inst-sitc">
+                            <i class="fa-solid fa-building-columns"></i> 投信連續軌跡
+                        </button>
+                    </nav>
+
+                    <div class="sub-tab-content-container">
+                        <!-- Sub-tab 1: Both -->
+                        <div id="inst-both" class="sub-tab-pane active">
+                            <div class="inst-grid">
+                                <div class="card glass-card table-card">
+                                    <div class="card-header" style="border-bottom: 2px solid #00f2fe; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-circle-arrow-up" style="color: #00f2fe;"></i> 外資投信同連買</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>外資連買(天)</th>
+                                                    <th>外資累計(張)</th>
+                                                    <th>投信連買(天)</th>
+                                                    <th>投信累計(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-both-buy-body">
+                                                <tr><td colspan="6" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card glass-card table-card" style="margin-top: 1.5rem;">
+                                    <div class="card-header" style="border-bottom: 2px solid #f54ea2; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-circle-arrow-down" style="color: #f54ea2;"></i> 外資投信同連賣</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>外資連賣(天)</th>
+                                                    <th>外資累計(張)</th>
+                                                    <th>投信連賣(天)</th>
+                                                    <th>投信累計(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-both-sell-body">
+                                                <tr><td colspan="6" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub-tab 2: Foreign -->
+                        <div id="inst-foreign" class="sub-tab-pane">
+                            <div class="inst-grid">
+                                <div class="card glass-card table-card">
+                                    <div class="card-header" style="border-bottom: 2px solid #3498db; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-arrow-trend-up" style="color: #3498db;"></i> 外資連續買超</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>連買天數</th>
+                                                    <th>最新一日(張)</th>
+                                                    <th>累計買超(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-foreign-buy-body">
+                                                <tr><td colspan="5" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card glass-card table-card" style="margin-top: 1.5rem;">
+                                    <div class="card-header" style="border-bottom: 2px solid #f54ea2; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-arrow-trend-down" style="color: #f54ea2;"></i> 外資連續賣超</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>連賣天數</th>
+                                                    <th>最新一日(張)</th>
+                                                    <th>累計賣超(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-foreign-sell-body">
+                                                <tr><td colspan="5" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub-tab 3: SITC -->
+                        <div id="inst-sitc" class="sub-tab-pane">
+                            <div class="inst-grid">
+                                <div class="card glass-card table-card">
+                                    <div class="card-header" style="border-bottom: 2px solid #2ecc71; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-arrow-trend-up" style="color: #2ecc71;"></i> 投信連續買超</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>連買天數</th>
+                                                    <th>最新一日(張)</th>
+                                                    <th>累計買超(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-sitc-buy-body">
+                                                <tr><td colspan="5" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card glass-card table-card" style="margin-top: 1.5rem;">
+                                    <div class="card-header" style="border-bottom: 2px solid #f54ea2; margin-bottom: 1rem; padding-bottom: 0.5rem;">
+                                        <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-arrow-trend-down" style="color: #f54ea2;"></i> 投信連續賣超</h4>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>個股</th>
+                                                    <th>股價</th>
+                                                    <th>連賣天數</th>
+                                                    <th>最新一日(張)</th>
+                                                    <th>累計賣超(張)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-sitc-sell-body">
+                                                <tr><td colspan="5" class="text-center">請點擊重新整理載入數據</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> <!-- Close inst-sub-tabs-container -->
+                </div> <!-- Close inst-streak-panel -->
+
+                <!-- Sub-tab 2: Volume Analysis -->
+                <div id="inst-volume-panel" class="main-sub-tab-pane">
+                    <div class="inst-grid volume-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;">
+                        <!-- Left Column: Single Stock Volume Query -->
+                        <div class="volume-query-col">
+                            <div class="card glass-card" style="padding: 1.5rem;">
+                                <div class="card-header" style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem;">
+                                    <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-magnifying-glass" style="color: #00f2fe;"></i> 個股量能與均量查詢</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-row" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                                        <div class="form-group" style="flex: 1; min-width: 120px; display: flex; flex-direction: column; gap: 0.4rem;">
+                                            <label for="volume-query-code" style="font-size: 0.9rem; color: #a5a1b8;">股票代號：</label>
+                                            <input type="text" id="volume-query-code" class="styled-input" placeholder="例如: 2330" value="2330" style="padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; width: 100%;">
+                                        </div>
+                                        <div class="form-group" style="flex: 1; min-width: 120px; display: flex; flex-direction: column; gap: 0.4rem;">
+                                            <label for="volume-query-days" style="font-size: 0.9rem; color: #a5a1b8;">均量天數 (自填)：</label>
+                                            <input type="number" id="volume-query-days" class="styled-input" placeholder="天數" value="20" min="2" max="60" style="padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; width: 100%;">
+                                        </div>
+                                        <button class="btn btn-primary" id="btn-volume-query" style="align-self: flex-end; height: 42px; padding: 0 1.5rem; background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); color: #0b0813; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                                            <i class="fa-solid fa-magnifying-glass"></i> 查詢
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Result Card (Hidden by default) -->
+                                    <div id="volume-query-result" class="volume-result-card" style="display: none; margin-top: 1.5rem; padding: 1.2rem; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                                        <div class="result-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                            <h3 id="vq-stock-title" style="font-size: 1.2rem; color: #fff;">台積電 (2330)</h3>
+                                            <span class="date-badge" id="vq-date-badge" style="background: rgba(255,255,255,0.08); padding: 0.3rem 0.6rem; border-radius: 6px; font-size: 0.8rem; color: #a5a1b8;">2026-07-31</span>
+                                        </div>
+                                        <div class="result-metrics-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div class="metric-item" style="padding: 0.8rem; background: rgba(0,0,0,0.15); border-radius: 8px; border-left: 3px solid #4facfe;">
+                                                <span class="metric-label" style="display: block; font-size: 0.8rem; color: #a5a1b8; margin-bottom: 0.3rem;">最新收盤價</span>
+                                                <span class="metric-value" id="vq-price" style="font-size: 1.2rem; font-weight: 700; color: #fff;">0.00</span>
+                                            </div>
+                                            <div class="metric-item" style="padding: 0.8rem; background: rgba(0,0,0,0.15); border-radius: 8px; border-left: 3px solid #00f2fe;">
+                                                <span class="metric-label" style="display: block; font-size: 0.8rem; color: #a5a1b8; margin-bottom: 0.3rem;">今日成交量</span>
+                                                <span class="metric-value" id="vq-volume" style="font-size: 1.2rem; font-weight: 700; color: #00f2fe;">0.0 張</span>
+                                            </div>
+                                            <div class="metric-item" style="padding: 0.8rem; background: rgba(0,0,0,0.15); border-radius: 8px; border-left: 3px solid #a29bfe;">
+                                                <span class="metric-label" style="display: block; font-size: 0.8rem; color: #a5a1b8; margin-bottom: 0.3rem;">多日均量</span>
+                                                <span class="metric-value" id="vq-avg-volume" style="font-size: 1.2rem; font-weight: 700; color: #a29bfe;">0.0 張</span>
+                                            </div>
+                                            <div class="metric-item" style="padding: 0.8rem; background: rgba(0,0,0,0.15); border-radius: 8px; border-left: 3px solid #f54ea2;">
+                                                <span class="metric-label" style="display: block; font-size: 0.8rem; color: #a5a1b8; margin-bottom: 0.3rem;">成交量比 (量比)</span>
+                                                <span class="metric-value" id="vq-ratio" style="font-size: 1.2rem; font-weight: 700; color: #f54ea2;">0.00x</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <h5 style="margin-top: 1.2rem; margin-bottom: 0.6rem; color: #00f2fe; display: flex; align-items: center; gap: 0.4rem; font-size: 0.95rem;"><i class="fa-solid fa-clock-rotate-left"></i> 近 10 日量能變化歷史</h5>
+                                        <div class="table-container" style="max-height: 250px; overflow-y: auto;">
+                                            <table class="data-table small-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                                                <thead>
+                                                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); text-align: left;">
+                                                        <th style="padding: 0.5rem 0.3rem; color: #a5a1b8;">日期</th>
+                                                        <th style="padding: 0.5rem 0.3rem; color: #a5a1b8;">收盤價</th>
+                                                        <th style="padding: 0.5rem 0.3rem; color: #a5a1b8;">成交量(張)</th>
+                                                        <th style="padding: 0.5rem 0.3rem; color: #a5a1b8;">均量(張)</th>
+                                                        <th style="padding: 0.5rem 0.3rem; color: #a5a1b8;">量比</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="vq-history-body">
+                                                    <!-- Filled dynamically -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Full Market Volume Screener -->
+                        <div class="volume-screener-col">
+                            <div class="card glass-card" style="padding: 1.5rem;">
+                                <div class="card-header" style="margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.8rem;">
+                                    <h4 style="display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-bolt" style="color: #f39c12;"></i> 全市場量能爆發篩選 (量增排行)</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-row" style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                                        <div class="form-group" style="flex: 1.2; min-width: 140px; display: flex; flex-direction: column; gap: 0.4rem;">
+                                            <label for="volume-screen-days" style="font-size: 0.9rem; color: #a5a1b8;">計算均量天數：</label>
+                                            <select id="volume-screen-days" class="styled-select" style="padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; width: 100%;">
+                                                <option value="5">5 日均量 (短線爆發)</option>
+                                                <option value="10">10 日均量 (中短線)</option>
+                                                <option value="20" selected>20 日均量 (月均量)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="flex: 1; min-width: 100px; display: flex; flex-direction: column; gap: 0.4rem;">
+                                            <label for="volume-screen-min" style="font-size: 0.9rem; color: #a5a1b8;">最低量(張)：</label>
+                                            <input type="number" id="volume-screen-min" class="styled-input" value="1000" min="100" step="100" style="padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; width: 100%;">
+                                        </div>
+                                        <div class="form-group" style="flex: 0.8; min-width: 80px; display: flex; flex-direction: column; gap: 0.4rem;">
+                                            <label for="volume-screen-ratio" style="font-size: 0.9rem; color: #a5a1b8;">量比大於：</label>
+                                            <input type="number" id="volume-screen-ratio" class="styled-input" value="1.5" min="1.0" step="0.1" style="padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: #fff; font-size: 1rem; width: 100%;">
+                                        </div>
+                                        <button class="btn btn-primary" id="btn-volume-screen" style="align-self: flex-end; height: 42px; padding: 0 1.2rem; background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: #fff; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: transform 0.2s; display: flex; align-items: center; gap: 0.4rem;">
+                                            <i class="fa-solid fa-bolt"></i> 執行篩選
+                                        </button>
+                                    </div>
+
+                                    <!-- Matches count -->
+                                    <div class="matches-bar" id="volume-screen-matches" style="display: none; margin-bottom: 0.8rem; color: #00f2fe; font-weight: 600; font-size: 0.95rem;">
+                                        <i class="fa-solid fa-circle-check"></i> 篩選出 <span id="volume-screen-count">0</span> 檔量能爆發個股
+                                    </div>
+                                    
+                                    <!-- Results Table -->
+                                    <div class="table-container" style="max-height: 380px; overflow-y: auto;">
+                                        <table class="data-table" style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                                            <thead>
+                                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); text-align: left;">
+                                                    <th style="padding: 0.6rem 0.4rem; color: #a5a1b8;">個股</th>
+                                                    <th style="padding: 0.6rem 0.4rem; color: #a5a1b8;">股價</th>
+                                                    <th style="padding: 0.6rem 0.4rem; color: #a5a1b8;">成交量(張)</th>
+                                                    <th style="padding: 0.6rem 0.4rem; color: #a5a1b8;">均量(張)</th>
+                                                    <th style="padding: 0.6rem 0.4rem; color: #a5a1b8;">量能比率</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="table-volume-screen-body">
+                                                <tr><td colspan="5" class="text-center" style="padding: 2rem 0; color: #a5a1b8;">請點擊右上方「執行篩選」按鈕開始</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Close main-sub-tab-content -->
+        </section>
+
+        <!-- TAB 5: Margin Diagnostics -->
+        <section id="margin-diag" class="tab-pane">
+            <div class="control-panel card glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">
+                <div class="control-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <h4 style="margin: 0; color: #fff; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                        <i class="fa-solid fa-scale-balanced" style="color: #f39c12;"></i> 最新資券信用交易診斷
+                    </h4>
+                    <div class="dates-info" id="margin-diag-date-info" style="font-size: 0.95rem; color: #a5a1b8; background: rgba(255,255,255,0.05); padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05);">
+                        🔍 正在載入最新數據...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Columns Layout for groups -->
+            <div class="margin-diag-columns" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                <!-- Column 1: Squeeze/Potential軋空 -->
+                <div class="card glass-card col-card" style="border-top: 4px solid #ff4757; padding: 1.2rem; display: flex; flex-direction: column;">
+                    <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+                        <h4 style="color: #ff4757; display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem;">
+                            🔥 資券同增軋空股 (<span id="count-squeeze">0</span>)
+                        </h4>
+                        <span style="font-size: 0.8rem; color: #a5a1b8; display: block; margin-top: 0.3rem;">近3日融資券同增 + 站上MA5</span>
+                    </div>
+                    <div class="list-container" id="list-squeeze" style="max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.8rem; padding-right: 0.3rem;">
+                        <div class="text-center" style="color: #8c82ab; padding: 2rem 0;">無符合條件個股</div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Major/主力點火 -->
+                <div class="card glass-card col-card" style="border-top: 4px solid #2ed573; padding: 1.2rem; display: flex; flex-direction: column;">
+                    <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+                        <h4 style="color: #2ed573; display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem;">
+                            🚀 主力點火強勢股 (<span id="count-major">0</span>)
+                        </h4>
+                        <span style="font-size: 0.8rem; color: #a5a1b8; display: block; margin-top: 0.3rem;">融資增加 + 站上MA5強勢</span>
+                    </div>
+                    <div class="list-container" id="list-major" style="max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.8rem; padding-right: 0.3rem;">
+                        <div class="text-center" style="color: #8c82ab; padding: 2rem 0;">無符合條件個股</div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Retail Trap/散戶套牢 -->
+                <div class="card glass-card col-card" style="border-top: 4px solid #ffa502; padding: 1.2rem; display: flex; flex-direction: column;">
+                    <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+                        <h4 style="color: #ffa502; display: flex; align-items: center; gap: 0.5rem; margin: 0; font-size: 1.1rem;">
+                            ⚠️ 散戶套牢斷頭股 (<span id="count-retail">0</span>)
+                        </h4>
+                        <span style="font-size: 0.8rem; color: #a5a1b8; display: block; margin-top: 0.3rem;">融資增加 + 跌破MA20弱勢</span>
+                    </div>
+                    <div class="list-container" id="list-retail" style="max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.8rem; padding-right: 0.3rem;">
+                        <div class="text-center" style="color: #8c82ab; padding: 2rem 0;">無符合條件個股</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         </main>
     </div>
     

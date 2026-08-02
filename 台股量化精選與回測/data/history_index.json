@@ -11,6 +11,17 @@
     "t20": "N/A"
   },
   {
+    "filename": "台股資券診斷_20260731.csv",
+    "date": "2026/07/31",
+    "raw_date": "20260731",
+    "strategy": "籌碼",
+    "strategy_type": "margin",
+    "count": 329,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
     "filename": "台股精選標的_20260730.csv",
     "date": "2026/07/30",
     "raw_date": "20260730",

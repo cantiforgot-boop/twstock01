@@ -227,7 +227,7 @@ def evaluate_historical_report_file(target_date_str, prefix, offset_days, stock_
     except Exception as e:
         return f"  ⚠️ 提示：報表 {filename} 讀取異常: {e}", None, date_formatted
 
-def run_stock_selection():
+def run_stock_selection(min_volume=3000):
     os.makedirs('data', exist_ok=True)
     today_str = datetime.now().strftime("%Y%m%d")
     today_formatted = datetime.now().strftime("%Y/%m/%d")
@@ -240,7 +240,7 @@ def run_stock_selection():
         
     tickers = list(stock_map.values())
     
-    # 2. 流動性過濾 (5日平均成交量 > 3,000 張)
+    # 2. 流動性過濾 (5日平均成交量 > min_volume 張)
     print("\n【階段一】進行空方流動性過濾...")
     stage1_data = download_data_in_chunks(tickers, period="1mo", chunk_size=250)
     
@@ -253,7 +253,7 @@ def run_stock_selection():
             if len(vols) >= 5:
                 vols_last5 = vols.tail(5)
                 avg_vol_5d_sheets = vols_last5.mean() / 1000.0
-                if avg_vol_5d_sheets > 3000.0:
+                if avg_vol_5d_sheets > float(min_volume):
                     passed_stage1.append({
                         'symbol_yf': ticker,
                         'symbol': symbol,
@@ -293,7 +293,7 @@ def run_stock_selection():
         sym = row['symbol']
         passed_stage1_df.at[idx, 'name'] = detailed_names.get(sym, sym)
         
-    print(f"通過流動性過濾 (5日均量 > 3000張) 的個股共 {len(passed_stage1_df)} 檔")
+    print(f"通過流動性過濾 (5日均量 > {min_volume}張) 的個股共 {len(passed_stage1_df)} 檔")
     
     selected_results = []
     

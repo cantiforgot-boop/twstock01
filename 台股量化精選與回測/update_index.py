@@ -17,25 +17,39 @@ def generate_static_indexes():
     
     long_runs = 0
     short_runs = 0
+    margin_runs = 0
     long_stocks = 0
     short_stocks = 0
+    margin_stocks = 0
     
     long_t5_list = []
     short_t5_list = []
+    margin_t5_list = []
     
     for f in files:
         basename = os.path.basename(f)
-        match = re.match(r'(台股精選標的|台股空方精選)_(\d{8})\.csv', basename)
+        match = re.match(r'(台股精選標的|台股空方精選|台股資券診斷)_(\d{8})\.csv', basename)
         if match:
-            strategy_name = "多方" if match.group(1) == "台股精選標的" else "空方"
-            strategy_type = "long" if strategy_name == "多方" else "short"
+            prefix = match.group(1)
+            if prefix == "台股精選標的":
+                strategy_name = "多方"
+                strategy_type = "long"
+            elif prefix == "台股空方精選":
+                strategy_name = "空方"
+                strategy_type = "short"
+            else:
+                strategy_name = "籌碼"
+                strategy_type = "margin"
+                
             date_str = match.group(2)
             formatted_date = f"{date_str[0:4]}/{date_str[4:6]}/{date_str[6:8]}"
             
             if strategy_type == 'long':
                 long_runs += 1
-            else:
+            elif strategy_type == 'short':
                 short_runs += 1
+            else:
+                margin_runs += 1
                 
             try:
                 df = pd.read_csv(f)
@@ -43,15 +57,17 @@ def generate_static_indexes():
                 
                 if strategy_type == 'long':
                     long_stocks += num_stocks
-                else:
+                elif strategy_type == 'short':
                     short_stocks += num_stocks
+                else:
+                    margin_stocks += num_stocks
                 
                 # Fetch backtest averages
                 t5_avg = "N/A"
                 t10_avg = "N/A"
                 t20_avg = "N/A"
                 
-                pct_col = "漲跌幅(%)" if strategy_type == "long" else "跌幅(%)"
+                pct_col = "漲跌幅(%)" if strategy_type in ["long", "margin"] else "跌幅(%)"
                 
                 if f'T+5{pct_col}' in df.columns:
                     val = df[f'T+5{pct_col}'].dropna().tolist()
@@ -59,8 +75,10 @@ def generate_static_indexes():
                         t5_avg = f"{sum(val)/len(val):+.2f}%"
                         if strategy_type == 'long':
                             long_t5_list.extend(val)
-                        else:
+                        elif strategy_type == 'short':
                             short_t5_list.extend(val)
+                        else:
+                            margin_t5_list.extend(val)
                         
                 if f'T+10{pct_col}' in df.columns:
                     val = df[f'T+10{pct_col}'].dropna().tolist()
@@ -86,7 +104,7 @@ def generate_static_indexes():
             except Exception as e:
                 print(f"[Index Generator] 解析 {basename} 失敗: {e}")
                 
-    # Sort history list by raw_date descending
+    # Sort history list by raw_date descending, and sub-sort by type
     history_list.sort(key=lambda x: (x["raw_date"], x["strategy_type"]), reverse=True)
     
     # Write history_index.json
@@ -107,9 +125,15 @@ def generate_static_indexes():
     short_t5_avg = 0.0
     if short_t5_list:
         short_t5_avg = sum(short_t5_list) / len(short_t5_list)
-        # For shorting, negative change means stock price fell, which is a win!
         wins = sum(1 for x in short_t5_list if x < 0)
         short_win_rate = wins / len(short_t5_list) * 100
+        
+    margin_win_rate = 0.0
+    margin_t5_avg = 0.0
+    if margin_t5_list:
+        margin_t5_avg = sum(margin_t5_list) / len(margin_t5_list)
+        wins = sum(1 for x in margin_t5_list if x > 0)
+        margin_win_rate = wins / len(margin_t5_list) * 100
         
     stats_data = {
         "long": {
@@ -123,6 +147,12 @@ def generate_static_indexes():
             "stocks": short_stocks,
             "t5_avg": round(short_t5_avg, 2),
             "win_rate": round(short_win_rate, 1)
+        },
+        "margin": {
+            "runs": margin_runs,
+            "stocks": margin_stocks,
+            "t5_avg": round(margin_t5_avg, 2),
+            "win_rate": round(margin_win_rate, 1)
         }
     }
     
