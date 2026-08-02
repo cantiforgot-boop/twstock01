@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             historyFilesBody.innerHTML = `<tr><td colspan="6" class="text-center">讀取歷史目錄中...</td></tr>`;
             
             // Adaptive route: Flask API locally, static index JSON on GitHub Pages
-            const url = isLocal ? '/api/history' : 'data/history_index.json';
+            const url = isLocal ? '/api/history' : '../data/history_index.json';
             const response = await fetch(url);
             const data = await response.json();
             
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 // Static Pages mode: fetch CSV file directly and parse
-                const response = await fetch(`data/${filename}`);
+                const response = await fetch(`../data/${filename}`);
                 if (!response.ok) {
                     detailDataBody.innerHTML = `<tr><td colspan="15" class="text-center text-down">無法加載 CSV 檔案</td></tr>`;
                     return;
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // LOAD STRATEGY STATS & CHARTS
     async function loadStats() {
         try {
-            const url = isLocal ? '/api/stats' : 'data/strategy_stats.json';
+            const url = isLocal ? '/api/stats' : '../data/strategy_stats.json';
             const response = await fetch(url);
             const data = await response.json();
 
@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         try {
-            const resp = await fetch(isLocal ? `/api/institutional?days=${days}` : `data/institutional_${days}.json`);
+            const resp = await fetch(isLocal ? `/api/institutional?days=${days}` : `../data/institutional_${days}.json`);
             const json = await resp.json();
             
             if (json.status === 'success') {
@@ -693,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const resp = await fetch(`/api/volume/screener?days=${days}&min_volume=${minVol}&min_ratio=${minRatio}`);
                     json = await resp.json();
                 } else {
-                    const resp = await fetch(`data/volume_screener_${days}.json`);
+                    const resp = await fetch(`../data/volume_screener_${days}.json`);
                     const rawJson = await resp.json();
                     
                     if (rawJson.status === 'success') {
@@ -780,7 +780,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. 取得歷史選股列表，找出最新的籌碼報告
-            const response = await fetch(isLocal ? '/api/history' : 'data/history_index.json');
+            const response = await fetch(isLocal ? '/api/history' : '../data/history_index.json');
             const history = await response.json();
             
             const latestMargin = history.find(item => item.strategy_type === 'margin');
@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const reportResp = await fetch(`/api/report/${latestMargin.filename}`);
                 data = await reportResp.json();
             } else {
-                const reportResp = await fetch(`data/${latestMargin.filename}`);
+                const reportResp = await fetch(`../data/${latestMargin.filename}`);
                 const csvText = await reportResp.text();
                 data = parseCSV(csvText);
             }

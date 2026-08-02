@@ -75,6 +75,18 @@ def get_institutional():
     if days not in [3, 5, 10]:
         days = 3
     try:
+        # 優先讀取本地已生成的靜態快取 JSON，避免重複爬蟲導致 TWSE/TPEx 封鎖 IP 或載入過慢
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        cache_path = os.path.join(current_dir, 'data', f'institutional_{days}.json')
+        if os.path.exists(cache_path):
+            try:
+                import json
+                with open(cache_path, 'r', encoding='utf-8') as f:
+                    cache_data = json.load(f)
+                return jsonify(cache_data)
+            except Exception as e:
+                print(f"[Local Cache] 讀取法人快取失敗，將重新爬取: {e}")
+
         data = institutional_screener.run_institutional_screener(days)
         if data:
             return jsonify({"status": "success", "data": data})
@@ -104,6 +116,26 @@ def get_volume_screener():
     min_volume = request.args.get('min_volume', default=1000, type=int)
     min_ratio = request.args.get('min_ratio', default=1.5, type=float)
     try:
+        # 優先讀取本地已生成的靜態快取 JSON，並在本地進行過濾，速度提升 1000 倍且不依賴 yfinance 連線
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        cache_path = os.path.join(current_dir, 'data', f'volume_screener_{days}.json')
+        if os.path.exists(cache_path):
+            try:
+                import json
+                with open(cache_path, 'r', encoding='utf-8') as f:
+                    cache_data = json.load(f)
+                if cache_data.get("status") == "success":
+                    raw_list = cache_data.get("data", [])
+                    filtered = []
+                    for s in raw_list:
+                        vol = int(s.get("volume", 0))
+                        ratio = float(s.get("ratio", 0.0))
+                        if vol >= min_volume and ratio >= min_ratio:
+                            filtered.append(s)
+                    return jsonify({"status": "success", "data": filtered})
+            except Exception as e:
+                print(f"[Local Cache] 讀取量能快取失敗，將重新爬取: {e}")
+
         data = institutional_screener.run_volume_screener(days, min_volume, min_ratio)
         if data is not None:
             return jsonify({"status": "success", "data": data})
