@@ -1,0 +1,123 @@
+[
+  {
+    "filename": "台股空方精選_20260731.csv",
+    "date": "2026/07/31",
+    "raw_date": "20260731",
+    "strategy": "空方",
+    "strategy_type": "short",
+    "count": 2,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260730.csv",
+    "date": "2026/07/30",
+    "raw_date": "20260730",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 1,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股空方精選_20260727.csv",
+    "date": "2026/07/27",
+    "raw_date": "20260727",
+    "strategy": "空方",
+    "strategy_type": "short",
+    "count": 1,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股空方精選_20260723.csv",
+    "date": "2026/07/23",
+    "raw_date": "20260723",
+    "strategy": "空方",
+    "strategy_type": "short",
+    "count": 1,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260723.csv",
+    "date": "2026/07/23",
+    "raw_date": "20260723",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 12,
+    "t5": "-18.75%",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260722.csv",
+    "date": "2026/07/22",
+    "raw_date": "20260722",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 0,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股空方精選_20260721.csv",
+    "date": "2026/07/21",
+    "raw_date": "20260721",
+    "strategy": "空方",
+    "strategy_type": "short",
+    "count": 1,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260721.csv",
+    "date": "2026/07/21",
+    "raw_date": "20260721",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 10,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260719.csv",
+    "date": "2026/07/19",
+    "raw_date": "20260719",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 4,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股空方精選_20260716.csv",
+    "date": "2026/07/16",
+    "raw_date": "20260716",
+    "strategy": "空方",
+    "strategy_type": "short",
+    "count": 5,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股精選標的_20260716.csv",
+    "date": "2026/07/16",
+    "raw_date": "20260716",
+    "strategy": "多方",
+    "strategy_type": "long",
+    "count": 8,
+    "t5": "-3.49%",
+    "t10": "N/A",
+    "t20": "N/A"
+  }
+]

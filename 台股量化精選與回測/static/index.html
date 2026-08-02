@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台股量化精選與回測儀表板 3.0</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-chart-line logo-icon"></i>
+                <div class="logo-text">
+                    <h1>台股量化精選與回測</h1>
+                    <span>Taiwan Stock Quantitative Selection & Backtest Dashboard</span>
+                </div>
+            </div>
+            <div class="version-badge">v3.0 旗艦版</div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-tab="realtime">
+                <i class="fa-solid fa-robot"></i> 即時選股機器人
+            </button>
+            <button class="tab-btn" data-tab="history">
+                <i class="fa-solid fa-database"></i> 歷史選股與回測
+            </button>
+            <button class="tab-btn" data-tab="stats">
+                <i class="fa-solid fa-pie-chart"></i> 策略績效統計
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="tab-content-container">
+            <!-- TAB 1: Real-time Selection -->
+            <section id="realtime" class="tab-pane active">
+                <div class="strategy-row">
+                    <!-- Long Strategy Card -->
+                    <div class="card glass-card strategy-card long">
+                        <div class="card-header">
+                            <span class="strategy-badge long">多方策略</span>
+                            <h3>MACD 黃金交叉起漲點</h3>
+                        </div>
+                        <p class="strategy-desc">鎖定 5日均量 > 5000張、MA20 > MA60 多頭排列，且今日收盤高於 MA5，MACD 柱體首日由綠翻紅的強勢起漲股。</p>
+                        <div class="strategy-params">
+                            <span><i class="fa-solid fa-filter"></i> 流動性：5000張</span>
+                            <span><i class="fa-solid fa-fire"></i> 乖離警示：5日>3% / 20日>10%</span>
+                        </div>
+                        <button class="btn btn-long" id="btn-run-long">
+                            <i class="fa-solid fa-play"></i> 執行多方選股
+                        </button>
+                    </div>
+
+                    <!-- Short Strategy Card -->
+                    <div class="card glass-card strategy-card short">
+                        <div class="card-header">
+                            <span class="strategy-badge short">空方策略</span>
+                            <h3>大趨勢偏空與反彈無力</h3>
+                        </div>
+                        <p class="strategy-desc">鎖定 5日均量 > 3000張、MA60 > MA20 空頭排列，且 MA20 > MA5 短線偏弱。選取 MACD 紅柱縮短 (狀態 A) 或由紅翻綠 (狀態 B) 的標的。</p>
+                        <div class="strategy-params">
+                            <span><i class="fa-solid fa-filter"></i> 流動性：3000張</span>
+                            <span><i class="fa-solid fa-bolt"></i> 分類：狀態 A (主) / 狀態 B (備)</span>
+                        </div>
+                        <button class="btn btn-short" id="btn-run-short">
+                            <i class="fa-solid fa-play"></i> 執行空方選股
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Console Output Log -->
+                <div class="card glass-card console-card">
+                    <div class="card-header console-header">
+                        <h4><i class="fa-solid fa-terminal"></i> 執行狀態日誌</h4>
+                        <div class="console-status" id="console-status-text">
+                            <span class="dot idle"></span> 系統閒置中
+                        </div>
+                    </div>
+                    <div class="console-body" id="console-log">
+                        等待執行指令...
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: History and Backtest -->
+            <section id="history" class="tab-pane">
+                <div class="history-grid">
+                    <!-- History Files List -->
+                    <div class="card glass-card history-list-card">
+                        <div class="card-header">
+                            <h4><i class="fa-solid fa-folder-open"></i> 歷史選股報表目錄</h4>
+                        </div>
+                        <div class="table-container">
+                            <table class="data-table" id="history-files-table">
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>策略</th>
+                                        <th>個股數</th>
+                                        <th>T+5 平均</th>
+                                        <th>T+10 平均</th>
+                                        <th>T+20 平均</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-files-body">
+                                    <tr>
+                                        <td colspan="6" class="text-center">加載中...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Selected File Detail -->
+                    <div class="card glass-card history-detail-card">
+                        <div class="card-header detail-header">
+                            <h4 id="detail-title"><i class="fa-solid fa-list-check"></i> 請選擇左側報表查看細節</h4>
+                            <div class="detail-actions" id="detail-actions-panel" style="display: none;">
+                                <span class="date-badge" id="detail-date-badge">YYYY/MM/DD</span>
+                                <span class="type-badge" id="detail-type-badge">策略</span>
+                            </div>
+                        </div>
+                        <div class="table-container scrollable-detail">
+                            <table class="data-table" id="detail-data-table">
+                                <thead>
+                                    <tr id="detail-table-headers">
+                                        <th>股票代號</th>
+                                        <th>股票名稱</th>
+                                        <th>選出時收盤價</th>
+                                        <th>選出日期</th>
+                                        <th>5日均量</th>
+                                        <th>MACD狀態</th>
+                                        <th>風險提示</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="detail-data-body">
+                                    <tr>
+                                        <td colspan="7" class="text-center">尚未選擇報表</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: Strategy Statistics -->
+            <section id="stats" class="tab-pane">
+                <div class="stats-cards-grid">
+                    <!-- Long Overall Stats Card -->
+                    <div class="card glass-card stats-card long">
+                        <div class="stats-icon long"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                        <div class="stats-info">
+                            <h4>多方策略 (T+5 平均)</h4>
+                            <h2 id="stats-long-return">N/A</h2>
+                            <p>累計運行 <span id="stats-long-runs">0</span> 次，選出 <span id="stats-long-stocks">0</span> 檔個股</p>
+                            <span class="win-rate-badge long">勝率：<span id="stats-long-win">0%</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Short Overall Stats Card -->
+                    <div class="card glass-card stats-card short">
+                        <div class="stats-icon short"><i class="fa-solid fa-arrow-trend-down"></i></div>
+                        <div class="stats-info">
+                            <h4>空方策略 (T+5 平均變動)</h4>
+                            <h2 id="stats-short-return">N/A</h2>
+                            <p>累計運行 <span id="stats-short-runs">0</span> 次，選出 <span id="stats-short-stocks">0</span> 檔個股</p>
+                            <span class="win-rate-badge short">做空成功率：<span id="stats-short-win">0%</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-charts-row">
+                    <!-- Chart 1: Average Return -->
+                    <div class="card glass-card chart-card">
+                        <div class="card-header">
+                            <h4><i class="fa-solid fa-chart-bar"></i> 多空策略 T+5 平均績效對比</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="return-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2: Win Rate -->
+                    <div class="card glass-card chart-card">
+                        <div class="card-header">
+                            <h4><i class="fa-solid fa-chart-pie"></i> 多空策略勝率指標</h4>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="winrate-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

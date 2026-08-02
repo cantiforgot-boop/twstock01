@@ -1,0 +1,14 @@
+{
+  "long": {
+    "runs": 6,
+    "stocks": 35,
+    "t5_avg": -7.65,
+    "win_rate": 27.3
+  },
+  "short": {
+    "runs": 5,
+    "stocks": 10,
+    "t5_avg": 0.0,
+    "win_rate": 0.0
+  }
+}
