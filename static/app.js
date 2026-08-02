@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         try {
-            const resp = await fetch(`/api/institutional?days=${days}`);
+            const resp = await fetch(isLocal ? `/api/institutional?days=${days}` : `data/institutional_${days}.json`);
             const json = await resp.json();
             
             if (json.status === 'success') {
@@ -604,6 +604,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
+            if (!isLocal) {
+                alert("本功能需要使用本地 Python 伺服器進行即時查詢，雲端唯讀網頁暫不支援單股即時均量分析。\n\n請在您本機上執行 python app.py 啟用 Flask 伺服器使用此功能！");
+                return;
+            }
+            
             btnVolumeQuery.disabled = true;
             btnVolumeQuery.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 查詢中`;
             
@@ -683,8 +688,26 @@ document.addEventListener('DOMContentLoaded', () => {
             blockScreenMatches.style.display = 'none';
 
             try {
-                const resp = await fetch(`/api/volume/screener?days=${days}&min_volume=${minVol}&min_ratio=${minRatio}`);
-                const json = await resp.json();
+                let json;
+                if (isLocal) {
+                    const resp = await fetch(`/api/volume/screener?days=${days}&min_volume=${minVol}&min_ratio=${minRatio}`);
+                    json = await resp.json();
+                } else {
+                    const resp = await fetch(`data/volume_screener_${days}.json`);
+                    const rawJson = await resp.json();
+                    
+                    if (rawJson.status === 'success') {
+                        const rawList = rawJson.data || [];
+                        const filtered = rawList.filter(s => {
+                            const vol = parseInt(s.volume) || 0;
+                            const ratio = parseFloat(s.ratio) || 0;
+                            return vol >= minVol && ratio >= minRatio;
+                        });
+                        json = { status: 'success', data: filtered };
+                    } else {
+                        json = rawJson;
+                    }
+                }
                 
                 if (json.status === 'success') {
                     const list = json.data;
@@ -757,7 +780,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. 取得歷史選股列表，找出最新的籌碼報告
-            const response = await fetch('/api/history');
+            const response = await fetch(isLocal ? '/api/history' : 'data/history_index.json');
             const history = await response.json();
             
             const latestMargin = history.find(item => item.strategy_type === 'margin');
@@ -774,12 +797,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (infoEl) infoEl.innerHTML = `<i class="fa-solid fa-clock"></i> <strong>報告日期：</strong>${latestMargin.date}`;
 
             // 2. 獲取該報表的詳細內容
-            const reportResp = await fetch(`/api/report/${latestMargin.filename}`);
-            const data = await reportResp.json();
-
-            if (data.status === 'error') {
-                if (infoEl) infoEl.innerHTML = `<span style="color: #f54ea2;"><i class="fa-solid fa-triangle-exclamation"></i> 載入報告失敗: ${data.message}</span>`;
-                return;
+            let data = [];
+            if (isLocal) {
+                const reportResp = await fetch(`/api/report/${latestMargin.filename}`);
+                data = await reportResp.json();
+            } else {
+                const reportResp = await fetch(`data/${latestMargin.filename}`);
+                const csvText = await reportResp.text();
+                data = parseCSV(csvText);
             }
 
             // 3. 分類過濾

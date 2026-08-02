@@ -161,6 +161,43 @@ def generate_static_indexes():
     with open(stats_path, 'w', encoding='utf-8') as f_out:
         json.dump(stats_data, f_out, ensure_ascii=False, indent=2)
     print(f"[Index Generator] 成功寫入統計: {stats_path}")
+    
+    # 預先生成法人與量能靜態 JSON，以供 GitHub Pages 靜態唯讀使用
+    pregenerate_institutional_and_volume_data(data_dir)
+
+def pregenerate_institutional_and_volume_data(data_dir):
+    try:
+        import sys
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        sys.path.append(current_dir)
+        import institutional_screener
+        print("[Index Generator] 開始預先生成法人與量能數據...")
+        
+        # 1. 預先生成 3, 5, 10 日法人連買賣超數據
+        for d in [3, 5, 10]:
+            try:
+                data = institutional_screener.run_institutional_screener(d)
+                if data:
+                    path = os.path.join(data_dir, f'institutional_{d}.json')
+                    with open(path, 'w', encoding='utf-8') as f:
+                        json.dump({"status": "success", "data": data}, f, ensure_ascii=False, indent=2)
+                    print(f"[Index Generator] 成功寫入法人連買賣超 ({d}日): {path}")
+            except Exception as inner_e:
+                print(f"[Index Generator] 生成 {d} 日法人數據失敗: {inner_e}")
+                
+        # 2. 預先生成 5, 10, 20 日全市場量能數據 (過濾最低 100 張，均比 1.0 倍，保留空間給前端篩選)
+        for d in [5, 10, 20]:
+            try:
+                data = institutional_screener.run_volume_screener(d, min_volume_sheets=100, min_ratio=1.0)
+                if data is not None:
+                    path = os.path.join(data_dir, f'volume_screener_{d}.json')
+                    with open(path, 'w', encoding='utf-8') as f:
+                        json.dump({"status": "success", "data": data}, f, ensure_ascii=False, indent=2)
+                    print(f"[Index Generator] 成功寫入全市場量能數據 ({d}日): {path}")
+            except Exception as inner_e:
+                print(f"[Index Generator] 生成 {d} 日量能數據失敗: {inner_e}")
+    except Exception as e:
+        print(f"[Index Generator] 預先生成法人與量能數據時失敗: {e}")
 
 if __name__ == '__main__':
     generate_static_indexes()

@@ -1,0 +1,1724 @@
+{
+  "status": "success",
+  "data": {
+    "dates": [
+      "20260731",
+      "20260730",
+      "20260729"
+    ],
+    "foreign_buy": [
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 40012.5,
+        "foreign_sum": 83558.9,
+        "foreign_history": [
+          40012.5,
+          30788.5,
+          12757.8
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 458.0,
+        "sitc_sum": -2448.3,
+        "sitc_history": [
+          458.0,
+          -18.6,
+          -2887.7
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2002",
+        "name": "中鋼",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 8568.9,
+        "foreign_sum": 31840.3,
+        "foreign_history": [
+          8568.9,
+          13814.2,
+          9457.2
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 132.0,
+        "sitc_sum": 279.0,
+        "sitc_history": [
+          132.0,
+          59.0,
+          88.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2412",
+        "name": "中華電",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 6775.2,
+        "foreign_sum": 27139.0,
+        "foreign_history": [
+          6775.2,
+          7429.8,
+          12934.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 1639.2,
+        "sitc_sum": 1150.6,
+        "sitc_history": [
+          1639.2,
+          76.0,
+          -564.7
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1402",
+        "name": "遠東新",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 13943.1,
+        "foreign_sum": 19551.0,
+        "foreign_history": [
+          13943.1,
+          2747.4,
+          2860.5
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 18.0,
+        "sitc_sum": 53.0,
+        "sitc_history": [
+          18.0,
+          4.8,
+          30.3
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "4904",
+        "name": "遠傳",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 3281.0,
+        "foreign_sum": 18775.7,
+        "foreign_history": [
+          3281.0,
+          6464.0,
+          9030.7
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 1672.0,
+        "sitc_sum": -436.6,
+        "sitc_history": [
+          1672.0,
+          -274.7,
+          -1833.9
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3045",
+        "name": "台灣大",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 5165.8,
+        "foreign_sum": 14444.7,
+        "foreign_history": [
+          5165.8,
+          5458.9,
+          3819.9
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 1491.6,
+        "sitc_sum": 1728.8,
+        "sitc_history": [
+          1491.6,
+          55.6,
+          181.6
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "9945",
+        "name": "潤泰新",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 7356.6,
+        "foreign_sum": 14213.3,
+        "foreign_history": [
+          7356.6,
+          4156.7,
+          2700.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": -4.0,
+        "sitc_history": [
+          0.0,
+          -4.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2603",
+        "name": "長榮",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 1387.0,
+        "foreign_sum": 6416.7,
+        "foreign_history": [
+          1387.0,
+          1340.8,
+          3688.9
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 146.1,
+        "sitc_sum": 362.3,
+        "sitc_history": [
+          146.1,
+          69.0,
+          147.2
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2367",
+        "name": "燿華",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 367.8,
+        "foreign_sum": 6411.8,
+        "foreign_history": [
+          367.8,
+          808.1,
+          5236.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 813.3,
+        "foreign_sum": 2794.6,
+        "foreign_history": [
+          813.3,
+          302.1,
+          1679.3
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 415.2,
+        "sitc_sum": 455.7,
+        "sitc_history": [
+          415.2,
+          -36.8,
+          77.3
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8027",
+        "name": "鈦昇",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 9.0,
+        "foreign_sum": 2278.4,
+        "foreign_history": [
+          9.0,
+          1384.8,
+          884.6
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1476",
+        "name": "儒鴻",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 127.1,
+        "foreign_sum": 1285.6,
+        "foreign_history": [
+          127.1,
+          990.4,
+          168.1
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 1.0,
+        "sitc_sum": 7.5,
+        "sitc_history": [
+          1.0,
+          3.9,
+          2.6
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2480",
+        "name": "敦陽科",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 695.3,
+        "foreign_sum": 834.0,
+        "foreign_history": [
+          695.3,
+          95.3,
+          43.4
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6180",
+        "name": "橘子",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 96.9,
+        "foreign_sum": 443.5,
+        "foreign_history": [
+          96.9,
+          95.6,
+          251.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6558",
+        "name": "興能高",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 11.0,
+        "foreign_sum": 396.5,
+        "foreign_history": [
+          11.0,
+          17.0,
+          368.5
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6217",
+        "name": "中探針",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 306.6,
+        "foreign_sum": 391.6,
+        "foreign_history": [
+          306.6,
+          55.0,
+          30.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2636",
+        "name": "台驊控股",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 167.7,
+        "foreign_sum": 383.4,
+        "foreign_history": [
+          167.7,
+          66.8,
+          149.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8240",
+        "name": "華宏",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 37.0,
+        "foreign_sum": 370.1,
+        "foreign_history": [
+          37.0,
+          67.0,
+          266.1
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "7792",
+        "name": "安葆",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 57.0,
+        "foreign_sum": 186.0,
+        "foreign_history": [
+          57.0,
+          52.0,
+          77.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "5213",
+        "name": "亞昕",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 36.0,
+        "foreign_sum": 161.1,
+        "foreign_history": [
+          36.0,
+          84.0,
+          41.1
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3679",
+        "name": "新至陞",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 58.0,
+        "foreign_sum": 140.1,
+        "foreign_history": [
+          58.0,
+          7.0,
+          75.1
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3018",
+        "name": "隆銘綠能",
+        "market": "TSE",
+        "foreign_streak": 3,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 23.0,
+        "foreign_sum": 69.0,
+        "foreign_history": [
+          23.0,
+          44.0,
+          2.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1788",
+        "name": "杏昌",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 1.0,
+        "foreign_sum": 25.6,
+        "foreign_history": [
+          1.0,
+          19.0,
+          5.6
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2434",
+        "name": "統懋",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 8.0,
+        "foreign_sum": 25.3,
+        "foreign_history": [
+          8.0,
+          15.0,
+          2.3
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1541",
+        "name": "錩泰",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 10.0,
+        "foreign_sum": 24.4,
+        "foreign_history": [
+          10.0,
+          2.0,
+          12.4
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1525",
+        "name": "江申",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 4.0,
+        "foreign_sum": 23.3,
+        "foreign_history": [
+          4.0,
+          8.0,
+          11.3
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8482",
+        "name": "商億-KY",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 2.0,
+        "foreign_sum": 22.9,
+        "foreign_history": [
+          2.0,
+          4.0,
+          16.9
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8467",
+        "name": "波力-KY",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 1.0,
+        "foreign_sum": 14.8,
+        "foreign_history": [
+          1.0,
+          2.0,
+          11.8
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "7689",
+        "name": "大鵬科CLMX",
+        "market": "TSE",
+        "foreign_streak": 4,
+        "foreign_streak_type": "buy",
+        "foreign_latest": 3.0,
+        "foreign_sum": 8.0,
+        "foreign_history": [
+          3.0,
+          1.0,
+          4.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      }
+    ],
+    "foreign_sell": [
+      {
+        "code": "6153",
+        "name": "嘉聯益",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -935.8,
+        "foreign_sum": -5423.6,
+        "foreign_history": [
+          -935.8,
+          -2331.8,
+          -2155.9
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1944.7,
+        "foreign_sum": -4613.1,
+        "foreign_history": [
+          -1944.7,
+          -2059.8,
+          -608.6
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 1543.3,
+        "sitc_sum": 3631.0,
+        "sitc_history": [
+          1543.3,
+          1518.2,
+          569.6
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2393",
+        "name": "億光",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1099.3,
+        "foreign_sum": -3141.8,
+        "foreign_history": [
+          -1099.3,
+          -918.0,
+          -1124.5
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 39.0,
+        "sitc_sum": 36.0,
+        "sitc_history": [
+          39.0,
+          -5.0,
+          2.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2439",
+        "name": "美律",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -806.3,
+        "foreign_sum": -998.5,
+        "foreign_history": [
+          -806.3,
+          -1.4,
+          -190.8
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 1.0,
+        "sitc_sum": 1.0,
+        "sitc_history": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -465.9,
+        "foreign_sum": -920.4,
+        "foreign_history": [
+          -465.9,
+          -180.8,
+          -273.7
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 152.2,
+        "sitc_sum": 343.8,
+        "sitc_history": [
+          152.2,
+          80.5,
+          111.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2236",
+        "name": "百達-KY",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -461.0,
+        "foreign_sum": -861.3,
+        "foreign_history": [
+          -461.0,
+          -386.0,
+          -14.3
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1773",
+        "name": "勝一",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -194.9,
+        "foreign_sum": -854.6,
+        "foreign_history": [
+          -194.9,
+          -191.7,
+          -468.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 2.0,
+        "sitc_sum": 7.0,
+        "sitc_history": [
+          2.0,
+          2.0,
+          3.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1612",
+        "name": "宏泰",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -2.9,
+        "foreign_sum": -504.6,
+        "foreign_history": [
+          -2.9,
+          -8.1,
+          -493.6
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6691",
+        "name": "洋基工程",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -207.0,
+        "foreign_sum": -369.8,
+        "foreign_history": [
+          -207.0,
+          -45.3,
+          -117.5
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 13.0,
+        "sitc_sum": 17.0,
+        "sitc_history": [
+          13.0,
+          3.0,
+          1.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6649",
+        "name": "台生材",
+        "market": "OTC",
+        "foreign_streak": 4,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -11.0,
+        "foreign_sum": -55.0,
+        "foreign_history": [
+          -11.0,
+          -17.0,
+          -27.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "5356",
+        "name": "協益",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -8.0,
+        "foreign_sum": -52.0,
+        "foreign_history": [
+          -8.0,
+          -20.0,
+          -24.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8499",
+        "name": "鼎炫-KY",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -10.0,
+        "foreign_sum": -42.3,
+        "foreign_history": [
+          -10.0,
+          -9.0,
+          -23.3
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6697",
+        "name": "東捷資訊",
+        "market": "OTC",
+        "foreign_streak": 5,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -4.0,
+        "foreign_sum": -30.0,
+        "foreign_history": [
+          -4.0,
+          -3.0,
+          -23.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "1295",
+        "name": "生合",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -6.0,
+        "foreign_sum": -24.0,
+        "foreign_history": [
+          -6.0,
+          -4.0,
+          -14.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "4126",
+        "name": "太醫",
+        "market": "OTC",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -7.0,
+        "foreign_sum": -24.0,
+        "foreign_history": [
+          -7.0,
+          -1.0,
+          -16.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "4950",
+        "name": "金耘國際",
+        "market": "OTC",
+        "foreign_streak": 3,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -3.0,
+        "foreign_sum": -15.0,
+        "foreign_history": [
+          -3.0,
+          -3.0,
+          -9.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8928",
+        "name": "鉅明",
+        "market": "OTC",
+        "foreign_streak": 5,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1.0,
+        "foreign_sum": -13.0,
+        "foreign_history": [
+          -1.0,
+          -9.0,
+          -3.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "4502",
+        "name": "健信",
+        "market": "OTC",
+        "foreign_streak": 4,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -2.0,
+        "foreign_sum": -8.0,
+        "foreign_history": [
+          -2.0,
+          -2.0,
+          -4.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6240",
+        "name": "松崗",
+        "market": "OTC",
+        "foreign_streak": 3,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1.0,
+        "foreign_sum": -7.0,
+        "foreign_history": [
+          -1.0,
+          -5.0,
+          -1.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6556",
+        "name": "勝品",
+        "market": "OTC",
+        "foreign_streak": 4,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1.0,
+        "foreign_sum": -4.0,
+        "foreign_history": [
+          -1.0,
+          -1.0,
+          -2.0
+        ],
+        "sitc_streak": 0,
+        "sitc_streak_type": "none",
+        "sitc_latest": 0.0,
+        "sitc_sum": 0.0,
+        "sitc_history": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "price": "N/A"
+      }
+    ],
+    "sitc_buy": [
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 6829.7,
+        "foreign_sum": 14023.3,
+        "foreign_history": [
+          6829.7,
+          10567.4,
+          -3373.8
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 2744.7,
+        "sitc_sum": 11569.5,
+        "sitc_history": [
+          2744.7,
+          3502.9,
+          5321.9
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -117.4,
+        "foreign_sum": -3935.3,
+        "foreign_history": [
+          -117.4,
+          -1590.0,
+          -2227.9
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 5815.0,
+        "sitc_sum": 11418.7,
+        "sitc_history": [
+          5815.0,
+          2422.0,
+          3181.7
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 22905.1,
+        "foreign_sum": 28830.8,
+        "foreign_history": [
+          22905.1,
+          3002.4,
+          2923.2
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 2455.4,
+        "sitc_sum": 5889.5,
+        "sitc_history": [
+          2455.4,
+          1291.2,
+          2143.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 49858.1,
+        "foreign_sum": 14934.6,
+        "foreign_history": [
+          49858.1,
+          -33608.0,
+          -1315.5
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 3505.4,
+        "sitc_sum": 4907.5,
+        "sitc_history": [
+          3505.4,
+          307.9,
+          1094.2
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2360",
+        "name": "致茂",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -1944.7,
+        "foreign_sum": -4613.1,
+        "foreign_history": [
+          -1944.7,
+          -2059.8,
+          -608.6
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 1543.3,
+        "sitc_sum": 3631.0,
+        "sitc_history": [
+          1543.3,
+          1518.2,
+          569.6
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2892",
+        "name": "第一金",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 13218.0,
+        "foreign_sum": 22225.0,
+        "foreign_history": [
+          13218.0,
+          14858.7,
+          -5851.6
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 1017.1,
+        "sitc_sum": 3278.7,
+        "sitc_history": [
+          1017.1,
+          500.7,
+          1760.9
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "8069",
+        "name": "元太",
+        "market": "OTC",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -29.3,
+        "foreign_sum": 1256.9,
+        "foreign_history": [
+          -29.3,
+          152.7,
+          1133.5
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 11.0,
+        "sitc_sum": 1619.9,
+        "sitc_history": [
+          11.0,
+          966.5,
+          642.4
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -4083.4,
+        "foreign_sum": -30875.0,
+        "foreign_history": [
+          -4083.4,
+          -27311.0,
+          519.4
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 840.4,
+        "sitc_sum": 1439.8,
+        "sitc_history": [
+          840.4,
+          227.6,
+          371.8
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -2785.6,
+        "foreign_sum": -3039.2,
+        "foreign_history": [
+          -2785.6,
+          -399.6,
+          146.0
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 746.2,
+        "sitc_sum": 1052.0,
+        "sitc_history": [
+          746.2,
+          62.4,
+          243.4
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3665",
+        "name": "貿聯-KY",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -225.2,
+        "foreign_sum": -826.1,
+        "foreign_history": [
+          -225.2,
+          -690.2,
+          89.3
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 363.2,
+        "sitc_sum": 976.3,
+        "sitc_history": [
+          363.2,
+          369.0,
+          244.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2610",
+        "name": "華航",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 37781.2,
+        "foreign_sum": 52878.9,
+        "foreign_history": [
+          37781.2,
+          991.3,
+          14106.4
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 389.0,
+        "sitc_sum": 910.4,
+        "sitc_history": [
+          389.0,
+          12.4,
+          509.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3653",
+        "name": "健策",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -255.3,
+        "foreign_sum": -927.0,
+        "foreign_history": [
+          -255.3,
+          -157.6,
+          -514.1
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 319.0,
+        "sitc_sum": 875.4,
+        "sitc_history": [
+          319.0,
+          157.4,
+          399.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2395",
+        "name": "研華",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -464.7,
+        "foreign_sum": -854.6,
+        "foreign_history": [
+          -464.7,
+          287.3,
+          -677.2
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 43.0,
+        "sitc_sum": 869.1,
+        "sitc_history": [
+          43.0,
+          19.0,
+          807.1
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2474",
+        "name": "可成",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -848.7,
+        "foreign_sum": -1487.8,
+        "foreign_history": [
+          -848.7,
+          -139.9,
+          -499.2
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 616.0,
+        "sitc_sum": 666.8,
+        "sitc_history": [
+          616.0,
+          22.8,
+          28.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "2637",
+        "name": "慧洋-KY",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 55.1,
+        "foreign_sum": -126.6,
+        "foreign_history": [
+          55.1,
+          -461.4,
+          279.7
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 300.0,
+        "sitc_sum": 503.0,
+        "sitc_history": [
+          300.0,
+          1.0,
+          202.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3702",
+        "name": "大聯大",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 876.6,
+        "foreign_sum": 1092.3,
+        "foreign_history": [
+          876.6,
+          1257.5,
+          -1041.8
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 198.0,
+        "sitc_sum": 473.5,
+        "sitc_history": [
+          198.0,
+          32.0,
+          243.5
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "market": "TSE",
+        "foreign_streak": 10,
+        "foreign_streak_type": "sell",
+        "foreign_latest": -465.9,
+        "foreign_sum": -920.4,
+        "foreign_history": [
+          -465.9,
+          -180.8,
+          -273.7
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 152.2,
+        "sitc_sum": 343.8,
+        "sitc_history": [
+          152.2,
+          80.5,
+          111.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "5274",
+        "name": "信驊",
+        "market": "OTC",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 34.6,
+        "foreign_sum": -93.9,
+        "foreign_history": [
+          34.6,
+          -111.3,
+          -17.2
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 17.0,
+        "sitc_sum": 114.2,
+        "sitc_history": [
+          17.0,
+          90.2,
+          7.1
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "6196",
+        "name": "帆宣",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -440.4,
+        "foreign_sum": -92.8,
+        "foreign_history": [
+          -440.4,
+          20.6,
+          326.9
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "buy",
+        "sitc_latest": 9.0,
+        "sitc_sum": 80.0,
+        "sitc_history": [
+          9.0,
+          2.0,
+          69.0
+        ],
+        "price": "N/A"
+      }
+    ],
+    "sitc_sell": [
+      {
+        "code": "2368",
+        "name": "金像電",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 32.6,
+        "foreign_sum": 1448.8,
+        "foreign_history": [
+          32.6,
+          -97.5,
+          1513.8
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "sell",
+        "sitc_latest": -285.0,
+        "sitc_sum": -2034.1,
+        "sitc_history": [
+          -285.0,
+          -862.1,
+          -887.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "5439",
+        "name": "高技",
+        "market": "OTC",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": -508.3,
+        "foreign_sum": -250.5,
+        "foreign_history": [
+          -508.3,
+          -447.2,
+          705.0
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "sell",
+        "sitc_latest": -572.6,
+        "sitc_sum": -1726.6,
+        "sitc_history": [
+          -572.6,
+          -577.0,
+          -577.0
+        ],
+        "price": "N/A"
+      },
+      {
+        "code": "3167",
+        "name": "大量",
+        "market": "TSE",
+        "foreign_streak": 0,
+        "foreign_streak_type": "none",
+        "foreign_latest": 332.0,
+        "foreign_sum": 1250.6,
+        "foreign_history": [
+          332.0,
+          680.0,
+          238.6
+        ],
+        "sitc_streak": 10,
+        "sitc_streak_type": "sell",
+        "sitc_latest": -1020.0,
+        "sitc_sum": -1497.0,
+        "sitc_history": [
+          -1020.0,
+          -375.0,
+          -102.0
+        ],
+        "price": "N/A"
+      }
+    ],
+    "both_buy": [],
+    "both_sell": []
+  }
+}
