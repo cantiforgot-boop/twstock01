@@ -1,0 +1,6 @@
+flask>=3.0.0
+pandas>=2.0.0
+yfinance>=0.2.0
+requests>=2.30.0
+lxml>=4.9.0
+python-dotenv>=1.0.0
