@@ -818,3 +818,462 @@ header {
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
+/* ========================================================
+   三新擴充工具 CSS 樣式 (總經、黑馬、自選監控)
+   ======================================================== */
+
+/* 總經風向儀指標卡片 */
+.compass-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .compass-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .compass-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.indicator-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.indicator-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.indicator-card.safe { border-left: 4px solid #2ecc71; }
+.indicator-card.warn { border-left: 4px solid #f39c12; }
+.indicator-card.danger { border-left: 4px solid #e74c3c; }
+.indicator-card.neutral { border-left: 4px solid #9b59b6; }
+
+.indicator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8c82ab;
+    font-size: 0.85rem;
+}
+
+.indicator-val {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0.2rem 0;
+}
+
+.indicator-diag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    width: fit-content;
+    font-weight: 600;
+}
+
+.indicator-diag.safe { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+.indicator-diag.warn { background: rgba(243, 156, 18, 0.15); color: #f39c12; }
+.indicator-diag.danger { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
+.indicator-diag.neutral { background: rgba(155, 89, 182, 0.15); color: #9b59b6; }
+
+/* Markdown 渲染區域樣式 */
+.report-markdown-view {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-height: 700px;
+    overflow-y: auto;
+    color: #d1cbe5;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.report-markdown-view h1, .report-markdown-view h2, .report-markdown-view h3 {
+    color: #fff;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.report-markdown-view h1 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.5rem;
+}
+
+.report-markdown-view h2 { font-size: 1.2rem; }
+.report-markdown-view h3 { font-size: 1.05rem; }
+
+.report-markdown-view p {
+    margin-bottom: 1rem;
+}
+
+.report-markdown-view ul, .report-markdown-view ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.report-markdown-view li {
+    margin-bottom: 0.4rem;
+}
+
+.report-markdown-view blockquote {
+    border-left: 4px solid #00f2fe;
+    background: rgba(0, 242, 254, 0.05);
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.report-markdown-view blockquote.important {
+    border-left-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.05);
+}
+
+.report-markdown-view table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.report-markdown-view th, .report-markdown-view td {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem;
+    text-align: left;
+}
+
+.report-markdown-view th {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+/* Modal 彈出視窗樣式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #0f0b1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #a5a1b8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #fff;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* 警示監控兩欄佈局 */
+.alert-monitor-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .alert-monitor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group-alert {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.form-group-alert label {
+    font-size: 0.85rem;
+    color: #a5a1b8;
+}
+
+.form-group-alert label i {
+    margin-right: 0.3rem;
+}
+
+.alert-input {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.alert-input:focus {
+    border-color: #00f2fe;
+    box-shadow: 0 0 5px rgba(0, 242, 254, 0.2);
+}
+
+.btn-full-width {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    color: #0b0813;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-full-width:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.alert-rule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    transition: border-color 0.2s;
+}
+
+.alert-rule-item:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.alert-rule-info h5 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.alert-rule-conds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.cond-chip {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #a5a1b8;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.alert-rule-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Switch Switch Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2ecc71;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.btn-delete-rule {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-delete-rule:hover {
+    background: rgba(231, 76, 60, 0.1);
+}
+
+/* Stock Analysis Tab Styles */
+.price-range-bar-bg {
+    margin: 0.8rem 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#analysis-report-body h1, 
+#analysis-report-body h2, 
+#analysis-report-body h3, 
+#analysis-report-body h4 {
+    color: #fff;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.3rem;
+}
+
+#analysis-report-body h1 { font-size: 1.4rem; }
+#analysis-report-body h2 { font-size: 1.25rem; }
+#analysis-report-body h3 { font-size: 1.1rem; }
+
+#analysis-report-body p {
+    margin-bottom: 0.8rem;
+    color: #cbd5e1;
+}
+
+#analysis-report-body ul, 
+#analysis-report-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+}
+
+#analysis-report-body li {
+    margin-bottom: 0.4rem;
+}
+
+#analysis-report-body strong {
+    color: #00cec9;
+}
+
+#analysis-report-body blockquote {
+    border-left: 3px solid #00cec9;
+    background: rgba(0, 206, 201, 0.05);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.history-report-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    transition: all 0.2s;
+}
+
+.history-report-item:hover {
+    background: rgba(0, 206, 201, 0.1);
+    border-color: rgba(0, 206, 201, 0.3);
+    color: #fff;
+}
+
+

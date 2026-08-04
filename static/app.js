@@ -51,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 loadInstitutionalData();
             } else if (tabId === 'margin-diag') {
                 loadLatestMarginDiag();
+            } else if (tabId === 'market-compass') {
+                loadMarketCompass();
+            } else if (tabId === 'chip-horse') {
+                loadChipHorse();
+            } else if (tabId === 'alert-monitor') {
+                loadAlertConfigs();
             }
         });
     });
@@ -876,11 +882,880 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = html;
     }
 
+    // ========================================================
+    // 擴充功能控制器：大盤總經風向儀
+    // ========================================================
+    async function loadMarketCompass() {
+        const reportContent = document.getElementById('compass-report-content');
+        if (reportContent) reportContent.innerHTML = `📢 正在讀取大盤總經風向儀報告，請稍候...`;
+
+        try {
+            // Read from API or JSON static cache depending on env
+            let response;
+            if (isLocal) {
+                response = await fetch('/api/market-compass');
+            } else {
+                response = await fetch('../data/market_compass.json');
+            }
+            
+            if (response.status === 200) {
+                let data;
+                if (isLocal) {
+                    data = await response.json();
+                } else {
+                    const metrics = await response.json();
+                    // In cloud static pages, we also load the latest report file directly
+                    const reportResp = await fetch('../data/reports/market_compass_report_latest.md');
+                    const text = reportResp.status === 200 ? await reportResp.text() : "雲端報告加載中，若有延遲請稍後重新整理。";
+                    data = { metrics, report: text };
+                }
+                
+                renderMarketCompassMetrics(data.metrics);
+                if (reportContent) {
+                    reportContent.innerHTML = parseMarkdown(data.report);
+                }
+            } else {
+                if (reportContent) reportContent.innerHTML = `⚠️ 無法加載總經數據，請確認後端服務是否正常。`;
+            }
+        } catch (err) {
+            console.error("Error loading market compass:", err);
+            if (reportContent) reportContent.innerHTML = `⚠️ 載入異常: ${err.message}`;
+        }
+    }
+
+    function renderMarketCompassMetrics(m) {
+        if (!m) return;
+        
+        // 1. Margin Ratio (融資維持率)
+        const marginEl = document.getElementById('ind-margin-ratio');
+        if (marginEl) {
+            const val = m.margin_ratio || 0;
+            const state = val >= 160 ? 'safe' : val >= 140 ? 'warn' : 'danger';
+            const diagText = val >= 160 ? '🟢 安全偏多' : val >= 140 ? '🟡 融資警戒' : '🔴 恐慌斷頭買點';
+            marginEl.className = `indicator-card ${state}`;
+            marginEl.innerHTML = `
+                <div class="indicator-header">大盤融資維持率 <i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="indicator-val">${val}%</div>
+                <div class="indicator-diag ${state}">${diagText}</div>
+                <div style="font-size: 0.75rem; color: #8c82ab; margin-top: 0.2rem;">更新日期: ${m.margin_ratio_date || 'N/A'}</div>
+            `;
+        }
+
+        // 2. Futures Net Position (外資期貨淨留倉)
+        const futuresEl = document.getElementById('ind-futures-pos');
+        if (futuresEl) {
+            const val = m.futures_net_position || 0;
+            const state = val > 10000 ? 'safe' : val < -20000 ? 'danger' : 'neutral';
+            const diagText = val > 10000 ? '🟢 偏多進攻' : val < -20000 ? '🔴 偏空避險' : '⚪ 中性觀望';
+            futuresEl.className = `indicator-card ${state}`;
+            futuresEl.innerHTML = `
+                <div class="indicator-header">外資期貨淨留倉 <i class="fa-solid fa-arrow-trend-up"></i></div>
+                <div class="indicator-val">${val.toLocaleString()} 口</div>
+                <div class="indicator-diag ${state}">${diagText}</div>
+                <div style="font-size: 0.75rem; color: #8c82ab; margin-top: 0.2rem;">更新日期: ${m.futures_date || 'N/A'}</div>
+            `;
+        }
+
+        // 3. USD/TWD Exchange Rate (新台幣匯率)
+        const usdTwdEl = document.getElementById('ind-usd-twd');
+        if (usdTwdEl) {
+            const val = m.usd_twd || 32.5;
+            const state = val > 32.5 ? 'danger' : val < 31.8 ? 'safe' : 'neutral';
+            const diagText = val > 32.5 ? '🔴 貶值外資流出' : val < 31.8 ? '🟢 升值外資匯入' : '⚪ 台幣整理';
+            usdTwdEl.className = `indicator-card ${state}`;
+            usdTwdEl.innerHTML = `
+                <div class="indicator-header">新台幣/美元匯率 <i class="fa-solid fa-money-bill-transfer"></i></div>
+                <div class="indicator-val">${val}</div>
+                <div class="indicator-diag ${state}">${diagText}</div>
+                <div style="font-size: 0.75rem; color: #8c82ab; margin-top: 0.2rem;">更新頻率: 盤後每日</div>
+            `;
+        }
+
+        // 4. NDC Business Cycle Score/Light (景氣燈號與分數)
+        const ndcEl = document.getElementById('ind-ndc-score');
+        if (ndcEl) {
+            const score = m.ndc_score || 0;
+            const light = m.ndc_light || 'N/A';
+            const state = ['紅', '黃紅'].includes(light) ? 'danger' : ['藍', '黃藍'].includes(light) ? 'safe' : 'neutral';
+            const diagText = `${light}燈 (${state === 'danger' ? '🔴 過熱保守' : state === 'safe' ? '🟢 偏冷長買' : '⚪ 穩定'})`;
+            ndcEl.className = `indicator-card ${state}`;
+            ndcEl.innerHTML = `
+                <div class="indicator-header">國發會景氣燈號 <i class="fa-solid fa-lightbulb"></i></div>
+                <div class="indicator-val">${score} 分</div>
+                <div class="indicator-diag ${state}">${diagText}</div>
+                <div style="font-size: 0.75rem; color: #8c82ab; margin-top: 0.2rem;">更新月份: ${m.ndc_date || 'N/A'}</div>
+            `;
+        }
+
+        // 5. US 10Y Yield (美債 10Y 殖利率)
+        const us10yEl = document.getElementById('ind-us-10y');
+        if (us10yEl) {
+            const val = m.us_10y_yield || 4.0;
+            const state = val > 4.3 ? 'danger' : val < 3.8 ? 'safe' : 'neutral';
+            const diagText = val > 4.3 ? '🔴 利率高企壓抑' : val < 3.8 ? '🟢 利率舒緩有利' : '⚪ 區間整理';
+            us10yEl.className = `indicator-card ${state}`;
+            us10yEl.innerHTML = `
+                <div class="indicator-header">美債 10Y 殖利率 <i class="fa-solid fa-percent"></i></div>
+                <div class="indicator-val">${val}%</div>
+                <div class="indicator-diag ${state}">${diagText}</div>
+                <div style="font-size: 0.75rem; color: #8c82ab; margin-top: 0.2rem;">更新頻率: 盤後每日</div>
+            `;
+        }
+    }
+
+    async function runMarketCompassCrawler() {
+        const btn = document.getElementById('btn-run-compass-crawler');
+        if (!btn) return;
+        btn.disabled = true;
+        btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 正在爬取更新中...`;
+        
+        try {
+            const response = await fetch('/api/market-compass/run', { method: 'POST' });
+            const res = await response.json();
+            alert(res.message || "爬取任務已啟動！請稍後刷新。");
+            // Wait 6 seconds and reload compass
+            setTimeout(() => {
+                loadMarketCompass();
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-play"></i> 手動爬取新數據`;
+            }, 6000);
+        } catch (err) {
+            alert(`手動爬取失敗: ${err.message}`);
+            btn.disabled = false;
+            btn.innerHTML = `<i class="fa-solid fa-play"></i> 手動爬取新數據`;
+        }
+    }
+
+    // ========================================================
+    // 擴充功能控制器：黑馬籌碼雷達
+    // ========================================================
+    let chipHorseData = []; // Store currently loaded list for Modal diagnostics lookup
+    
+    async function loadChipHorse() {
+        const tableBody = document.getElementById('table-chip-horse-body');
+        const dateBadge = document.getElementById('chip-horse-date-badge');
+        
+        if (tableBody) tableBody.innerHTML = `<tr><td colspan="11" class="text-center" style="padding: 2rem 0;"><i class="fa-solid fa-spinner fa-spin"></i> 正在載入黑馬籌碼名單...</td></tr>`;
+        
+        try {
+            let response;
+            if (isLocal) {
+                response = await fetch('/api/chip-horse');
+            } else {
+                response = await fetch('../data/chip_horse_latest.json');
+            }
+            
+            if (response.status === 200) {
+                const data = await response.json();
+                chipHorseData = data.candidates || [];
+                
+                if (dateBadge) dateBadge.textContent = `數據日期: ${data.date ? data.date.replace(/(\d{4})(\d{2})(\d{2})/, '$1/$2/$3') : 'N/A'}`;
+                
+                renderChipHorseTable(chipHorseData);
+            } else {
+                if (tableBody) tableBody.innerHTML = `<tr><td colspan="11" class="text-center" style="color: #f54ea2;">⚠️ 無法載入籌碼雷達名單，請確認數據已生成。</td></tr>`;
+            }
+        } catch (err) {
+            console.error("Error loading chip horse:", err);
+            if (tableBody) tableBody.innerHTML = `<tr><td colspan="11" class="text-center" style="color: #f54ea2;">⚠️ 連線異常: ${err.message}</td></tr>`;
+        }
+    }
+
+    function renderChipHorseTable(list) {
+        const tableBody = document.getElementById('table-chip-horse-body');
+        if (!tableBody) return;
+        
+        if (list.length === 0) {
+            tableBody.innerHTML = `<tr><td colspan="11" class="text-center" style="padding: 2rem 0; color: #a5a1b8;">本期沒有符合篩選條件的黑馬股</td></tr>`;
+            return;
+        }
+        
+        let html = '';
+        list.forEach((c, idx) => {
+            const largeStreakText = `${c.w0_large}% <span style="font-size: 0.75rem; color:#8c82ab;">← ${c.w1_large}% ← ${c.w2_large}%</span>`;
+            const retailStreakText = `${c.w0_retail}% <span style="font-size: 0.75rem; color:#8c82ab;">← ${c.w1_retail}% ← ${c.w2_retail}%</span>`;
+            const countStreakText = `${c.w0_shareholders.toLocaleString()} <span style="font-size: 0.75rem; color:#8c82ab;">← ${c.w1_shareholders.toLocaleString()} ← ${c.w2_shareholders.toLocaleString()}</span>`;
+            
+            // Format delta percentages
+            const largeDiffStr = c.large_diff_2w >= 0 ? `+${c.large_diff_2w}%` : `${c.large_diff_2w}%`;
+            const countDiffStr = c.shareholders_diff_2w.toLocaleString();
+            
+            const largeColor = c.large_diff_2w >= 0 ? '#ff4757' : '#2ed573';
+            const countColor = c.shareholders_diff_2w <= 0 ? '#2ed573' : '#ff4757';
+            
+            const foreignStreak = c.foreign_buy_days > 0 ? `<span style="color: #3498db; font-weight:bold;">外:${c.foreign_buy_days}日</span>` : '';
+            const sitcStreak = c.sitc_buy_days > 0 ? `<span style="color: #2ecc71; font-weight:bold;">投:${c.sitc_buy_days}日</span>` : '';
+            const streakCombo = [foreignStreak, sitcStreak].filter(x => x !== '').join(' / ') || '<span style="color: #8c82ab;">無連買</span>';
+            
+            const rating = c.ai_diagnosis ? c.ai_diagnosis.rating : '中立';
+            const targetPrice = c.ai_diagnosis ? c.ai_diagnosis.target_price : 'N/A';
+            const ratingColor = ['買進', '強力買進'].includes(rating) ? '#2ecc71' : '#a5a1b8';
+            
+            html += `
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.04);">
+                <td><strong>${c.code}</strong></td>
+                <td><strong>${c.name}</strong></td>
+                <td style="color: #00f2fe; font-weight:bold;">${c.current_price || '--'} 元</td>
+                <td>${largeStreakText}</td>
+                <td style="color: ${largeColor}; font-weight:bold;">${largeDiffStr}</td>
+                <td>${retailStreakText}</td>
+                <td>${countStreakText}</td>
+                <td style="color: ${countColor}; font-weight:bold;">${countDiffStr}</td>
+                <td>${streakCombo}</td>
+                <td><span style="color: ${ratingColor}; font-weight:bold;">${rating}</span> (目標: ${targetPrice}元)</td>
+                <td>
+                    <div style="display:flex; gap:0.4rem;">
+                        <button class="btn btn-primary" onclick="showDiagModal('${c.code}')" style="padding: 0.2rem 0.5rem; font-size:0.75rem; height:24px;">
+                            <i class="fa-solid fa-brain"></i> AI診斷
+                        </button>
+                        <button class="btn btn-long" onclick="jumpToTechnicalAnalysis('${c.code}')" style="padding: 0.2rem 0.5rem; font-size:0.75rem; height:24px; background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.2); color: #00f2fe;">
+                            <i class="fa-solid fa-chart-line"></i> 線圖
+                        </button>
+                    </div>
+                </td>
+            </tr>`;
+        });
+        tableBody.innerHTML = html;
+    }
+
+    window.showDiagModal = function(code) {
+        const item = chipHorseData.find(c => c.code === code);
+        if (!item) return;
+        
+        const overlay = document.getElementById('modal-diagnosis-overlay');
+        const title = document.getElementById('modal-diag-title');
+        const body = document.getElementById('modal-diag-body');
+        
+        if (title) title.innerHTML = `<i class="fa-solid fa-horse-head" style="color: #f39c12; margin-right:0.5rem;"></i> 黑馬診斷：${item.name} (${item.code})`;
+        
+        const diag = item.ai_diagnosis || { rating: '中立', target_price: 'N/A', key_reasons: ['籌碼面呈大戶緩增，浮額逐漸洗淨'], risk_note: '短期面臨大盤波動風險，建議逢回分批承接。' };
+        
+        let reasonsHtml = '';
+        diag.key_reasons.forEach(r => {
+            reasonsHtml += `<li style="margin-bottom:0.5rem; color:#d1cbe5;">${r}</li>`;
+        });
+        
+        if (body) {
+            body.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; background: rgba(255,255,255,0.03); padding:1rem; border-radius:10px; border:1px solid rgba(255,255,255,0.05); margin-bottom:1.5rem;">
+                    <div>
+                        <span style="font-size:0.85rem; color:#8c82ab; display:block;">分析師評等</span>
+                        <strong style="font-size:1.4rem; color:#2ecc71; font-weight:700;">${diag.rating}</strong>
+                    </div>
+                    <div style="text-align:right;">
+                        <span style="font-size:0.85rem; color:#8c82ab; display:block;">合理估計目標價</span>
+                        <strong style="font-size:1.4rem; color:#00f2fe; font-weight:700;">${diag.target_price} 元</strong>
+                    </div>
+                </div>
+                
+                <h4 style="color:#fff; margin-bottom:0.8rem; font-size:1.05rem; display:flex; align-items:center; gap:0.4rem;"><i class="fa-solid fa-list-check" style="color:#00f2fe;"></i> 核心看好理由</h4>
+                <ul style="padding-left:1.2rem; margin-bottom:1.5rem;">
+                    ${reasonsHtml}
+                </ul>
+                
+                <h4 style="color:#fff; margin-bottom:0.5rem; font-size:1.05rem; display:flex; align-items:center; gap:0.4rem;"><i class="fa-solid fa-triangle-exclamation" style="color:#ffa502;"></i> 潛在風險提示</h4>
+                <div style="background: rgba(243, 156, 18, 0.05); border-left: 4px solid #ffa502; padding:0.8rem 1rem; border-radius: 0 8px 8px 0; color:#d1cbe5; font-size:0.9rem; line-height:1.6;">
+                    ${diag.risk_note}
+                </div>
+                
+                <div style="margin-top:2rem; display:flex; justify-content:flex-end;">
+                    <button class="btn btn-long" onclick="jumpToTechnicalAnalysis('${item.code}'); closeDiagModal();" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); color:#0b0813; font-weight:700; border:none; padding:0.6rem 1.5rem; border-radius:8px; cursor:pointer;">
+                        📈 帶入波段線圖進行交易
+                    </button>
+                </div>
+            `;
+        }
+        
+        if (overlay) overlay.classList.add('active');
+    };
+
+    window.closeDiagModal = function() {
+        const overlay = document.getElementById('modal-diagnosis-overlay');
+        if (overlay) overlay.classList.remove('active');
+    };
+    
+    // Wire modal close actions
+    const modalCloseBtn = document.getElementById('modal-diag-close-btn');
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeDiagModal);
+    }
+    const modalOverlay = document.getElementById('modal-diagnosis-overlay');
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeDiagModal();
+        });
+    }
+
+    window.jumpToTechnicalAnalysis = function(code) {
+        // Find buttons
+        const instTabBtn = document.querySelector('.tab-btn[data-tab="institutional"]');
+        const instVolumeSubTabBtn = document.querySelector('.sub-tab-btn[data-sub-tab="inst-volume-panel"]');
+        const queryInput = document.getElementById('volume-query-code');
+        const queryBtn = document.getElementById('btn-volume-query');
+        
+        // 1. Switch to institutional Tab
+        if (instTabBtn) instTabBtn.click();
+        
+        // 2. Switch to Volume sub-tab
+        if (instVolumeSubTabBtn) instVolumeSubTabBtn.click();
+        
+        // 3. Set input value
+        if (queryInput) queryInput.value = code;
+        
+        // 4. Trigger search
+        if (queryBtn) {
+            setTimeout(() => {
+                queryBtn.click();
+            }, 300);
+        }
+    };
+
+    async function runChipHorseCrawler() {
+        const btn = document.getElementById('btn-run-chip-horse-crawler');
+        if (!btn) return;
+        btn.disabled = true;
+        btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 正在篩選中...`;
+        
+        try {
+            const response = await fetch('/api/chip-horse/run', { method: 'POST' });
+            const res = await response.json();
+            alert(res.message || "篩選任務已啟動！可能需要 20-30 秒下載最新集保與現價資料，請稍候。");
+            
+            // Wait 25 seconds and reload
+            setTimeout(() => {
+                loadChipHorse();
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-play"></i> 手動下載篩選 (每週六)`;
+            }, 25000);
+        } catch (err) {
+            alert(`篩選任務啟動失敗: ${err.message}`);
+            btn.disabled = false;
+            btn.innerHTML = `<i class="fa-solid fa-play"></i> 手動下載篩選 (每週六)`;
+        }
+    }
+
+    // ========================================================
+    // 擴充功能控制器：監控警示設定 (Telegram Alerts)
+    // ========================================================
+    async function loadAlertConfigs() {
+        const rulesList = document.getElementById('alert-rules-list');
+        if (rulesList) rulesList.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;"><i class="fa-solid fa-spinner fa-spin"></i> 載入監控規則中...</div>`;
+        
+        try {
+            const response = await fetch('/api/alerts');
+            if (response.status === 200) {
+                const configs = await response.json();
+                renderAlertRules(configs);
+            } else {
+                if (rulesList) rulesList.innerHTML = `<div class="text-center" style="color: #f54ea2;">⚠️ 載入警示規則失敗，請確認後端服務。</div>`;
+            }
+        } catch (err) {
+            console.error("Error loading alert configs:", err);
+            if (rulesList) rulesList.innerHTML = `<div class="text-center" style="color: #f54ea2;">⚠️ 連線異常: ${err.message}</div>`;
+        }
+    }
+
+    function renderAlertRules(configs) {
+        const container = document.getElementById('alert-rules-list');
+        if (!container) return;
+        
+        if (configs.length === 0) {
+            container.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 4rem 0;"><i class="fa-solid fa-bell-slash" style="font-size: 2rem; margin-bottom:1rem; opacity:0.5;"></i><br>目前沒有任何監控規則，請利用左側表單新增自選股監控。</div>`;
+            return;
+        }
+        
+        let html = '';
+        configs.forEach(c => {
+            const conds = c.conditions || {};
+            let chipsHtml = '';
+            
+            if (conds.price_above) chipsHtml += `<span class="cond-chip">📈 破 ${conds.price_above}元</span>`;
+            if (conds.price_below) chipsHtml += `<span class="cond-chip">📉 跌破 ${conds.price_below}元</span>`;
+            if (conds.inst_buy_above) chipsHtml += `<span class="cond-chip">💼 法人買超 &gt; ${conds.inst_buy_above}張</span>`;
+            if (conds.volume_ratio_above) chipsHtml += `<span class="cond-chip">🔥 量比 &gt; ${conds.volume_ratio_above}倍</span>`;
+            if (conds.volume_spike_above) chipsHtml += `<span class="cond-chip">⚡ 5m量爆發 &gt; ${conds.volume_spike_above}倍</span>`;
+            
+            const isChecked = c.is_active !== false ? 'checked' : '';
+            
+            html += `
+            <div class="alert-rule-item">
+                <div class="alert-rule-info">
+                    <h5><strong>${c.stock_name || '未命名'} (${c.stock_code})</strong></h5>
+                    <div class="alert-rule-conds">
+                        ${chipsHtml}
+                    </div>
+                </div>
+                <div class="alert-rule-actions">
+                    <label class="switch">
+                        <input type="checkbox" onchange="toggleAlertRule('${c.id}', this.checked)" ${isChecked}>
+                        <span class="slider"></span>
+                    </label>
+                    <button class="btn-delete-rule" onclick="deleteAlertRule('${c.id}')" title="刪除規則">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>`;
+        });
+        container.innerHTML = html;
+    }
+
+    window.saveAlertRule = async function() {
+        const codeInput = document.getElementById('alert-stock-code');
+        const nameInput = document.getElementById('alert-stock-name');
+        const aboveInput = document.getElementById('alert-price-above');
+        const belowInput = document.getElementById('alert-price-below');
+        const instInput = document.getElementById('alert-inst-buy');
+        const ratioInput = document.getElementById('alert-volume-ratio');
+        const spikeInput = document.getElementById('alert-volume-spike');
+        
+        if (!codeInput || !codeInput.value.trim()) {
+            alert("請填寫股票代號！");
+            return;
+        }
+        
+        const code = codeInput.value.trim();
+        const name = nameInput.value.trim() || `自選股_${code}`;
+        
+        const conditions = {};
+        if (aboveInput.value) conditions.price_above = parseFloat(aboveInput.value);
+        if (belowInput.value) conditions.price_below = parseFloat(belowInput.value);
+        if (instInput.value) conditions.inst_buy_above = parseInt(instInput.value);
+        if (ratioInput.value) conditions.volume_ratio_above = parseFloat(ratioInput.value);
+        if (spikeInput && spikeInput.value) conditions.volume_spike_above = parseFloat(spikeInput.value);
+        
+        if (Object.keys(conditions).length === 0) {
+            alert("請至少設定一項監控條件！");
+            return;
+        }
+        
+        const newRule = {
+            stock_code: code,
+            stock_name: name,
+            conditions: conditions,
+            is_active: true
+        };
+        
+        try {
+            const response = await fetch('/api/alerts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newRule)
+            });
+            
+            if (response.status === 200) {
+                alert("自選監控警示規則新增成功！");
+                // Clear form
+                codeInput.value = '';
+                nameInput.value = '';
+                aboveInput.value = '';
+                belowInput.value = '';
+                instInput.value = '';
+                ratioInput.value = '';
+                if (spikeInput) spikeInput.value = '';
+                // Reload list
+                loadAlertConfigs();
+            } else {
+                alert("新增失敗，請確認後端連線。");
+            }
+        } catch (err) {
+            alert(`連線異常: ${err.message}`);
+        }
+    };
+
+    window.toggleAlertRule = async function(id, isChecked) {
+        try {
+            // Get original rule
+            const getResp = await fetch('/api/alerts');
+            const configs = await getResp.json();
+            const rule = configs.find(c => c.id === id);
+            if (!rule) return;
+            
+            rule.is_active = isChecked;
+            
+            await fetch('/api/alerts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(rule)
+            });
+            console.log(`Rule ${id} toggled active state: ${isChecked}`);
+        } catch (err) {
+            console.error("Error toggling alert rule state:", err);
+        }
+    };
+
+    window.deleteAlertRule = async function(id) {
+        if (!confirm("確定要刪除此條監控規則嗎？")) return;
+        try {
+            const response = await fetch(`/api/alerts/${id}`, { method: 'DELETE' });
+            if (response.status === 200) {
+                loadAlertConfigs();
+            } else {
+                alert("刪除失敗");
+            }
+        } catch (err) {
+            alert(`連線異常: ${err.message}`);
+        }
+    };
+
+    // ========================================================
+    // 輔助工具：簡易 Markdown 渲染器與 Markdown 表格處理
+    // ========================================================
+    function parseMarkdown(md) {
+        if (!md) return "";
+        let html = md;
+        // Escape HTML entities to prevent rendering issues
+        html = html.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        
+        // Blockquotes for alerts (important, tip, warning etc)
+        html = html.replace(/^&gt;\s*\[\!IMPORTANT\]\s*([\s\S]*?)(?=\n\n|\n[^\&gt;]|$)/gm, '<blockquote class="important"><strong>⚠️ 重要：</strong><br>$1</blockquote>');
+        html = html.replace(/^&gt;\s*\[\!WARNING\]\s*([\s\S]*?)(?=\n\n|\n[^\&gt;]|$)/gm, '<blockquote class="important"><strong>⚠️ 警告：</strong><br>$1</blockquote>');
+        html = html.replace(/^&gt;\s*(.*?)(?=\n\n|\n[^\&gt;]|$)/gm, '<blockquote>$1</blockquote>');
+        
+        // Headers
+        html = html.replace(/^#\s+(.*?)$/gm, '<h1>$1</h1>');
+        html = html.replace(/^##\s+(.*?)$/gm, '<h2>$1</h2>');
+        html = html.replace(/^###\s+(.*?)$/gm, '<h3>$1</h3>');
+        
+        // Bold
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // Lists
+        html = html.replace(/^\-\s+(.*?)$/gm, '<li>$1</li>');
+        
+        // Tables parsing
+        let lines = html.split('\n');
+        let inTable = false;
+        for (let i = 0; i < lines.length; i++) {
+            let trimmed = lines[i].trim();
+            if (trimmed.startsWith('|')) {
+                if (!inTable) {
+                    inTable = true;
+                    lines[i] = '<table><thead>' + renderTableRow(lines[i], true) + '</thead><tbody>';
+                } else if (trimmed.includes('---')) {
+                    lines[i] = ''; // Skip divider line
+                } else {
+                    lines[i] = renderTableRow(lines[i], false);
+                }
+            } else {
+                if (inTable) {
+                    inTable = false;
+                    lines[i] = '</tbody></table>' + lines[i];
+                }
+            }
+        }
+        html = lines.join('\n');
+        
+        // Clean empty double newlines into spacing
+        html = html.replace(/\n\n/g, '<p></p>');
+        return html;
+    }
+
+    function renderTableRow(line, isHeader) {
+        let cells = line.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1);
+        let tag = isHeader ? 'th' : 'td';
+        cells = cells.map(c => c.replace(/^&gt;\s*/, ''));
+        return '<tr>' + cells.map(c => `<${tag}>${c}</${tag}>`).join('') + '</tr>';
+    }
+
+    // Set up event listener hooks for form and crawler buttons
+    const btnCompassRefresh = document.getElementById('btn-refresh-compass');
+    if (btnCompassRefresh) btnCompassRefresh.addEventListener('click', loadMarketCompass);
+    
+    const btnCompassCrawler = document.getElementById('btn-run-compass-crawler');
+    if (btnCompassCrawler) {
+        if (isLocal) {
+            btnCompassCrawler.addEventListener('click', runMarketCompassCrawler);
+        } else {
+            btnCompassCrawler.style.display = 'none';
+        }
+    }
+    
+    const btnChipHorseRefresh = document.getElementById('btn-refresh-chip-horse');
+    if (btnChipHorseRefresh) btnChipHorseRefresh.addEventListener('click', loadChipHorse);
+    
+    const btnChipHorseCrawler = document.getElementById('btn-run-chip-horse-crawler');
+    if (btnChipHorseCrawler) {
+        if (isLocal) {
+            btnChipHorseCrawler.addEventListener('click', runChipHorseCrawler);
+        } else {
+            btnChipHorseCrawler.style.display = 'none';
+        }
+    }
+    
+    const formAddAlert = document.getElementById('form-add-alert');
+    if (formAddAlert) {
+        formAddAlert.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveAlertRule();
+        });
+    }
+
+    // ========================================================
+    // 個股研究加碼評估 UI 控制器
+    // ========================================================
+    let currentStockData = null;
+
+    async function runStockAnalysis(stockCode) {
+        if (!stockCode) {
+            alert("請輸入股票代號");
+            return;
+        }
+        
+        const panelDashboardGrid = document.getElementById('analysis-dashboard-grid');
+        const panelLoading = document.getElementById('analysis-loading-panel');
+        const panelReportCard = document.getElementById('analysis-report-card');
+        const txtError = document.getElementById('analysis-error-message');
+        const lblLoadingStatus = document.getElementById('analysis-loading-status');
+        
+        txtError.style.display = 'none';
+        panelDashboardGrid.style.display = 'none';
+        panelReportCard.style.display = 'none';
+        panelLoading.style.display = 'block';
+        lblLoadingStatus.innerText = '正在透過 Selenium 搜尋觀測站法說會簡報，並獲取估值與營收數據...';
+        
+        try {
+            const res = await fetch(`/api/stock-analysis?code=${stockCode}`);
+            const data = await res.json();
+            
+            if (data.status !== 'success') {
+                panelLoading.style.display = 'none';
+                txtError.innerText = `分析失敗: ${data.message || '未知錯誤'}`;
+                txtError.style.display = 'block';
+                return;
+            }
+            
+            currentStockData = data;
+            
+            document.getElementById('analysis-company-name-title').innerText = `${data.company_name} (${data.stock_code})`;
+            
+            const currentPrice = data.current_price;
+            document.getElementById('analysis-current-price').innerText = currentPrice ? `${currentPrice} 元` : '未提供';
+            
+            const ratingMap = {
+                'strong_buy': { text: '強烈買進', color: '#2ecc71' },
+                'buy': { text: '買進', color: '#2ecc71' },
+                'hold': { text: '持有', color: '#f1c40f' },
+                'sell': { text: '賣出', color: '#e74c3c' },
+                'strong_sell': { text: '強烈賣出', color: '#e74c3c' }
+            };
+            const rInfo = ratingMap[data.rating] || { text: data.rating || '無評等', color: '#8c82ab' };
+            const rBadge = document.getElementById('analysis-rating-badge');
+            rBadge.innerText = rInfo.text;
+            rBadge.style.color = rInfo.color;
+            
+            document.getElementById('analysis-analysts-count').innerText = `${data.analysts_count} 家`;
+            
+            const targets = data.price_targets;
+            const priceLow = targets.low;
+            const priceHigh = targets.high;
+            const priceMean = targets.mean;
+            
+            document.getElementById('analysis-price-low').innerText = priceLow ? `最低: ${priceLow} 元` : '最低: -';
+            document.getElementById('analysis-price-high').innerText = priceHigh ? `最高: ${priceHigh} 元` : '最高: -';
+            
+            if (currentPrice && priceLow && priceHigh) {
+                let pct = ((currentPrice - priceLow) / (priceHigh - priceLow)) * 100;
+                pct = Math.max(0, Math.min(100, pct));
+                document.getElementById('analysis-price-range-fill').style.width = pct + '%';
+                document.getElementById('analysis-price-pin').style.left = pct + '%';
+            } else {
+                document.getElementById('analysis-price-range-fill').style.width = '0%';
+                document.getElementById('analysis-price-pin').style.left = '0%';
+            }
+            
+            if (priceMean && currentPrice) {
+                const upside = ((priceMean / currentPrice) - 1) * 100;
+                const upsideText = upside >= 0 ? `+${upside.toFixed(1)}%` : `${upside.toFixed(1)}%`;
+                const upsideClass = upside >= 0 ? 'text-up' : 'text-down';
+                document.getElementById('analysis-price-mean-desc').innerHTML = `平均目標價: <span style="color:#fff;">${priceMean.toFixed(1)} 元</span> (潛在空間: <span class="${upsideClass}">${upsideText}</span>)`;
+            } else {
+                document.getElementById('analysis-price-mean-desc').innerText = '平均目標價: - 元';
+            }
+            
+            const rev = data.revenue;
+            document.getElementById('analysis-revenue-ym').innerText = rev.date_ym ? `${rev.date_ym.substring(0, 3)}年${rev.date_ym.substring(3)}月` : '-';
+            
+            const revValFormatted = rev.monthly_rev ? `${(parseInt(rev.monthly_rev) / 1000).toLocaleString(undefined, {maximumFractionDigits:0})} 千元` : '- 元';
+            document.getElementById('analysis-revenue-val').innerText = revValFormatted;
+            
+            const formatPct = (valStr) => {
+                const val = parseFloat(valStr);
+                if (isNaN(val)) return '-';
+                const cls = val >= 0 ? 'text-up' : 'text-down';
+                const sign = val >= 0 ? '+' : '';
+                return `<span class="${cls}">${sign}${val.toFixed(2)}%</span>`;
+            };
+            document.getElementById('analysis-revenue-mom').innerHTML = formatPct(rev.mom);
+            document.getElementById('analysis-revenue-yoy').innerHTML = formatPct(rev.yoy);
+            document.getElementById('analysis-revenue-ytd-yoy').innerHTML = formatPct(rev.ytd_yoy);
+            document.getElementById('analysis-revenue-remark').innerText = rev.remark || '-';
+            
+            const brief = data.briefing;
+            document.getElementById('analysis-briefing-date').innerText = brief.date || '無最近法說會';
+            document.getElementById('analysis-briefing-time').innerText = brief.time || '-';
+            document.getElementById('analysis-briefing-location').innerText = brief.location || '-';
+            
+            const pdfEl = document.getElementById('analysis-briefing-pdf');
+            if (brief.pdf_filename) {
+                pdfEl.innerHTML = `<a href="${brief.pdf_url}" target="_blank" style="color: #a29bfe; text-decoration: underline;"><i class="fa-solid fa-file-pdf"></i> ${brief.pdf_filename}</a>`;
+            } else {
+                pdfEl.innerText = '無簡報檔案';
+            }
+            
+            const reportsContainer = document.getElementById('analysis-history-reports-container');
+            reportsContainer.innerHTML = '';
+            if (data.history_reports && data.history_reports.length > 0) {
+                data.history_reports.forEach(r => {
+                    const div = document.createElement('div');
+                    div.className = 'history-report-item';
+                    div.innerHTML = `
+                        <span><i class="fa-solid fa-file-lines" style="margin-right:0.3rem;"></i> ${r.date} 法說評估報告</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    `;
+                    div.addEventListener('click', () => {
+                        loadHistoryReportContent(stockCode, r.filename);
+                    });
+                    reportsContainer.appendChild(div);
+                });
+            } else {
+                reportsContainer.innerHTML = '<div style="font-size:0.8rem; color:#8c82ab; text-align:center; padding:0.5rem;">無歷史報告</div>';
+            }
+            
+            panelLoading.style.display = 'none';
+            panelDashboardGrid.style.display = 'flex';
+            
+            if (data.ai_report_exists && data.ai_report) {
+                document.getElementById('analysis-report-body').innerHTML = parseMarkdown(data.ai_report);
+                panelReportCard.style.display = 'block';
+            } else if (brief.pdf_filename) {
+                document.getElementById('analysis-report-body').innerHTML = `
+                    <div class="text-center" style="padding: 2rem 0;">
+                        <p style="margin-bottom:1rem;">偵測到該個股有最新法說會簡報，但尚未生成 AI 診斷報告。</p>
+                        <button class="btn btn-primary" id="btn-generate-initial-report" style="background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> 立即下載簡報並生成 AI 診斷報告
+                        </button>
+                    </div>
+                `;
+                panelReportCard.style.display = 'block';
+                document.getElementById('btn-generate-initial-report').addEventListener('click', triggerGenerateReport);
+            } else {
+                document.getElementById('analysis-report-body').innerHTML = '<div class="text-center" style="padding: 2rem 0; color: #8c82ab;">此個股查無最新法說會簡報 PDF 檔案，無法進行 AI 深度診斷。</div>';
+                panelReportCard.style.display = 'block';
+            }
+            
+        } catch (err) {
+            panelLoading.style.display = 'none';
+            txtError.innerText = `請求異常: ${err.message}`;
+            txtError.style.display = 'block';
+        }
+    }
+
+    async function loadHistoryReportContent(stockCode, filename) {
+        const reportBody = document.getElementById('analysis-report-body');
+        reportBody.innerHTML = '<div class="text-center" style="padding: 2rem 0;"><div class="loader-spinner" style="border: 3px solid rgba(255,255,255,0.1); border-top: 3px solid #00cec9; border-radius: 50%; width: 25px; height: 25px; animation: spin 1s linear infinite; margin: 0 auto 1rem auto;"></div>正在加載歷史報告內容...</div>';
+        document.getElementById('analysis-report-card').style.display = 'block';
+        
+        try {
+            const res = await fetch(`/api/download/reports/${filename}`);
+            if (res.status === 200) {
+                const text = await res.text();
+                reportBody.innerHTML = parseMarkdown(text);
+                document.getElementById('analysis-report-card').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                reportBody.innerHTML = `<div class="text-center text-down" style="padding: 2rem 0;">讀取歷史報告失敗 (HTTP ${res.status})</div>`;
+            }
+        } catch (err) {
+            reportBody.innerHTML = `<div class="text-center text-down" style="padding: 2rem 0;">讀取報告異常: ${err.message}</div>`;
+        }
+    }
+
+    async function triggerGenerateReport() {
+        if (!currentStockData || !currentStockData.briefing.pdf_filename) {
+            alert("無法生成報告: 缺少簡報資訊");
+            return;
+        }
+        
+        const panelLoading = document.getElementById('analysis-loading-panel');
+        const panelReportCard = document.getElementById('analysis-report-card');
+        const panelDashboardGrid = document.getElementById('analysis-dashboard-grid');
+        const lblLoadingStatus = document.getElementById('analysis-loading-status');
+        
+        panelDashboardGrid.style.display = 'none';
+        panelReportCard.style.display = 'none';
+        panelLoading.style.display = 'block';
+        lblLoadingStatus.innerText = '正在下載法說會簡報 PDF，抽取關鍵內容並發送至 Gemini 生成深度評估報告 (大約需要 15~20 秒)...';
+        
+        const code = currentStockData.stock_code;
+        const payload = {
+            code: code,
+            pdf_url: currentStockData.briefing.pdf_url,
+            pdf_filename: currentStockData.briefing.pdf_filename,
+            date: currentStockData.briefing.date,
+            context: {
+                company_name: currentStockData.company_name,
+                current_price: currentStockData.current_price || 'N/A',
+                price_low: currentStockData.price_targets.low || 'N/A',
+                price_mean: currentStockData.price_targets.mean || 'N/A',
+                price_high: currentStockData.price_targets.high || 'N/A',
+                revenue_val: currentStockData.revenue.monthly_rev || 'N/A',
+                revenue_mom: currentStockData.revenue.mom || 'N/A',
+                revenue_yoy: currentStockData.revenue.yoy || 'N/A',
+                revenue_ytd_yoy: currentStockData.revenue.ytd_yoy || 'N/A',
+                revenue_remark: currentStockData.revenue.remark || '無'
+            }
+        };
+        
+        try {
+            const res = await fetch('/api/stock-analysis/ai-report', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const data = await res.json();
+            
+            if (data.status !== 'success') {
+                panelLoading.style.display = 'none';
+                alert(`生成報告失敗: ${data.message}`);
+                panelDashboardGrid.style.display = 'flex';
+                return;
+            }
+            
+            await runStockAnalysis(code);
+        } catch (err) {
+            panelLoading.style.display = 'none';
+            alert(`請求生成報告異常: ${err.message}`);
+            panelDashboardGrid.style.display = 'flex';
+        }
+    }
+
+    // Hook up elements
+    const btnRunAnalysis = document.getElementById('btn-run-analysis');
+    const inputStockCode = document.getElementById('analysis-stock-code');
+    const btnRegenerateAiReport = document.getElementById('btn-regenerate-ai-report');
+
+    if (btnRunAnalysis) {
+        btnRunAnalysis.addEventListener('click', () => {
+            runStockAnalysis(inputStockCode.value.trim());
+        });
+    }
+
+    if (inputStockCode) {
+        inputStockCode.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                runStockAnalysis(inputStockCode.value.trim());
+            }
+        });
+    }
+
+    if (btnRegenerateAiReport) {
+        btnRegenerateAiReport.addEventListener('click', triggerGenerateReport);
+    }
+
     checkStatusOnLoad();
     
-    // Auto-load margin diagnostics if initial tab is selected (or when switching)
-    // We already handle it on tab click.
-    
-    // Also run loadLatestMarginDiag initially if needed
+    // Auto-load margin diagnostics and initial compass load
     loadLatestMarginDiag();
+    
+    // If the window URL points to specific tab, let's load it
+    // Wait, the switcher handles tab click. Let's do a default trigger if page load matches any.
 });

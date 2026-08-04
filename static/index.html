@@ -38,6 +38,18 @@
             <button class="tab-btn" data-tab="margin-diag">
                 <i class="fa-solid fa-scale-balanced"></i> 資券籌碼診斷
             </button>
+            <button class="tab-btn" data-tab="market-compass">
+                <i class="fa-solid fa-compass"></i> 大盤總經風向儀
+            </button>
+            <button class="tab-btn" data-tab="chip-horse">
+                <i class="fa-solid fa-horse"></i> 黑馬籌碼雷達
+            </button>
+            <button class="tab-btn" data-tab="stock-analysis">
+                <i class="fa-solid fa-file-invoice-dollar"></i> 個股研究加碼評估
+            </button>
+            <button class="tab-btn" data-tab="alert-monitor">
+                <i class="fa-solid fa-bell"></i> 監控警示設定
+            </button>
             <button class="tab-btn" data-tab="history">
                 <i class="fa-solid fa-database"></i> 歷史選股與回測
             </button>
@@ -653,12 +665,360 @@
                     <div class="list-container" id="list-retail" style="max-height: 600px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.8rem; padding-right: 0.3rem;">
                         <div class="text-center" style="color: #8c82ab; padding: 2rem 0;">無符合條件個股</div>
                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- TAB 6: Market Compass -->
+        <section id="market-compass" class="tab-pane">
+            <div class="control-panel card glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">
+                <div class="control-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <h4 style="margin: 0; color: #fff; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                        <i class="fa-solid fa-compass" style="color: #00f2fe;"></i> 大盤總經與資金風向儀
+                    </h4>
+                    <div style="display: flex; gap: 0.8rem; align-items: center;">
+                        <button class="btn btn-primary" id="btn-refresh-compass" style="height: 38px;">
+                            <i class="fa-solid fa-arrows-rotate"></i> 重新載入數據
+                        </button>
+                        <button class="btn btn-long" id="btn-run-compass-crawler" style="height: 38px; background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);">
+                            <i class="fa-solid fa-play"></i> 手動爬取新數據
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metrics Grid -->
+            <div class="compass-grid" id="compass-metrics-container">
+                <div class="indicator-card neutral" id="ind-margin-ratio">
+                    <div class="indicator-header">融資維持率 <i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="indicator-val">--%</div>
+                    <div class="indicator-diag neutral">載入中...</div>
+                </div>
+                <div class="indicator-card neutral" id="ind-futures-pos">
+                    <div class="indicator-header">外資期貨淨留倉 <i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <div class="indicator-val">-- 口</div>
+                    <div class="indicator-diag neutral">載入中...</div>
+                </div>
+                <div class="indicator-card neutral" id="ind-usd-twd">
+                    <div class="indicator-header">新台幣匯率 <i class="fa-solid fa-money-bill-transfer"></i></div>
+                    <div class="indicator-val">--</div>
+                    <div class="indicator-diag neutral">載入中...</div>
+                </div>
+                <div class="indicator-card neutral" id="ind-ndc-score">
+                    <div class="indicator-header">國發會景氣燈號 <i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="indicator-val">-- 分</div>
+                    <div class="indicator-diag neutral">載入中...</div>
+                </div>
+                <div class="indicator-card neutral" id="ind-us-10y">
+                    <div class="indicator-header">美債 10Y 殖利率 <i class="fa-solid fa-percent"></i></div>
+                    <div class="indicator-val">--%</div>
+                    <div class="indicator-diag neutral">載入中...</div>
+                </div>
+            </div>
+
+            <!-- Report Section -->
+            <div class="card glass-card">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+                    <h4 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-file-invoice" style="color: #00f2fe;"></i> AI 總經與籌碼策略報告 (週報/月報)</h4>
+                    <div style="display: flex; gap: 0.8rem;">
+                        <a href="/api/download/reports/market_compass_report_latest.md" class="btn btn-long" id="btn-download-compass-md" style="height: 34px; padding: 0.4rem 1rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none;">
+                            <i class="fa-solid fa-download"></i> 下載最新週報 (Markdown)
+                        </a>
+                    </div>
+                </div>
+                <div class="report-markdown-view" id="compass-report-content">
+                    📢 正在讀取大盤總經風向儀報告，請稍候...
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 7: Chip Horse Radar -->
+        <section id="chip-horse" class="tab-pane">
+            <div class="control-panel card glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">
+                <div class="control-row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <h4 style="margin: 0; color: #fff; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                        <i class="fa-solid fa-horse" style="color: #f39c12;"></i> 黑馬籌碼雷達 (主力吸籌 + 散戶清洗)
+                    </h4>
+                    <div style="display: flex; gap: 0.8rem; align-items: center;">
+                        <span class="dates-info" id="chip-horse-date-badge" style="font-size: 0.9rem; color: #a5a1b8; margin-right: 0.5rem;">數據日期: 加載中...</span>
+                        <button class="btn btn-primary" id="btn-refresh-chip-horse" style="height: 38px;">
+                            <i class="fa-solid fa-arrows-rotate"></i> 重新載入名單
+                        </button>
+                        <button class="btn btn-long" id="btn-run-chip-horse-crawler" style="height: 38px; background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);">
+                            <i class="fa-solid fa-play"></i> 手動下載篩選 (每週六)
+                        </button>
+                        <a href="/api/download/reports/chip_horse_screener_latest.csv" class="btn btn-margin" id="btn-download-chip-csv" style="height: 38px; background: linear-gradient(135deg, #2ed573 0%, #20bf6b 100%); color: white; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; font-size: 0.9rem; font-weight: bold; border-radius: 8px;">
+                            <i class="fa-solid fa-file-csv"></i> 下載名單 (CSV)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card glass-card">
+                <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+                    <h4 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-list-ol"></i> 本期黑馬股篩選清單 (大戶增+散戶減+股東人數降)</h4>
+                </div>
+                <div class="table-container">
+                    <table class="data-table" id="table-chip-horse">
+                        <thead>
+                            <tr>
+                                <th>個股代號</th>
+                                <th>個股名稱</th>
+                                <th>最新收盤價</th>
+                                <th>千張大戶比% (本期/一週前/兩週前)</th>
+                                <th>大戶兩週變動</th>
+                                <th>400張以下散戶% (本期/一週前/兩週前)</th>
+                                <th>總股東人數 (本期/一週前/兩週前)</th>
+                                <th>股東兩週變動</th>
+                                <th>法人連買 (外資/投信)</th>
+                                <th>AI 診斷</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-chip-horse-body">
+                            <tr>
+                                <td colspan="11" class="text-center" style="padding: 2rem 0;">正在載入黑馬籌碼名單...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 9: Individual Stock IR Reader & Position-Adding Analyst -->
+        <section id="stock-analysis" class="tab-pane">
+            <div class="control-panel card glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: space-between;">
+                    <h4 style="margin: 0; color: #fff; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                        <i class="fa-solid fa-file-invoice-dollar" style="color: #00cec9;"></i> 個股研究與法說會簡報 AI 加碼評估
+                    </h4>
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <input type="text" id="analysis-stock-code" placeholder="請輸入台股代號 (例: 2330)" style="width: 220px; padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff; outline: none; font-size: 0.9rem;">
+                        <button class="btn btn-primary" id="btn-run-analysis" style="height: 38px; background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);">
+                            <i class="fa-solid fa-magnifying-glass"></i> 開始分析
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error message container -->
+            <div id="analysis-error-message" class="card glass-card text-center" style="display: none; padding: 1.5rem; border-top: 4px solid #ff4757; color: #ff4757; font-weight: bold; margin-bottom: 1.5rem;">
+                <!-- Error text injected here -->
+            </div>
+
+            <!-- Main stock metrics grid -->
+            <div class="strategy-row" id="analysis-dashboard-grid" style="display: none; margin-bottom: 1.5rem;">
+                
+                <!-- Card 1: price target range -->
+                <div class="card glass-card strategy-card" style="border-top: 4px solid #00cec9; flex: 1;">
+                    <div class="card-header">
+                        <span class="strategy-badge" style="background: rgba(0, 206, 201, 0.15); color: #00cec9;">市場估值</span>
+                        <h3 id="analysis-company-name-title">公司名稱 (股票代號)</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem; margin: 1rem 0;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">目前股價：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-current-price">- 元</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">券商共識評等：</span>
+                            <span style="font-weight: bold;" id="analysis-rating-badge">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">納入統計券商數：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-analysts-count">- 家</span>
+                        </div>
+                        <!-- Range bar -->
+                        <div style="margin-top: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #a5a1b8; margin-bottom: 0.2rem;">
+                                <span id="analysis-price-low">最低: -</span>
+                                <span id="analysis-price-high">最高: -</span>
+                            </div>
+                            <div class="price-range-bar-bg" style="height: 10px; background: rgba(255,255,255,0.08); border-radius: 5px; position: relative; overflow: visible;">
+                                <div class="price-range-bar-fill" id="analysis-price-range-fill" style="height: 100%; background: linear-gradient(90deg, #00cec9, #0984e3); border-radius: 5px; width: 0%;"></div>
+                                <div class="price-range-bar-pin" id="analysis-price-pin" style="position: absolute; top: -4px; width: 18px; height: 18px; background: #fff; border: 3px solid #00cec9; border-radius: 50%; left: 0%; transform: translateX(-50%); box-shadow: 0 0 10px rgba(0,206,201,0.5); cursor: pointer;" title="目前股價位置"></div>
+                            </div>
+                            <div style="text-align: center; margin-top: 0.8rem; font-size: 0.9rem; font-weight: bold;" id="analysis-price-mean-desc">
+                                平均目標價: - 元 (潛在漲幅: -)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: latest revenue data -->
+                <div class="card glass-card strategy-card" style="border-top: 4px solid #0984e3; flex: 1;">
+                    <div class="card-header">
+                        <span class="strategy-badge" style="background: rgba(9, 132, 227, 0.15); color: #0984e3;">營收動能</span>
+                        <h3 id="analysis-revenue-title">最新月份營收動能</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.8rem; margin: 1rem 0;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">資料年月：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-revenue-ym">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">當月營業收入：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-revenue-val">- 元</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">營收月增率 (MoM)：</span>
+                            <span style="font-weight: bold;" id="analysis-revenue-mom">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">營收年增率 (YoY)：</span>
+                            <span style="font-weight: bold;" id="analysis-revenue-yoy">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                            <span style="color: #a5a1b8;">累計營收年增率：</span>
+                            <span style="font-weight: bold;" id="analysis-revenue-ytd-yoy">-</span>
+                        </div>
+                        <div style="font-size: 0.85rem; color: #a5a1b8; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.5rem; min-height: 40px;">
+                            <span style="font-weight: bold; color: #fff;">原因備註：</span>
+                            <span id="analysis-revenue-remark">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: briefing details and local documents list -->
+                <div class="card glass-card strategy-card" style="border-top: 4px solid #a29bfe; flex: 1.2;">
+                    <div class="card-header">
+                        <span class="strategy-badge" style="background: rgba(162, 155, 254, 0.15); color: #a29bfe;">法說與歷史簡報</span>
+                        <h3>最新官方法說會申報</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                            <span style="color: #a5a1b8;">會議日期：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-briefing-date">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                            <span style="color: #a5a1b8;">會議時間：</span>
+                            <span style="font-weight: bold; color: #fff;" id="analysis-briefing-time">-</span>
+                        </div>
+                        <div style="font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="color: #a5a1b8;">開會地點：</span>
+                            <span style="font-weight: bold; color: #fff; font-size: 0.85rem; line-height: 1.3;" id="analysis-briefing-location">-</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.4rem;">
+                            <span style="color: #a5a1b8;">最新簡報檔：</span>
+                            <span style="font-weight: bold;" id="analysis-briefing-pdf">-</span>
+                        </div>
+                        
+                        <!-- History file list container (Sorted by Date Descending) -->
+                        <div style="margin-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.4rem;">
+                            <div style="font-size: 0.85rem; color: #a5a1b8; font-weight: bold; margin-bottom: 0.3rem; display: flex; justify-content: space-between;">
+                                <span>歷史法說會分析報告 (按日期降序)</span>
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div id="analysis-history-reports-container" style="max-height: 90px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.3rem;">
+                                <!-- Historical items will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading panel -->
+            <div id="analysis-loading-panel" class="card glass-card text-center" style="display: none; padding: 3rem 0;">
+                <div class="loader-spinner" style="border: 4px solid rgba(255,255,255,0.1); border-top: 4px solid #00cec9; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1.5rem auto;"></div>
+                <h4 style="color: #fff; margin-bottom: 0.5rem;" id="analysis-loading-status">正在啟動 Selenium 搜尋觀測站法說會簡報...</h4>
+                <p style="color: #a5a1b8; font-size: 0.9rem; max-width: 500px; margin: 0 auto;">此操作包含無頭瀏覽器模擬點擊與大數據檢索，首次載入需要約 10~15 秒，請耐心等候。</p>
+            </div>
+
+            <!-- AI diagnosis report panel -->
+            <div class="card glass-card" id="analysis-report-card" style="display: none;">
+                <div class="card-header console-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1.2rem;">
+                    <h4 style="margin: 0; display: flex; align-items: center; gap: 0.5rem; font-size: 1.15rem; color: #fff;">
+                        <i class="fa-solid fa-wand-magic-sparkles" style="color: #00cec9;"></i> AI 財經助理法說會加碼評估報告
+                    </h4>
+                    <button class="btn btn-long" id="btn-regenerate-ai-report" style="height: 34px; font-size: 0.85rem; background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);">
+                        <i class="fa-solid fa-arrows-rotate"></i> 重新下載並生成診斷
+                    </button>
+                </div>
+                <!-- Report Content container -->
+                <div class="console-body" id="analysis-report-body" style="background: rgba(0,0,0,0.25); color: #e2dfeb; padding: 1.5rem; line-height: 1.7; font-size: 0.98rem; max-height: 600px; overflow-y: auto;">
+                    <!-- Markdown text will be injected and formatted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 8: Alert Monitor -->
+        <section id="alert-monitor" class="tab-pane">
+            <div class="control-panel card glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">
+                <div class="control-row">
+                    <h4 style="margin: 0; color: #fff; display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem;">
+                        <i class="fa-solid fa-bell" style="color: #ff4757;"></i> 即時股價與籌碼 Telegram 監控警示
+                    </h4>
+                </div>
+            </div>
+
+            <div class="alert-monitor-grid">
+                <!-- Left: Form -->
+                <div class="card glass-card" style="padding: 1.5rem;">
+                    <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1.2rem;">
+                        <h4 style="margin: 0; color: #fff;"><i class="fa-solid fa-plus"></i> 新增自選股監控規則</h4>
+                    </div>
+                    <form id="form-add-alert" onsubmit="return false;">
+                        <div class="form-group-alert">
+                            <label for="alert-stock-code"><i class="fa-solid fa-barcode"></i> 股票代號 (必填)：</label>
+                            <input type="text" id="alert-stock-code" class="alert-input" placeholder="例如: 2330" required>
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-stock-name"><i class="fa-solid fa-font"></i> 股票名稱 (選填)：</label>
+                            <input type="text" id="alert-stock-name" class="alert-input" placeholder="例如: 台積電">
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-price-above"><i class="fa-solid fa-circle-chevron-up" style="color: #2ecc71;"></i> 價格突破上限 (元) ：</label>
+                            <input type="number" id="alert-price-above" class="alert-input" placeholder="高於此價格觸發 (留空不監控)" step="0.1">
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-price-below"><i class="fa-solid fa-circle-chevron-down" style="color: #e74c3c;"></i> 價格跌破下限 (元) ：</label>
+                            <input type="number" id="alert-price-below" class="alert-input" placeholder="低於此價格觸發 (留空不監控)" step="0.1">
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-inst-buy"><i class="fa-solid fa-users" style="color: #3498db;"></i> 單日外資或投信買超破 (張)：</label>
+                            <input type="number" id="alert-inst-buy" class="alert-input" placeholder="例如: 5000 代表五千張">
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-volume-ratio"><i class="fa-solid fa-fire" style="color: #e67e22;"></i> 今日成交量比大於 (倍) ：</label>
+                            <input type="number" id="alert-volume-ratio" class="alert-input" placeholder="例如: 2.0 代表暴增2倍" step="0.1">
+                        </div>
+                        <div class="form-group-alert">
+                            <label for="alert-volume-spike"><i class="fa-solid fa-bolt" style="color: #ffa502;"></i> 5分鐘量能突然爆發大於 (倍) ：</label>
+                            <input type="number" id="alert-volume-spike" class="alert-input" placeholder="例如: 3.0 代表突增3倍" step="0.1">
+                        </div>
+                        <button type="submit" class="btn-full-width" id="btn-save-alert-rule" style="margin-top: 0.5rem;">
+                            <i class="fa-solid fa-check"></i> 建立並啟用監控規則
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Rule List -->
+                <div class="card glass-card" style="padding: 1.5rem;">
+                    <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem; margin-bottom: 1.2rem;">
+                        <h4 style="margin: 0; color: #fff;"><i class="fa-solid fa-clipboard-list"></i> 當前運作中的自選股監控列表</h4>
+                    </div>
+                    <div id="alert-rules-list" style="max-height: 550px; overflow-y: auto; padding-right: 0.5rem;">
+                        <div class="text-center" style="color: #8c82ab; padding: 3rem 0;">讀取監控規則中...</div>
+                    </div>
                 </div>
             </div>
         </section>
         </main>
     </div>
+
+    <!-- Modal for Individual Stock AI Diagnosis -->
+    <div class="modal-overlay" id="modal-diagnosis-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-diag-title">個股籌碼 AI 診斷評估</h3>
+                <button class="modal-close" id="modal-diag-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-diag-body">
+                <!-- Diagnosis content will be loaded here -->
+            </div>
+        </div>
+    </div>
     
-    <script src="app.js?v=3.1"></script>
+    <script src="app.js?v=3.2"></script>
 </body>
 </html>

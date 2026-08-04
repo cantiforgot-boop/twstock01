@@ -1,5 +1,16 @@
 [
   {
+    "filename": "台股資券診斷_20260803.csv",
+    "date": "2026/08/03",
+    "raw_date": "20260803",
+    "strategy": "籌碼",
+    "strategy_type": "margin",
+    "count": 423,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
     "filename": "台股空方精選_20260731.csv",
     "date": "2026/07/31",
     "raw_date": "20260731",
@@ -118,6 +129,17 @@
     "count": 5,
     "t5": "N/A",
     "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "台股資券診斷_20260716.csv",
+    "date": "2026/07/16",
+    "raw_date": "20260716",
+    "strategy": "籌碼",
+    "strategy_type": "margin",
+    "count": 239,
+    "t5": "+1.36%",
+    "t10": "-12.56%",
     "t20": "N/A"
   },
   {

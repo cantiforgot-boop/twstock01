@@ -12,9 +12,9 @@
     "win_rate": 0.0
   },
   "margin": {
-    "runs": 1,
-    "stocks": 34,
-    "t5_avg": 0.0,
-    "win_rate": 0.0
+    "runs": 3,
+    "stocks": 696,
+    "t5_avg": 1.36,
+    "win_rate": 62.3
   }
 }

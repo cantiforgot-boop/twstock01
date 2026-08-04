@@ -2,2541 +2,3216 @@
   "status": "success",
   "data": [
     {
-      "code": "1459",
-      "name": "聯發",
+      "code": "6578",
+      "name": "達邦蛋白",
+      "market": "OTC",
+      "price": 18.25,
+      "volume": 1178.3,
+      "avg_volume": 262.1,
+      "ratio": 4.5
+    },
+    {
+      "code": "2492",
+      "name": "華新科",
       "market": "TSE",
-      "price": 12.8,
-      "volume": 220.7,
-      "avg_volume": 44.1,
-      "ratio": 5.0
+      "price": 259.5,
+      "volume": 33209.2,
+      "avg_volume": 8617.9,
+      "ratio": 3.85
     },
     {
-      "code": "5516",
-      "name": "5516",
+      "code": "3489",
+      "name": "森寶",
       "market": "OTC",
-      "price": 11.9,
-      "volume": 399.8,
-      "avg_volume": 105.2,
-      "ratio": 3.8
+      "price": 25.65,
+      "volume": 2715.7,
+      "avg_volume": 708.5,
+      "ratio": 3.83
     },
     {
-      "code": "2434",
-      "name": "統懋",
+      "code": "6768",
+      "name": "志強-KY",
       "market": "TSE",
-      "price": 49.75,
-      "volume": 1885.1,
-      "avg_volume": 517.9,
-      "ratio": 3.64
+      "price": 64.9,
+      "volume": 3697.9,
+      "avg_volume": 1050.6,
+      "ratio": 3.52
     },
     {
-      "code": "6240",
-      "name": "6240",
+      "code": "6616",
+      "name": "特昇-KY",
       "market": "OTC",
-      "price": 19.8,
-      "volume": 189.0,
-      "avg_volume": 52.7,
-      "ratio": 3.59
+      "price": 8.78,
+      "volume": 122.3,
+      "avg_volume": 36.9,
+      "ratio": 3.32
     },
     {
-      "code": "2064",
-      "name": "2064",
+      "code": "3484",
+      "name": "崧騰",
       "market": "OTC",
-      "price": 11.65,
-      "volume": 272.6,
-      "avg_volume": 76.7,
-      "ratio": 3.55
+      "price": 51.2,
+      "volume": 1847.0,
+      "avg_volume": 572.6,
+      "ratio": 3.23
     },
     {
-      "code": "6109",
-      "name": "6109",
+      "code": "3048",
+      "name": "益登",
+      "market": "TSE",
+      "price": 55.8,
+      "volume": 16229.0,
+      "avg_volume": 5459.0,
+      "ratio": 2.97
+    },
+    {
+      "code": "3516",
+      "name": "亞帝歐",
       "market": "OTC",
-      "price": 11.2,
-      "volume": 1479.1,
-      "avg_volume": 423.1,
-      "ratio": 3.5
+      "price": 27.0,
+      "volume": 160.5,
+      "avg_volume": 55.9,
+      "ratio": 2.87
+    },
+    {
+      "code": "1617",
+      "name": "榮星",
+      "market": "TSE",
+      "price": 18.25,
+      "volume": 3942.4,
+      "avg_volume": 1409.8,
+      "ratio": 2.8
+    },
+    {
+      "code": "6666",
+      "name": "羅麗芬-KY",
+      "market": "TSE",
+      "price": 42.7,
+      "volume": 119.3,
+      "avg_volume": 43.3,
+      "ratio": 2.76
     },
     {
       "code": "3090",
       "name": "日電貿",
       "market": "TSE",
-      "price": 137.5,
-      "volume": 10137.1,
-      "avg_volume": 3606.3,
-      "ratio": 2.81
+      "price": 144.0,
+      "volume": 20058.8,
+      "avg_volume": 7407.5,
+      "ratio": 2.71
     },
     {
-      "code": "6877",
-      "name": "6877",
-      "market": "OTC",
-      "price": 120.5,
-      "volume": 450.7,
-      "avg_volume": 164.4,
-      "ratio": 2.74
-    },
-    {
-      "code": "4126",
-      "name": "4126",
-      "market": "OTC",
-      "price": 75.6,
-      "volume": 180.6,
-      "avg_volume": 69.4,
-      "ratio": 2.6
-    },
-    {
-      "code": "3438",
-      "name": "3438",
-      "market": "OTC",
-      "price": 57.1,
-      "volume": 498.3,
-      "avg_volume": 206.6,
-      "ratio": 2.41
-    },
-    {
-      "code": "7715",
-      "name": "7715",
-      "market": "OTC",
-      "price": 34.45,
-      "volume": 344.3,
-      "avg_volume": 145.7,
-      "ratio": 2.36
-    },
-    {
-      "code": "8096",
-      "name": "8096",
-      "market": "OTC",
-      "price": 115.0,
-      "volume": 9571.0,
-      "avg_volume": 4117.5,
-      "ratio": 2.32
-    },
-    {
-      "code": "3229",
-      "name": "晟鈦",
+      "code": "6201",
+      "name": "亞弘電",
       "market": "TSE",
-      "price": 47.45,
-      "volume": 1984.0,
-      "avg_volume": 872.2,
-      "ratio": 2.27
+      "price": 49.15,
+      "volume": 180.2,
+      "avg_volume": 67.5,
+      "ratio": 2.67
     },
     {
-      "code": "8383",
-      "name": "8383",
-      "market": "OTC",
-      "price": 68.3,
-      "volume": 5426.7,
-      "avg_volume": 2431.1,
-      "ratio": 2.23
-    },
-    {
-      "code": "2480",
-      "name": "敦陽科",
+      "code": "7705",
+      "name": "三商餐飲",
       "market": "TSE",
-      "price": 152.5,
-      "volume": 2012.7,
-      "avg_volume": 924.1,
+      "price": 30.0,
+      "volume": 124.3,
+      "avg_volume": 52.1,
+      "ratio": 2.39
+    },
+    {
+      "code": "2399",
+      "name": "映泰",
+      "market": "TSE",
+      "price": 39.85,
+      "volume": 9374.4,
+      "avg_volume": 3989.2,
+      "ratio": 2.35
+    },
+    {
+      "code": "1459",
+      "name": "聯發",
+      "market": "TSE",
+      "price": 12.95,
+      "volume": 186.6,
+      "avg_volume": 79.7,
+      "ratio": 2.34
+    },
+    {
+      "code": "6168",
+      "name": "宏齊",
+      "market": "TSE",
+      "price": 24.5,
+      "volume": 6727.0,
+      "avg_volume": 2956.4,
+      "ratio": 2.28
+    },
+    {
+      "code": "5287",
+      "name": "數字",
+      "market": "OTC",
+      "price": 145.5,
+      "volume": 200.4,
+      "avg_volume": 87.8,
+      "ratio": 2.28
+    },
+    {
+      "code": "2393",
+      "name": "億光",
+      "market": "TSE",
+      "price": 57.5,
+      "volume": 11550.9,
+      "avg_volume": 5119.7,
+      "ratio": 2.26
+    },
+    {
+      "code": "1413",
+      "name": "宏洲",
+      "market": "TSE",
+      "price": 9.24,
+      "volume": 291.6,
+      "avg_volume": 131.8,
+      "ratio": 2.21
+    },
+    {
+      "code": "4171",
+      "name": "瑞基",
+      "market": "OTC",
+      "price": 16.7,
+      "volume": 464.6,
+      "avg_volume": 212.9,
       "ratio": 2.18
     },
     {
-      "code": "5471",
-      "name": "松翰",
+      "code": "9802",
+      "name": "鈺齊-KY",
       "market": "TSE",
-      "price": 54.5,
-      "volume": 6106.5,
-      "avg_volume": 2955.1,
-      "ratio": 2.07
+      "price": 69.7,
+      "volume": 2045.8,
+      "avg_volume": 946.4,
+      "ratio": 2.16
     },
     {
-      "code": "6292",
-      "name": "6292",
+      "code": "2301",
+      "name": "光寶科",
+      "market": "TSE",
+      "price": 252.0,
+      "volume": 66978.0,
+      "avg_volume": 31118.8,
+      "ratio": 2.15
+    },
+    {
+      "code": "5356",
+      "name": "協益",
       "market": "OTC",
-      "price": 55.9,
-      "volume": 451.0,
-      "avg_volume": 218.4,
+      "price": 24.55,
+      "volume": 285.3,
+      "avg_volume": 132.4,
+      "ratio": 2.15
+    },
+    {
+      "code": "2064",
+      "name": "晉椿",
+      "market": "OTC",
+      "price": 11.7,
+      "volume": 258.5,
+      "avg_volume": 124.5,
+      "ratio": 2.08
+    },
+    {
+      "code": "8110",
+      "name": "華東",
+      "market": "TSE",
+      "price": 43.45,
+      "volume": 16555.4,
+      "avg_volume": 8022.0,
       "ratio": 2.06
     },
     {
-      "code": "6570",
-      "name": "6570",
+      "code": "8182",
+      "name": "加高",
       "market": "OTC",
-      "price": 53.7,
-      "volume": 349.2,
-      "avg_volume": 170.9,
+      "price": 38.8,
+      "volume": 4137.8,
+      "avg_volume": 2012.3,
+      "ratio": 2.06
+    },
+    {
+      "code": "3711",
+      "name": "日月光投控",
+      "market": "TSE",
+      "price": 585.0,
+      "volume": 52165.3,
+      "avg_volume": 25540.3,
       "ratio": 2.04
-    },
-    {
-      "code": "5355",
-      "name": "5355",
-      "market": "OTC",
-      "price": 5.53,
-      "volume": 167.1,
-      "avg_volume": 82.8,
-      "ratio": 2.02
-    },
-    {
-      "code": "6183",
-      "name": "關貿",
-      "market": "TSE",
-      "price": 91.9,
-      "volume": 101.9,
-      "avg_volume": 50.9,
-      "ratio": 2.0
-    },
-    {
-      "code": "7842",
-      "name": "7842",
-      "market": "OTC",
-      "price": 76.0,
-      "volume": 127.3,
-      "avg_volume": 64.3,
-      "ratio": 1.98
-    },
-    {
-      "code": "4556",
-      "name": "4556",
-      "market": "OTC",
-      "price": 83.1,
-      "volume": 1380.9,
-      "avg_volume": 706.6,
-      "ratio": 1.95
-    },
-    {
-      "code": "6831",
-      "name": "邁科",
-      "market": "TSE",
-      "price": 565.0,
-      "volume": 1854.9,
-      "avg_volume": 967.5,
-      "ratio": 1.92
-    },
-    {
-      "code": "3004",
-      "name": "豐達科",
-      "market": "TSE",
-      "price": 124.5,
-      "volume": 1788.8,
-      "avg_volume": 934.8,
-      "ratio": 1.91
-    },
-    {
-      "code": "8092",
-      "name": "8092",
-      "market": "OTC",
-      "price": 13.35,
-      "volume": 152.2,
-      "avg_volume": 80.1,
-      "ratio": 1.9
-    },
-    {
-      "code": "2233",
-      "name": "宇隆",
-      "market": "TSE",
-      "price": 193.5,
-      "volume": 2364.4,
-      "avg_volume": 1255.0,
-      "ratio": 1.88
-    },
-    {
-      "code": "7769",
-      "name": "鴻勁",
-      "market": "TSE",
-      "price": 6425.0,
-      "volume": 1997.0,
-      "avg_volume": 1061.7,
-      "ratio": 1.88
-    },
-    {
-      "code": "2348",
-      "name": "海悅",
-      "market": "TSE",
-      "price": 74.4,
-      "volume": 1266.3,
-      "avg_volume": 682.2,
-      "ratio": 1.86
-    },
-    {
-      "code": "9943",
-      "name": "好樂迪",
-      "market": "TSE",
-      "price": 51.5,
-      "volume": 310.3,
-      "avg_volume": 170.1,
-      "ratio": 1.82
-    },
-    {
-      "code": "5490",
-      "name": "5490",
-      "market": "OTC",
-      "price": 35.4,
-      "volume": 5113.3,
-      "avg_volume": 2807.3,
-      "ratio": 1.82
     },
     {
       "code": "2425",
       "name": "承啟",
       "market": "TSE",
-      "price": 48.3,
-      "volume": 10073.8,
-      "avg_volume": 5705.4,
-      "ratio": 1.77
+      "price": 50.2,
+      "volume": 16713.9,
+      "avg_volume": 8240.9,
+      "ratio": 2.03
     },
     {
-      "code": "1737",
-      "name": "臺鹽",
+      "code": "6834",
+      "name": "天二科技",
       "market": "TSE",
-      "price": 32.25,
-      "volume": 271.6,
-      "avg_volume": 155.0,
-      "ratio": 1.75
+      "price": 93.5,
+      "volume": 6329.0,
+      "avg_volume": 3110.2,
+      "ratio": 2.03
     },
     {
-      "code": "3520",
-      "name": "3520",
-      "market": "OTC",
-      "price": 18.3,
-      "volume": 2389.6,
-      "avg_volume": 1366.1,
-      "ratio": 1.75
-    },
-    {
-      "code": "6127",
-      "name": "6127",
-      "market": "OTC",
-      "price": 48.25,
-      "volume": 7257.7,
-      "avg_volume": 4172.5,
-      "ratio": 1.74
-    },
-    {
-      "code": "6743",
-      "name": "安普新",
+      "code": "5007",
+      "name": "三星",
       "market": "TSE",
-      "price": 30.3,
-      "volume": 718.8,
-      "avg_volume": 421.3,
-      "ratio": 1.71
+      "price": 56.5,
+      "volume": 108.1,
+      "avg_volume": 53.7,
+      "ratio": 2.01
     },
     {
-      "code": "4174",
-      "name": "4174",
-      "market": "OTC",
-      "price": 26.85,
-      "volume": 799.9,
-      "avg_volume": 467.0,
-      "ratio": 1.71
-    },
-    {
-      "code": "1742",
-      "name": "1742",
-      "market": "OTC",
-      "price": 18.5,
-      "volume": 236.2,
-      "avg_volume": 140.1,
-      "ratio": 1.69
-    },
-    {
-      "code": "2006",
-      "name": "東和鋼鐵",
+      "code": "3450",
+      "name": "聯鈞",
       "market": "TSE",
-      "price": 80.4,
-      "volume": 7916.2,
-      "avg_volume": 4699.0,
-      "ratio": 1.68
+      "price": 432.0,
+      "volume": 18812.8,
+      "avg_volume": 9444.6,
+      "ratio": 1.99
+    },
+    {
+      "code": "6907",
+      "name": "雅特力-KY",
+      "market": "OTC",
+      "price": 181.5,
+      "volume": 2225.7,
+      "avg_volume": 1128.4,
+      "ratio": 1.97
+    },
+    {
+      "code": "4953",
+      "name": "緯致",
+      "market": "OTC",
+      "price": 129.0,
+      "volume": 706.4,
+      "avg_volume": 360.8,
+      "ratio": 1.96
+    },
+    {
+      "code": "6208",
+      "name": "日揚",
+      "market": "OTC",
+      "price": 84.4,
+      "volume": 900.8,
+      "avg_volume": 463.0,
+      "ratio": 1.95
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "market": "TSE",
+      "price": 162.0,
+      "volume": 14091.3,
+      "avg_volume": 7310.6,
+      "ratio": 1.93
+    },
+    {
+      "code": "6933",
+      "name": "AMAX-KY",
+      "market": "TSE",
+      "price": 169.0,
+      "volume": 1119.1,
+      "avg_volume": 581.2,
+      "ratio": 1.93
+    },
+    {
+      "code": "3176",
+      "name": "基亞",
+      "market": "OTC",
+      "price": 31.65,
+      "volume": 628.8,
+      "avg_volume": 326.2,
+      "ratio": 1.93
+    },
+    {
+      "code": "3006",
+      "name": "晶豪科",
+      "market": "TSE",
+      "price": 217.5,
+      "volume": 16627.1,
+      "avg_volume": 8696.2,
+      "ratio": 1.91
+    },
+    {
+      "code": "4108",
+      "name": "懷特",
+      "market": "TSE",
+      "price": 11.2,
+      "volume": 464.0,
+      "avg_volume": 242.9,
+      "ratio": 1.91
+    },
+    {
+      "code": "3221",
+      "name": "台嘉碩",
+      "market": "OTC",
+      "price": 47.0,
+      "volume": 8021.1,
+      "avg_volume": 4234.2,
+      "ratio": 1.89
     },
     {
       "code": "7750",
       "name": "新代",
       "market": "TSE",
-      "price": 2235.0,
-      "volume": 425.6,
-      "avg_volume": 253.2,
-      "ratio": 1.68
+      "price": 2330.0,
+      "volume": 649.8,
+      "avg_volume": 346.8,
+      "ratio": 1.87
     },
     {
-      "code": "6907",
-      "name": "6907",
+      "code": "7842",
+      "name": "天能綠電",
       "market": "OTC",
-      "price": 176.0,
-      "volume": 1302.6,
-      "avg_volume": 784.7,
-      "ratio": 1.66
+      "price": 76.0,
+      "volume": 183.6,
+      "avg_volume": 98.9,
+      "ratio": 1.86
     },
     {
-      "code": "1303",
-      "name": "南亞",
-      "market": "TSE",
-      "price": 165.0,
-      "volume": 144696.1,
-      "avg_volume": 87914.7,
-      "ratio": 1.65
-    },
-    {
-      "code": "8150",
-      "name": "南茂",
-      "market": "TSE",
-      "price": 77.6,
-      "volume": 48646.0,
-      "avg_volume": 29439.1,
-      "ratio": 1.65
-    },
-    {
-      "code": "1219",
-      "name": "福壽",
-      "market": "TSE",
-      "price": 11.0,
-      "volume": 1415.9,
-      "avg_volume": 862.6,
-      "ratio": 1.64
-    },
-    {
-      "code": "4128",
-      "name": "4128",
+      "code": "8358",
+      "name": "金居",
       "market": "OTC",
-      "price": 14.5,
-      "volume": 3151.2,
-      "avg_volume": 1956.5,
-      "ratio": 1.61
+      "price": 341.0,
+      "volume": 24840.8,
+      "avg_volume": 13339.8,
+      "ratio": 1.86
     },
     {
-      "code": "6790",
-      "name": "永豐實",
+      "code": "3234",
+      "name": "光環",
+      "market": "OTC",
+      "price": 113.0,
+      "volume": 2298.0,
+      "avg_volume": 1242.0,
+      "ratio": 1.85
+    },
+    {
+      "code": "8048",
+      "name": "德勝",
+      "market": "OTC",
+      "price": 54.0,
+      "volume": 616.3,
+      "avg_volume": 336.2,
+      "ratio": 1.83
+    },
+    {
+      "code": "2488",
+      "name": "漢平",
       "market": "TSE",
-      "price": 38.2,
-      "volume": 354.1,
-      "avg_volume": 220.6,
-      "ratio": 1.6
+      "price": 48.25,
+      "volume": 405.1,
+      "avg_volume": 222.7,
+      "ratio": 1.82
     },
     {
-      "code": "3490",
-      "name": "3490",
+      "code": "3374",
+      "name": "精材",
       "market": "OTC",
-      "price": 28.4,
-      "volume": 1994.5,
-      "avg_volume": 1244.0,
-      "ratio": 1.6
+      "price": 309.5,
+      "volume": 17784.2,
+      "avg_volume": 9986.9,
+      "ratio": 1.78
     },
     {
-      "code": "8088",
-      "name": "8088",
+      "code": "8097",
+      "name": "常珵",
       "market": "OTC",
-      "price": 45.5,
-      "volume": 1291.0,
-      "avg_volume": 811.6,
-      "ratio": 1.59
+      "price": 54.4,
+      "volume": 223.2,
+      "avg_volume": 125.5,
+      "ratio": 1.78
+    },
+    {
+      "code": "6516",
+      "name": "勤崴國際",
+      "market": "OTC",
+      "price": 58.4,
+      "volume": 100.2,
+      "avg_volume": 56.7,
+      "ratio": 1.77
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "market": "TSE",
+      "price": 897.0,
+      "volume": 13575.7,
+      "avg_volume": 7721.7,
+      "ratio": 1.76
+    },
+    {
+      "code": "2820",
+      "name": "華票",
+      "market": "TSE",
+      "price": 16.3,
+      "volume": 5284.8,
+      "avg_volume": 3002.2,
+      "ratio": 1.76
+    },
+    {
+      "code": "1718",
+      "name": "中纖",
+      "market": "TSE",
+      "price": 9.99,
+      "volume": 70593.1,
+      "avg_volume": 40511.0,
+      "ratio": 1.74
+    },
+    {
+      "code": "2481",
+      "name": "強茂",
+      "market": "TSE",
+      "price": 130.0,
+      "volume": 33163.3,
+      "avg_volume": 19097.5,
+      "ratio": 1.74
+    },
+    {
+      "code": "6435",
+      "name": "大中",
+      "market": "OTC",
+      "price": 251.5,
+      "volume": 1538.4,
+      "avg_volume": 886.1,
+      "ratio": 1.74
+    },
+    {
+      "code": "7792",
+      "name": "安葆",
+      "market": "OTC",
+      "price": 198.0,
+      "volume": 342.9,
+      "avg_volume": 198.0,
+      "ratio": 1.73
     },
     {
       "code": "2478",
       "name": "大毅",
       "market": "TSE",
-      "price": 118.0,
-      "volume": 7210.1,
-      "avg_volume": 4575.6,
-      "ratio": 1.58
+      "price": 121.5,
+      "volume": 10560.7,
+      "avg_volume": 6141.7,
+      "ratio": 1.72
     },
     {
-      "code": "2596",
-      "name": "2596",
-      "market": "OTC",
-      "price": 30.45,
-      "volume": 110.0,
-      "avg_volume": 69.6,
-      "ratio": 1.58
-    },
-    {
-      "code": "6432",
-      "name": "6432",
-      "market": "OTC",
-      "price": 71.5,
-      "volume": 5640.5,
-      "avg_volume": 3574.4,
-      "ratio": 1.58
-    },
-    {
-      "code": "1215",
-      "name": "卜蜂",
+      "code": "3016",
+      "name": "嘉晶",
       "market": "TSE",
-      "price": 103.0,
-      "volume": 1924.1,
-      "avg_volume": 1227.5,
-      "ratio": 1.57
+      "price": 94.8,
+      "volume": 10605.8,
+      "avg_volume": 6166.5,
+      "ratio": 1.72
     },
     {
-      "code": "3234",
-      "name": "3234",
+      "code": "5475",
+      "name": "德宏",
       "market": "OTC",
-      "price": 104.0,
-      "volume": 1516.1,
-      "avg_volume": 966.6,
-      "ratio": 1.57
+      "price": 134.0,
+      "volume": 3969.9,
+      "avg_volume": 2314.6,
+      "ratio": 1.72
     },
     {
-      "code": "3489",
-      "name": "3489",
+      "code": "4908",
+      "name": "前鼎",
       "market": "OTC",
-      "price": 24.3,
-      "volume": 303.5,
-      "avg_volume": 193.1,
-      "ratio": 1.57
+      "price": 150.5,
+      "volume": 2797.5,
+      "avg_volume": 1633.8,
+      "ratio": 1.71
     },
     {
-      "code": "7760",
-      "name": "享溫馨",
+      "code": "3037",
+      "name": "欣興",
       "market": "TSE",
-      "price": 33.8,
-      "volume": 144.2,
-      "avg_volume": 92.2,
+      "price": 924.0,
+      "volume": 53794.1,
+      "avg_volume": 31586.2,
+      "ratio": 1.7
+    },
+    {
+      "code": "1608",
+      "name": "華榮",
+      "market": "TSE",
+      "price": 34.25,
+      "volume": 5651.1,
+      "avg_volume": 3336.4,
+      "ratio": 1.69
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "market": "TSE",
+      "price": 120.0,
+      "volume": 117960.5,
+      "avg_volume": 70271.7,
+      "ratio": 1.68
+    },
+    {
+      "code": "2258",
+      "name": "鴻華先進-創",
+      "market": "TSE",
+      "price": 30.0,
+      "volume": 1264.3,
+      "avg_volume": 754.1,
+      "ratio": 1.68
+    },
+    {
+      "code": "2012",
+      "name": "春雨",
+      "market": "TSE",
+      "price": 15.35,
+      "volume": 105.9,
+      "avg_volume": 63.4,
+      "ratio": 1.67
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "market": "TSE",
+      "price": 436.0,
+      "volume": 119621.6,
+      "avg_volume": 71590.3,
+      "ratio": 1.67
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "market": "TSE",
+      "price": 310.0,
+      "volume": 21143.9,
+      "avg_volume": 12702.2,
+      "ratio": 1.66
+    },
+    {
+      "code": "3581",
+      "name": "博磊",
+      "market": "OTC",
+      "price": 111.5,
+      "volume": 1087.6,
+      "avg_volume": 658.4,
+      "ratio": 1.65
+    },
+    {
+      "code": "8042",
+      "name": "金山電",
+      "market": "OTC",
+      "price": 110.5,
+      "volume": 6235.0,
+      "avg_volume": 3787.3,
+      "ratio": 1.65
+    },
+    {
+      "code": "2441",
+      "name": "超豐",
+      "market": "TSE",
+      "price": 119.5,
+      "volume": 13913.8,
+      "avg_volume": 8509.5,
+      "ratio": 1.64
+    },
+    {
+      "code": "2327",
+      "name": "國巨*",
+      "market": "TSE",
+      "price": 566.0,
+      "volume": 86024.1,
+      "avg_volume": 53581.3,
+      "ratio": 1.61
+    },
+    {
+      "code": "4716",
+      "name": "大立",
+      "market": "OTC",
+      "price": 17.55,
+      "volume": 1440.1,
+      "avg_volume": 895.6,
+      "ratio": 1.61
+    },
+    {
+      "code": "5425",
+      "name": "台半",
+      "market": "OTC",
+      "price": 81.6,
+      "volume": 14777.0,
+      "avg_volume": 9185.2,
+      "ratio": 1.61
+    },
+    {
+      "code": "4967",
+      "name": "十銓",
+      "market": "TSE",
+      "price": 256.5,
+      "volume": 9529.7,
+      "avg_volume": 5970.9,
+      "ratio": 1.6
+    },
+    {
+      "code": "8043",
+      "name": "蜜望實",
+      "market": "OTC",
+      "price": 137.5,
+      "volume": 8573.0,
+      "avg_volume": 5369.2,
+      "ratio": 1.6
+    },
+    {
+      "code": "4557",
+      "name": "永新-KY",
+      "market": "TSE",
+      "price": 49.65,
+      "volume": 110.1,
+      "avg_volume": 69.4,
+      "ratio": 1.59
+    },
+    {
+      "code": "2028",
+      "name": "威致",
+      "market": "TSE",
+      "price": 15.2,
+      "volume": 193.8,
+      "avg_volume": 122.4,
+      "ratio": 1.58
+    },
+    {
+      "code": "9907",
+      "name": "統一實",
+      "market": "TSE",
+      "price": 14.75,
+      "volume": 7994.0,
+      "avg_volume": 5067.7,
+      "ratio": 1.58
+    },
+    {
+      "code": "4536",
+      "name": "拓凱",
+      "market": "TSE",
+      "price": 166.0,
+      "volume": 600.5,
+      "avg_volume": 382.9,
+      "ratio": 1.57
+    },
+    {
+      "code": "4939",
+      "name": "亞電",
+      "market": "OTC",
+      "price": 56.3,
+      "volume": 16057.5,
+      "avg_volume": 10216.2,
+      "ratio": 1.57
+    },
+    {
+      "code": "6585",
+      "name": "鼎基",
+      "market": "TSE",
+      "price": 117.5,
+      "volume": 795.6,
+      "avg_volume": 510.0,
       "ratio": 1.56
     },
     {
       "code": "6206",
       "name": "飛捷",
       "market": "TSE",
-      "price": 133.5,
-      "volume": 4599.4,
-      "avg_volume": 2969.0,
+      "price": 140.0,
+      "volume": 5724.9,
+      "avg_volume": 3692.2,
       "ratio": 1.55
     },
     {
-      "code": "2303",
-      "name": "聯電",
+      "code": "6830",
+      "name": "汎銓",
       "market": "TSE",
-      "price": 118.0,
-      "volume": 372263.4,
-      "avg_volume": 241415.0,
-      "ratio": 1.54
-    },
-    {
-      "code": "4164",
-      "name": "承業醫",
-      "market": "TSE",
-      "price": 25.7,
-      "volume": 1129.7,
-      "avg_volume": 731.4,
-      "ratio": 1.54
-    },
-    {
-      "code": "2450",
-      "name": "神腦",
-      "market": "TSE",
-      "price": 28.65,
-      "volume": 235.7,
-      "avg_volume": 153.9,
-      "ratio": 1.53
-    },
-    {
-      "code": "6533",
-      "name": "晶心科",
-      "market": "TSE",
-      "price": 231.5,
-      "volume": 1730.8,
-      "avg_volume": 1139.9,
-      "ratio": 1.52
-    },
-    {
-      "code": "6834",
-      "name": "天二科技",
-      "market": "TSE",
-      "price": 87.7,
-      "volume": 3371.3,
-      "avg_volume": 2211.5,
-      "ratio": 1.52
-    },
-    {
-      "code": "2743",
-      "name": "2743",
-      "market": "OTC",
-      "price": 56.4,
-      "volume": 166.0,
-      "avg_volume": 109.3,
-      "ratio": 1.52
-    },
-    {
-      "code": "5392",
-      "name": "5392",
-      "market": "OTC",
-      "price": 41.55,
-      "volume": 2756.5,
-      "avg_volume": 1816.6,
-      "ratio": 1.52
-    },
-    {
-      "code": "7714",
-      "name": "7714",
-      "market": "OTC",
-      "price": 141.0,
-      "volume": 572.6,
-      "avg_volume": 376.1,
-      "ratio": 1.52
-    },
-    {
-      "code": "2302",
-      "name": "麗正",
-      "market": "TSE",
-      "price": 40.0,
-      "volume": 4858.7,
-      "avg_volume": 3226.4,
-      "ratio": 1.51
-    },
-    {
-      "code": "2393",
-      "name": "億光",
-      "market": "TSE",
-      "price": 61.5,
-      "volume": 4920.9,
-      "avg_volume": 3256.5,
-      "ratio": 1.51
+      "price": 403.0,
+      "volume": 3019.8,
+      "avg_volume": 1945.2,
+      "ratio": 1.55
     },
     {
       "code": "2049",
       "name": "上銀",
       "market": "TSE",
       "price": 332.0,
-      "volume": 4391.1,
-      "avg_volume": 2931.5,
-      "ratio": 1.5
+      "volume": 5559.9,
+      "avg_volume": 3604.1,
+      "ratio": 1.54
     },
     {
-      "code": "6202",
-      "name": "盛群",
+      "code": "2454",
+      "name": "聯發科",
       "market": "TSE",
-      "price": 58.7,
-      "volume": 7473.1,
-      "avg_volume": 5021.6,
-      "ratio": 1.49
+      "price": 3865.0,
+      "volume": 16817.7,
+      "avg_volume": 10938.3,
+      "ratio": 1.54
     },
     {
-      "code": "6770",
-      "name": "力積電",
-      "market": "TSE",
-      "price": 54.7,
-      "volume": 207129.7,
-      "avg_volume": 138680.8,
-      "ratio": 1.49
-    },
-    {
-      "code": "3303",
-      "name": "3303",
-      "market": "OTC",
-      "price": 56.3,
-      "volume": 1316.3,
-      "avg_volume": 882.5,
-      "ratio": 1.49
-    },
-    {
-      "code": "6669",
-      "name": "緯穎",
-      "market": "TSE",
-      "price": 5925.0,
-      "volume": 3343.5,
-      "avg_volume": 2268.8,
-      "ratio": 1.47
-    },
-    {
-      "code": "6259",
-      "name": "6259",
-      "market": "OTC",
-      "price": 30.2,
-      "volume": 986.6,
-      "avg_volume": 670.6,
-      "ratio": 1.47
-    },
-    {
-      "code": "6469",
-      "name": "6469",
-      "market": "OTC",
-      "price": 77.4,
-      "volume": 985.4,
-      "avg_volume": 671.2,
-      "ratio": 1.47
-    },
-    {
-      "code": "6996",
-      "name": "6996",
+      "code": "3551",
+      "name": "世禾",
       "market": "OTC",
       "price": 175.0,
-      "volume": 161.4,
-      "avg_volume": 109.5,
-      "ratio": 1.47
+      "volume": 1156.8,
+      "avg_volume": 749.6,
+      "ratio": 1.54
     },
     {
-      "code": "2908",
-      "name": "特力",
+      "code": "3653",
+      "name": "健策",
       "market": "TSE",
-      "price": 21.7,
-      "volume": 358.1,
-      "avg_volume": 245.6,
-      "ratio": 1.46
+      "price": 4145.0,
+      "volume": 2777.1,
+      "avg_volume": 1816.3,
+      "ratio": 1.53
     },
     {
-      "code": "2546",
-      "name": "根基",
+      "code": "6805",
+      "name": "富世達",
       "market": "TSE",
-      "price": 104.0,
-      "volume": 443.9,
-      "avg_volume": 306.6,
-      "ratio": 1.45
+      "price": 1590.0,
+      "volume": 1912.5,
+      "avg_volume": 1251.0,
+      "ratio": 1.53
     },
     {
-      "code": "1733",
-      "name": "五鼎",
-      "market": "TSE",
-      "price": 32.4,
-      "volume": 399.0,
-      "avg_volume": 278.0,
-      "ratio": 1.44
-    },
-    {
-      "code": "5324",
-      "name": "5324",
+      "code": "4116",
+      "name": "明基醫",
       "market": "OTC",
-      "price": 12.1,
-      "volume": 595.5,
-      "avg_volume": 413.0,
-      "ratio": 1.44
+      "price": 39.4,
+      "volume": 106.3,
+      "avg_volume": 69.5,
+      "ratio": 1.53
     },
     {
-      "code": "1477",
-      "name": "聚陽",
-      "market": "TSE",
-      "price": 218.5,
-      "volume": 2727.0,
-      "avg_volume": 1905.9,
-      "ratio": 1.43
-    },
-    {
-      "code": "5487",
-      "name": "5487",
+      "code": "4207",
+      "name": "環泰",
       "market": "OTC",
-      "price": 29.4,
-      "volume": 115.1,
-      "avg_volume": 80.4,
-      "ratio": 1.43
+      "price": 19.95,
+      "volume": 106.5,
+      "avg_volume": 69.6,
+      "ratio": 1.53
     },
     {
-      "code": "2515",
-      "name": "中工",
+      "code": "2504",
+      "name": "國產",
       "market": "TSE",
-      "price": 12.05,
-      "volume": 10990.4,
-      "avg_volume": 7736.7,
-      "ratio": 1.42
+      "price": 30.75,
+      "volume": 4260.7,
+      "avg_volume": 2812.0,
+      "ratio": 1.52
     },
     {
-      "code": "6155",
-      "name": "鈞寶",
+      "code": "4722",
+      "name": "國精化",
       "market": "TSE",
-      "price": 53.5,
-      "volume": 3781.8,
-      "avg_volume": 2667.0,
-      "ratio": 1.42
+      "price": 203.0,
+      "volume": 2154.3,
+      "avg_volume": 1414.2,
+      "ratio": 1.52
     },
     {
-      "code": "2230",
-      "name": "2230",
-      "market": "OTC",
-      "price": 23.25,
-      "volume": 287.1,
-      "avg_volume": 202.2,
-      "ratio": 1.42
-    },
-    {
-      "code": "6488",
-      "name": "6488",
-      "market": "OTC",
-      "price": 866.0,
-      "volume": 15354.9,
-      "avg_volume": 10806.0,
-      "ratio": 1.42
-    },
-    {
-      "code": "4540",
-      "name": "全球傳動",
+      "code": "6947",
+      "name": "台鎔科技",
       "market": "TSE",
-      "price": 49.0,
-      "volume": 2041.3,
-      "avg_volume": 1450.3,
-      "ratio": 1.41
-    },
-    {
-      "code": "6465",
-      "name": "6465",
-      "market": "OTC",
-      "price": 47.7,
-      "volume": 413.1,
-      "avg_volume": 293.5,
-      "ratio": 1.41
-    },
-    {
-      "code": "6263",
-      "name": "6263",
-      "market": "OTC",
-      "price": 155.5,
-      "volume": 262.7,
-      "avg_volume": 188.2,
-      "ratio": 1.4
-    },
-    {
-      "code": "6525",
-      "name": "捷敏-KY",
-      "market": "TSE",
-      "price": 127.5,
-      "volume": 3102.9,
-      "avg_volume": 2232.5,
-      "ratio": 1.39
-    },
-    {
-      "code": "8210",
-      "name": "勤誠",
-      "market": "TSE",
-      "price": 1095.0,
-      "volume": 1442.3,
-      "avg_volume": 1039.9,
-      "ratio": 1.39
-    },
-    {
-      "code": "2501",
-      "name": "國建",
-      "market": "TSE",
-      "price": 22.65,
-      "volume": 3778.1,
-      "avg_volume": 2746.3,
-      "ratio": 1.38
-    },
-    {
-      "code": "2362",
-      "name": "藍天",
-      "market": "TSE",
-      "price": 44.75,
-      "volume": 1636.7,
-      "avg_volume": 1195.0,
-      "ratio": 1.37
-    },
-    {
-      "code": "2033",
-      "name": "佳大",
-      "market": "TSE",
-      "price": 15.5,
-      "volume": 143.0,
-      "avg_volume": 105.2,
-      "ratio": 1.36
-    },
-    {
-      "code": "2305",
-      "name": "全友",
-      "market": "TSE",
-      "price": 31.95,
-      "volume": 13310.0,
-      "avg_volume": 9837.1,
-      "ratio": 1.35
-    },
-    {
-      "code": "4958",
-      "name": "臻鼎-KY",
-      "market": "TSE",
-      "price": 421.5,
-      "volume": 54625.7,
-      "avg_volume": 40594.2,
-      "ratio": 1.35
-    },
-    {
-      "code": "6449",
-      "name": "鈺邦",
-      "market": "TSE",
-      "price": 225.0,
-      "volume": 1683.6,
-      "avg_volume": 1249.0,
-      "ratio": 1.35
-    },
-    {
-      "code": "6504",
-      "name": "南六",
-      "market": "TSE",
-      "price": 39.65,
-      "volume": 125.2,
-      "avg_volume": 92.5,
-      "ratio": 1.35
-    },
-    {
-      "code": "9946",
-      "name": "三發地產",
-      "market": "TSE",
-      "price": 17.8,
-      "volume": 376.5,
-      "avg_volume": 279.1,
-      "ratio": 1.35
-    },
-    {
-      "code": "2376",
-      "name": "技嘉",
-      "market": "TSE",
-      "price": 324.5,
-      "volume": 10882.4,
-      "avg_volume": 8142.4,
-      "ratio": 1.34
-    },
-    {
-      "code": "1608",
-      "name": "華榮",
-      "market": "TSE",
-      "price": 31.15,
-      "volume": 3532.3,
-      "avg_volume": 2657.6,
-      "ratio": 1.33
-    },
-    {
-      "code": "3704",
-      "name": "合勤控",
-      "market": "TSE",
-      "price": 45.35,
-      "volume": 3215.3,
-      "avg_volume": 2425.4,
-      "ratio": 1.33
-    },
-    {
-      "code": "2345",
-      "name": "智邦",
-      "market": "TSE",
-      "price": 2335.0,
-      "volume": 3722.1,
-      "avg_volume": 2829.5,
-      "ratio": 1.32
-    },
-    {
-      "code": "2449",
-      "name": "京元電子",
-      "market": "TSE",
-      "price": 233.5,
-      "volume": 31640.1,
-      "avg_volume": 24086.0,
-      "ratio": 1.31
-    },
-    {
-      "code": "3231",
-      "name": "緯創",
-      "market": "TSE",
-      "price": 186.0,
-      "volume": 162186.0,
-      "avg_volume": 123723.7,
-      "ratio": 1.31
-    },
-    {
-      "code": "3402",
-      "name": "3402",
-      "market": "OTC",
-      "price": 132.0,
-      "volume": 1055.5,
-      "avg_volume": 805.6,
-      "ratio": 1.31
-    },
-    {
-      "code": "4989",
-      "name": "榮科",
-      "market": "TSE",
-      "price": 61.1,
-      "volume": 8075.9,
-      "avg_volume": 6201.6,
-      "ratio": 1.3
-    },
-    {
-      "code": "6415",
-      "name": "矽力*-KY",
-      "market": "TSE",
-      "price": 424.5,
-      "volume": 6743.8,
-      "avg_volume": 5194.3,
-      "ratio": 1.3
-    },
-    {
-      "code": "8011",
-      "name": "台通",
-      "market": "TSE",
-      "price": 16.75,
-      "volume": 1213.6,
-      "avg_volume": 930.4,
-      "ratio": 1.3
-    },
-    {
-      "code": "8261",
-      "name": "富鼎",
-      "market": "TSE",
-      "price": 171.0,
-      "volume": 11005.4,
-      "avg_volume": 8451.4,
-      "ratio": 1.3
-    },
-    {
-      "code": "3537",
-      "name": "3537",
-      "market": "OTC",
-      "price": 51.1,
-      "volume": 996.6,
-      "avg_volume": 764.4,
-      "ratio": 1.3
-    },
-    {
-      "code": "6147",
-      "name": "6147",
-      "market": "OTC",
-      "price": 135.5,
-      "volume": 41190.1,
-      "avg_volume": 31616.0,
-      "ratio": 1.3
-    },
-    {
-      "code": "2383",
-      "name": "台光電",
-      "market": "TSE",
-      "price": 4980.0,
-      "volume": 4179.3,
-      "avg_volume": 3236.5,
-      "ratio": 1.29
-    },
-    {
-      "code": "3042",
-      "name": "晶技",
-      "market": "TSE",
-      "price": 154.5,
-      "volume": 19933.1,
-      "avg_volume": 15396.0,
-      "ratio": 1.29
-    },
-    {
-      "code": "3236",
-      "name": "3236",
-      "market": "OTC",
-      "price": 42.6,
-      "volume": 4666.4,
-      "avg_volume": 3607.4,
-      "ratio": 1.29
-    },
-    {
-      "code": "4743",
-      "name": "4743",
-      "market": "OTC",
-      "price": 45.45,
-      "volume": 3463.2,
-      "avg_volume": 2678.8,
-      "ratio": 1.29
-    },
-    {
-      "code": "6023",
-      "name": "6023",
-      "market": "OTC",
-      "price": 84.7,
-      "volume": 973.4,
-      "avg_volume": 753.4,
-      "ratio": 1.29
-    },
-    {
-      "code": "7734",
-      "name": "7734",
-      "market": "OTC",
-      "price": 3690.0,
-      "volume": 290.3,
-      "avg_volume": 224.8,
-      "ratio": 1.29
-    },
-    {
-      "code": "8059",
-      "name": "8059",
-      "market": "OTC",
-      "price": 15.05,
-      "volume": 207.5,
-      "avg_volume": 161.1,
-      "ratio": 1.29
-    },
-    {
-      "code": "2820",
-      "name": "華票",
-      "market": "TSE",
-      "price": 16.5,
-      "volume": 2925.1,
-      "avg_volume": 2287.3,
-      "ratio": 1.28
-    },
-    {
-      "code": "3349",
-      "name": "3349",
-      "market": "OTC",
-      "price": 22.25,
-      "volume": 140.0,
-      "avg_volume": 109.4,
-      "ratio": 1.28
-    },
-    {
-      "code": "6115",
-      "name": "鎰勝",
-      "market": "TSE",
-      "price": 45.25,
-      "volume": 274.2,
-      "avg_volume": 215.8,
-      "ratio": 1.27
-    },
-    {
-      "code": "4123",
-      "name": "4123",
-      "market": "OTC",
-      "price": 38.5,
-      "volume": 2599.1,
-      "avg_volume": 2041.9,
-      "ratio": 1.27
-    },
-    {
-      "code": "2834",
-      "name": "臺企銀",
-      "market": "TSE",
-      "price": 18.2,
-      "volume": 79981.8,
-      "avg_volume": 63409.0,
-      "ratio": 1.26
-    },
-    {
-      "code": "3665",
-      "name": "貿聯-KY",
-      "market": "TSE",
-      "price": 2095.0,
-      "volume": 4814.8,
-      "avg_volume": 3822.1,
-      "ratio": 1.26
-    },
-    {
-      "code": "5228",
-      "name": "5228",
-      "market": "OTC",
-      "price": 38.4,
-      "volume": 559.7,
-      "avg_volume": 444.3,
-      "ratio": 1.26
-    },
-    {
-      "code": "6203",
-      "name": "6203",
-      "market": "OTC",
-      "price": 64.3,
-      "volume": 217.8,
-      "avg_volume": 172.9,
-      "ratio": 1.26
-    },
-    {
-      "code": "3141",
-      "name": "3141",
-      "market": "OTC",
-      "price": 70.5,
-      "volume": 932.8,
-      "avg_volume": 743.9,
-      "ratio": 1.25
-    },
-    {
-      "code": "3324",
-      "name": "3324",
-      "market": "OTC",
-      "price": 944.0,
-      "volume": 2901.3,
-      "avg_volume": 2319.2,
-      "ratio": 1.25
-    },
-    {
-      "code": "6617",
-      "name": "6617",
-      "market": "OTC",
-      "price": 79.9,
-      "volume": 451.1,
-      "avg_volume": 359.7,
-      "ratio": 1.25
-    },
-    {
-      "code": "5403",
-      "name": "5403",
-      "market": "OTC",
-      "price": 92.0,
-      "volume": 130.5,
-      "avg_volume": 105.5,
-      "ratio": 1.24
-    },
-    {
-      "code": "2535",
-      "name": "達欣工",
-      "market": "TSE",
-      "price": 89.4,
-      "volume": 542.1,
-      "avg_volume": 441.7,
-      "ratio": 1.23
-    },
-    {
-      "code": "6405",
-      "name": "悅城",
-      "market": "TSE",
-      "price": 36.1,
-      "volume": 1119.4,
-      "avg_volume": 907.5,
-      "ratio": 1.23
-    },
-    {
-      "code": "6548",
-      "name": "6548",
-      "market": "OTC",
-      "price": 70.2,
-      "volume": 7419.6,
-      "avg_volume": 6010.8,
-      "ratio": 1.23
-    },
-    {
-      "code": "1413",
-      "name": "宏洲",
-      "market": "TSE",
-      "price": 9.46,
-      "volume": 160.1,
-      "avg_volume": 130.7,
-      "ratio": 1.22
-    },
-    {
-      "code": "6227",
-      "name": "6227",
-      "market": "OTC",
-      "price": 121.0,
-      "volume": 701.5,
-      "avg_volume": 574.7,
-      "ratio": 1.22
-    },
-    {
-      "code": "6683",
-      "name": "6683",
-      "market": "OTC",
-      "price": 1015.0,
-      "volume": 265.4,
-      "avg_volume": 217.7,
-      "ratio": 1.22
+      "price": 76.7,
+      "volume": 903.7,
+      "avg_volume": 596.0,
+      "ratio": 1.52
     },
     {
       "code": "2204",
       "name": "中華",
       "market": "TSE",
+      "price": 50.6,
+      "volume": 2367.3,
+      "avg_volume": 1570.9,
+      "ratio": 1.51
+    },
+    {
+      "code": "6526",
+      "name": "達發",
+      "market": "TSE",
+      "price": 575.0,
+      "volume": 940.5,
+      "avg_volume": 622.0,
+      "ratio": 1.51
+    },
+    {
+      "code": "3704",
+      "name": "合勤控",
+      "market": "TSE",
+      "price": 45.9,
+      "volume": 4280.2,
+      "avg_volume": 2862.6,
+      "ratio": 1.5
+    },
+    {
+      "code": "5516",
+      "name": "雙喜",
+      "market": "OTC",
+      "price": 11.7,
+      "volume": 213.2,
+      "avg_volume": 141.7,
+      "ratio": 1.5
+    },
+    {
+      "code": "3443",
+      "name": "創意",
+      "market": "TSE",
+      "price": 4145.0,
+      "volume": 3001.7,
+      "avg_volume": 2020.1,
+      "ratio": 1.49
+    },
+    {
+      "code": "4903",
+      "name": "聯光通",
+      "market": "OTC",
+      "price": 39.0,
+      "volume": 3326.4,
+      "avg_volume": 2238.4,
+      "ratio": 1.49
+    },
+    {
+      "code": "7717",
+      "name": "萊德光電-KY",
+      "market": "OTC",
+      "price": 413.0,
+      "volume": 380.6,
+      "avg_volume": 256.2,
+      "ratio": 1.49
+    },
+    {
+      "code": "1457",
+      "name": "宜進",
+      "market": "TSE",
+      "price": 14.3,
+      "volume": 159.6,
+      "avg_volume": 108.0,
+      "ratio": 1.48
+    },
+    {
+      "code": "3266",
+      "name": "昇陽",
+      "market": "TSE",
+      "price": 13.65,
+      "volume": 103.1,
+      "avg_volume": 69.8,
+      "ratio": 1.48
+    },
+    {
+      "code": "2102",
+      "name": "泰豐",
+      "market": "TSE",
+      "price": 18.85,
+      "volume": 539.6,
+      "avg_volume": 366.6,
+      "ratio": 1.47
+    },
+    {
+      "code": "2536",
+      "name": "宏普",
+      "market": "TSE",
+      "price": 17.95,
+      "volume": 1267.7,
+      "avg_volume": 859.5,
+      "ratio": 1.47
+    },
+    {
+      "code": "2493",
+      "name": "揚博",
+      "market": "TSE",
+      "price": 220.0,
+      "volume": 4951.6,
+      "avg_volume": 3385.0,
+      "ratio": 1.46
+    },
+    {
+      "code": "2514",
+      "name": "龍邦",
+      "market": "TSE",
+      "price": 12.55,
+      "volume": 151.6,
+      "avg_volume": 104.0,
+      "ratio": 1.46
+    },
+    {
+      "code": "7795",
+      "name": "長廣",
+      "market": "TSE",
+      "price": 418.0,
+      "volume": 1231.5,
+      "avg_volume": 842.5,
+      "ratio": 1.46
+    },
+    {
+      "code": "1218",
+      "name": "泰山",
+      "market": "TSE",
+      "price": 15.25,
+      "volume": 3083.8,
+      "avg_volume": 2129.3,
+      "ratio": 1.45
+    },
+    {
+      "code": "3363",
+      "name": "上詮",
+      "market": "OTC",
+      "price": 563.0,
+      "volume": 4056.2,
+      "avg_volume": 2804.9,
+      "ratio": 1.45
+    },
+    {
+      "code": "2023",
+      "name": "燁輝",
+      "market": "TSE",
+      "price": 13.65,
+      "volume": 2915.8,
+      "avg_volume": 2031.1,
+      "ratio": 1.44
+    },
+    {
+      "code": "3494",
+      "name": "誠研",
+      "market": "TSE",
+      "price": 6.88,
+      "volume": 144.1,
+      "avg_volume": 100.2,
+      "ratio": 1.44
+    },
+    {
+      "code": "8131",
+      "name": "福懋科",
+      "market": "TSE",
+      "price": 66.0,
+      "volume": 8427.9,
+      "avg_volume": 5879.7,
+      "ratio": 1.43
+    },
+    {
+      "code": "1109",
+      "name": "信大",
+      "market": "TSE",
+      "price": 13.6,
+      "volume": 228.1,
+      "avg_volume": 160.9,
+      "ratio": 1.42
+    },
+    {
+      "code": "3312",
+      "name": "弘憶股",
+      "market": "TSE",
+      "price": 48.6,
+      "volume": 1998.6,
+      "avg_volume": 1412.0,
+      "ratio": 1.42
+    },
+    {
+      "code": "6530",
+      "name": "創威",
+      "market": "OTC",
+      "price": 74.7,
+      "volume": 924.0,
+      "avg_volume": 648.6,
+      "ratio": 1.42
+    },
+    {
+      "code": "6592",
+      "name": "和潤企業",
+      "market": "TSE",
+      "price": 59.9,
+      "volume": 850.3,
+      "avg_volume": 604.5,
+      "ratio": 1.41
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "market": "TSE",
+      "price": 2320.0,
+      "volume": 4436.9,
+      "avg_volume": 3178.6,
+      "ratio": 1.4
+    },
+    {
+      "code": "3217",
+      "name": "優群",
+      "market": "OTC",
+      "price": 141.0,
+      "volume": 1120.6,
+      "avg_volume": 802.7,
+      "ratio": 1.4
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "market": "TSE",
+      "price": 198.5,
+      "volume": 47219.5,
+      "avg_volume": 34022.2,
+      "ratio": 1.39
+    },
+    {
+      "code": "2484",
+      "name": "希華",
+      "market": "TSE",
+      "price": 69.9,
+      "volume": 30155.9,
+      "avg_volume": 21675.2,
+      "ratio": 1.39
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "market": "TSE",
+      "price": 131.0,
+      "volume": 3222.3,
+      "avg_volume": 2311.0,
+      "ratio": 1.39
+    },
+    {
+      "code": "6446",
+      "name": "藥華藥",
+      "market": "TSE",
+      "price": 1215.0,
+      "volume": 4165.2,
+      "avg_volume": 2988.3,
+      "ratio": 1.39
+    },
+    {
+      "code": "8411",
+      "name": "福貞-KY",
+      "market": "TSE",
+      "price": 12.8,
+      "volume": 181.9,
+      "avg_volume": 131.1,
+      "ratio": 1.39
+    },
+    {
+      "code": "1805",
+      "name": "寶徠",
+      "market": "TSE",
+      "price": 9.7,
+      "volume": 179.0,
+      "avg_volume": 129.3,
+      "ratio": 1.38
+    },
+    {
+      "code": "2302",
+      "name": "麗正",
+      "market": "TSE",
+      "price": 41.9,
+      "volume": 5227.4,
+      "avg_volume": 3785.6,
+      "ratio": 1.38
+    },
+    {
+      "code": "2637",
+      "name": "慧洋-KY",
+      "market": "TSE",
+      "price": 83.9,
+      "volume": 3632.4,
+      "avg_volume": 2625.7,
+      "ratio": 1.38
+    },
+    {
+      "code": "7740",
+      "name": "熙特爾-創",
+      "market": "TSE",
+      "price": 153.0,
+      "volume": 230.6,
+      "avg_volume": 166.9,
+      "ratio": 1.38
+    },
+    {
+      "code": "6265",
+      "name": "方土昶",
+      "market": "OTC",
+      "price": 49.3,
+      "volume": 3884.3,
+      "avg_volume": 2814.4,
+      "ratio": 1.38
+    },
+    {
+      "code": "2059",
+      "name": "川湖",
+      "market": "TSE",
+      "price": 9495.0,
+      "volume": 865.9,
+      "avg_volume": 634.0,
+      "ratio": 1.37
+    },
+    {
+      "code": "3557",
+      "name": "嘉威",
+      "market": "TSE",
+      "price": 27.25,
+      "volume": 114.5,
+      "avg_volume": 83.7,
+      "ratio": 1.37
+    },
+    {
+      "code": "6274",
+      "name": "台燿",
+      "market": "OTC",
+      "price": 1340.0,
+      "volume": 8817.8,
+      "avg_volume": 6440.4,
+      "ratio": 1.37
+    },
+    {
+      "code": "8289",
+      "name": "泰藝",
+      "market": "OTC",
+      "price": 42.05,
+      "volume": 1345.0,
+      "avg_volume": 982.6,
+      "ratio": 1.37
+    },
+    {
+      "code": "2388",
+      "name": "威盛",
+      "market": "TSE",
+      "price": 80.3,
+      "volume": 8774.9,
+      "avg_volume": 6456.9,
+      "ratio": 1.36
+    },
+    {
+      "code": "2442",
+      "name": "新美齊",
+      "market": "TSE",
+      "price": 19.1,
+      "volume": 2650.8,
+      "avg_volume": 1945.5,
+      "ratio": 1.36
+    },
+    {
+      "code": "8021",
+      "name": "尖點",
+      "market": "TSE",
+      "price": 390.5,
+      "volume": 5308.8,
+      "avg_volume": 3890.3,
+      "ratio": 1.36
+    },
+    {
+      "code": "5487",
+      "name": "通泰",
+      "market": "OTC",
+      "price": 29.55,
+      "volume": 103.0,
+      "avg_volume": 75.8,
+      "ratio": 1.36
+    },
+    {
+      "code": "8431",
+      "name": "匯鑽科",
+      "market": "OTC",
       "price": 51.5,
-      "volume": 1592.2,
-      "avg_volume": 1318.1,
-      "ratio": 1.21
+      "volume": 542.6,
+      "avg_volume": 399.0,
+      "ratio": 1.36
     },
     {
-      "code": "6919",
-      "name": "康霈*",
+      "code": "6831",
+      "name": "邁科",
       "market": "TSE",
-      "price": 109.5,
-      "volume": 7503.0,
-      "avg_volume": 6188.4,
-      "ratio": 1.21
+      "price": 617.0,
+      "volume": 1700.1,
+      "avg_volume": 1259.7,
+      "ratio": 1.35
     },
     {
-      "code": "2201",
-      "name": "裕隆",
+      "code": "5371",
+      "name": "中光電",
+      "market": "OTC",
+      "price": 82.7,
+      "volume": 14831.4,
+      "avg_volume": 11007.1,
+      "ratio": 1.35
+    },
+    {
+      "code": "5392",
+      "name": "能率",
+      "market": "OTC",
+      "price": 42.35,
+      "volume": 2893.4,
+      "avg_volume": 2145.6,
+      "ratio": 1.35
+    },
+    {
+      "code": "6875",
+      "name": "國邑*",
+      "market": "OTC",
+      "price": 33.0,
+      "volume": 122.5,
+      "avg_volume": 90.5,
+      "ratio": 1.35
+    },
+    {
+      "code": "6186",
+      "name": "新潤",
+      "market": "OTC",
+      "price": 41.8,
+      "volume": 1492.9,
+      "avg_volume": 1113.1,
+      "ratio": 1.34
+    },
+    {
+      "code": "7709",
+      "name": "榮田",
+      "market": "OTC",
+      "price": 70.9,
+      "volume": 131.6,
+      "avg_volume": 98.0,
+      "ratio": 1.34
+    },
+    {
+      "code": "1709",
+      "name": "和益",
       "market": "TSE",
-      "price": 27.45,
-      "volume": 4505.2,
-      "avg_volume": 3753.5,
-      "ratio": 1.2
+      "price": 25.2,
+      "volume": 3897.4,
+      "avg_volume": 2923.9,
+      "ratio": 1.33
+    },
+    {
+      "code": "1809",
+      "name": "中釉",
+      "market": "TSE",
+      "price": 37.7,
+      "volume": 3010.4,
+      "avg_volume": 2259.2,
+      "ratio": 1.33
+    },
+    {
+      "code": "2527",
+      "name": "宏璟",
+      "market": "TSE",
+      "price": 42.55,
+      "volume": 1875.8,
+      "avg_volume": 1411.6,
+      "ratio": 1.33
+    },
+    {
+      "code": "4564",
+      "name": "元翎",
+      "market": "TSE",
+      "price": 16.0,
+      "volume": 2055.0,
+      "avg_volume": 1541.6,
+      "ratio": 1.33
+    },
+    {
+      "code": "4989",
+      "name": "榮科",
+      "market": "TSE",
+      "price": 67.2,
+      "volume": 9388.6,
+      "avg_volume": 7063.1,
+      "ratio": 1.33
+    },
+    {
+      "code": "3236",
+      "name": "千如",
+      "market": "OTC",
+      "price": 43.0,
+      "volume": 5703.3,
+      "avg_volume": 4303.7,
+      "ratio": 1.33
+    },
+    {
+      "code": "3490",
+      "name": "單井",
+      "market": "OTC",
+      "price": 28.4,
+      "volume": 1919.3,
+      "avg_volume": 1444.6,
+      "ratio": 1.33
+    },
+    {
+      "code": "6187",
+      "name": "萬潤",
+      "market": "OTC",
+      "price": 1090.0,
+      "volume": 2997.4,
+      "avg_volume": 2254.6,
+      "ratio": 1.33
+    },
+    {
+      "code": "1215",
+      "name": "卜蜂",
+      "market": "TSE",
+      "price": 103.5,
+      "volume": 1651.8,
+      "avg_volume": 1251.4,
+      "ratio": 1.32
+    },
+    {
+      "code": "3504",
+      "name": "揚明光",
+      "market": "TSE",
+      "price": 78.2,
+      "volume": 9138.4,
+      "avg_volume": 6929.8,
+      "ratio": 1.32
     },
     {
       "code": "6606",
       "name": "建德工業",
       "market": "TSE",
       "price": 26.1,
-      "volume": 188.8,
-      "avg_volume": 157.4,
-      "ratio": 1.2
+      "volume": 261.2,
+      "avg_volume": 198.6,
+      "ratio": 1.32
     },
     {
-      "code": "1714",
-      "name": "和桐",
+      "code": "1210",
+      "name": "大成",
       "market": "TSE",
-      "price": 14.35,
-      "volume": 18788.5,
-      "avg_volume": 15791.1,
-      "ratio": 1.19
+      "price": 55.5,
+      "volume": 4166.8,
+      "avg_volume": 3178.9,
+      "ratio": 1.31
     },
     {
-      "code": "2464",
-      "name": "盟立",
+      "code": "4526",
+      "name": "東台",
       "market": "TSE",
-      "price": 147.5,
-      "volume": 6352.9,
-      "avg_volume": 5325.5,
-      "ratio": 1.19
+      "price": 29.75,
+      "volume": 2869.2,
+      "avg_volume": 2184.4,
+      "ratio": 1.31
     },
     {
-      "code": "4912",
-      "name": "聯德控股-KY",
+      "code": "6451",
+      "name": "訊芯-KY",
       "market": "TSE",
-      "price": 86.6,
-      "volume": 470.8,
-      "avg_volume": 394.5,
-      "ratio": 1.19
+      "price": 391.0,
+      "volume": 5220.9,
+      "avg_volume": 3996.2,
+      "ratio": 1.31
     },
     {
-      "code": "5533",
-      "name": "皇鼎",
+      "code": "8222",
+      "name": "寶一",
       "market": "TSE",
-      "price": 14.0,
-      "volume": 185.2,
-      "avg_volume": 155.2,
-      "ratio": 1.19
+      "price": 36.75,
+      "volume": 1384.4,
+      "avg_volume": 1054.8,
+      "ratio": 1.31
     },
     {
-      "code": "6933",
-      "name": "AMAX-KY",
-      "market": "TSE",
-      "price": 154.0,
-      "volume": 513.6,
-      "avg_volume": 432.4,
-      "ratio": 1.19
-    },
-    {
-      "code": "6265",
-      "name": "6265",
+      "code": "3288",
+      "name": "點晶",
       "market": "OTC",
-      "price": 44.85,
-      "volume": 2816.5,
-      "avg_volume": 2375.0,
-      "ratio": 1.19
+      "price": 25.45,
+      "volume": 108.4,
+      "avg_volume": 82.5,
+      "ratio": 1.31
     },
     {
-      "code": "7777",
-      "name": "7777",
+      "code": "6204",
+      "name": "艾華",
       "market": "OTC",
-      "price": 38.65,
-      "volume": 1744.1,
-      "avg_volume": 1463.1,
-      "ratio": 1.19
+      "price": 73.7,
+      "volume": 251.5,
+      "avg_volume": 191.5,
+      "ratio": 1.31
     },
     {
-      "code": "8182",
-      "name": "8182",
+      "code": "6173",
+      "name": "信昌電",
       "market": "OTC",
-      "price": 37.3,
-      "volume": 1680.2,
-      "avg_volume": 1406.7,
-      "ratio": 1.19
+      "price": 164.5,
+      "volume": 1690.3,
+      "avg_volume": 1300.3,
+      "ratio": 1.3
     },
     {
-      "code": "2312",
-      "name": "金寶",
-      "market": "TSE",
-      "price": 31.75,
-      "volume": 24012.8,
-      "avg_volume": 20420.6,
-      "ratio": 1.18
-    },
-    {
-      "code": "2485",
-      "name": "兆赫",
-      "market": "TSE",
-      "price": 38.3,
-      "volume": 7197.0,
-      "avg_volume": 6077.0,
-      "ratio": 1.18
-    },
-    {
-      "code": "3583",
-      "name": "辛耘",
-      "market": "TSE",
-      "price": 670.0,
-      "volume": 1054.3,
-      "avg_volume": 890.2,
-      "ratio": 1.18
-    },
-    {
-      "code": "8112",
-      "name": "至上",
-      "market": "TSE",
-      "price": 81.4,
-      "volume": 16142.4,
-      "avg_volume": 13719.6,
-      "ratio": 1.18
-    },
-    {
-      "code": "9938",
-      "name": "百和",
-      "market": "TSE",
-      "price": 45.9,
-      "volume": 2761.1,
-      "avg_volume": 2336.8,
-      "ratio": 1.18
-    },
-    {
-      "code": "4127",
-      "name": "4127",
+      "code": "6290",
+      "name": "良維",
       "market": "OTC",
-      "price": 74.5,
-      "volume": 218.3,
-      "avg_volume": 185.1,
-      "ratio": 1.18
+      "price": 215.0,
+      "volume": 4321.7,
+      "avg_volume": 3316.4,
+      "ratio": 1.3
     },
     {
-      "code": "2472",
-      "name": "立隆電",
-      "market": "TSE",
-      "price": 230.5,
-      "volume": 5530.4,
-      "avg_volume": 4720.2,
-      "ratio": 1.17
-    },
-    {
-      "code": "4967",
-      "name": "十銓",
-      "market": "TSE",
-      "price": 240.0,
-      "volume": 5266.6,
-      "avg_volume": 4513.6,
-      "ratio": 1.17
-    },
-    {
-      "code": "5292",
-      "name": "華懋",
-      "market": "TSE",
-      "price": 161.0,
-      "volume": 170.6,
-      "avg_volume": 145.5,
-      "ratio": 1.17
-    },
-    {
-      "code": "5484",
-      "name": "慧友",
-      "market": "TSE",
-      "price": 40.4,
-      "volume": 325.2,
-      "avg_volume": 277.2,
-      "ratio": 1.17
-    },
-    {
-      "code": "1437",
-      "name": "勤益控",
-      "market": "TSE",
-      "price": 31.25,
-      "volume": 319.6,
-      "avg_volume": 275.2,
-      "ratio": 1.16
-    },
-    {
-      "code": "2029",
-      "name": "盛餘",
-      "market": "TSE",
-      "price": 20.45,
-      "volume": 358.7,
-      "avg_volume": 310.3,
-      "ratio": 1.16
-    },
-    {
-      "code": "3211",
-      "name": "3211",
+      "code": "8383",
+      "name": "千附",
       "market": "OTC",
-      "price": 309.0,
-      "volume": 7398.9,
-      "avg_volume": 6400.0,
-      "ratio": 1.16
+      "price": 69.9,
+      "volume": 3718.9,
+      "avg_volume": 2860.1,
+      "ratio": 1.3
     },
     {
-      "code": "3485",
-      "name": "3485",
-      "market": "OTC",
-      "price": 201.0,
-      "volume": 184.0,
-      "avg_volume": 158.8,
-      "ratio": 1.16
-    },
-    {
-      "code": "6486",
-      "name": "6486",
-      "market": "OTC",
-      "price": 73.6,
-      "volume": 161.4,
-      "avg_volume": 139.1,
-      "ratio": 1.16
-    },
-    {
-      "code": "8054",
-      "name": "8054",
-      "market": "OTC",
-      "price": 79.4,
-      "volume": 1512.2,
-      "avg_volume": 1303.1,
-      "ratio": 1.16
-    },
-    {
-      "code": "2375",
-      "name": "凱美",
+      "code": "2031",
+      "name": "新光鋼",
       "market": "TSE",
-      "price": 121.0,
-      "volume": 6884.5,
-      "avg_volume": 5993.9,
-      "ratio": 1.15
+      "price": 39.05,
+      "volume": 1143.7,
+      "avg_volume": 884.9,
+      "ratio": 1.29
     },
     {
-      "code": "3026",
-      "name": "禾伸堂",
+      "code": "2348",
+      "name": "海悅",
       "market": "TSE",
-      "price": 459.5,
-      "volume": 3234.5,
-      "avg_volume": 2809.5,
-      "ratio": 1.15
+      "price": 67.8,
+      "volume": 1056.8,
+      "avg_volume": 820.5,
+      "ratio": 1.29
     },
     {
-      "code": "3533",
-      "name": "嘉澤",
+      "code": "2545",
+      "name": "皇翔",
       "market": "TSE",
-      "price": 2005.0,
-      "volume": 1219.2,
-      "avg_volume": 1057.0,
-      "ratio": 1.15
+      "price": 32.5,
+      "volume": 431.8,
+      "avg_volume": 334.1,
+      "ratio": 1.29
     },
     {
-      "code": "5907",
-      "name": "大洋-KY",
+      "code": "4916",
+      "name": "事欣科",
       "market": "TSE",
-      "price": 5.0,
-      "volume": 615.9,
-      "avg_volume": 535.1,
-      "ratio": 1.15
-    },
-    {
-      "code": "6614",
-      "name": "資拓宏宇",
-      "market": "TSE",
-      "price": 35.9,
-      "volume": 115.4,
-      "avg_volume": 100.3,
-      "ratio": 1.15
-    },
-    {
-      "code": "9924",
-      "name": "福興",
-      "market": "TSE",
-      "price": 38.4,
-      "volume": 435.5,
-      "avg_volume": 380.0,
-      "ratio": 1.15
-    },
-    {
-      "code": "8299",
-      "name": "8299",
-      "market": "OTC",
-      "price": 1760.0,
-      "volume": 6120.8,
-      "avg_volume": 5343.7,
-      "ratio": 1.15
-    },
-    {
-      "code": "8436",
-      "name": "8436",
-      "market": "OTC",
-      "price": 113.0,
-      "volume": 499.0,
-      "avg_volume": 434.4,
-      "ratio": 1.15
-    },
-    {
-      "code": "1560",
-      "name": "中砂",
-      "market": "TSE",
-      "price": 671.0,
-      "volume": 1942.1,
-      "avg_volume": 1705.9,
-      "ratio": 1.14
-    },
-    {
-      "code": "4938",
-      "name": "和碩",
-      "market": "TSE",
-      "price": 86.6,
-      "volume": 12879.5,
-      "avg_volume": 11315.3,
-      "ratio": 1.14
-    },
-    {
-      "code": "5288",
-      "name": "豐祥-KY",
-      "market": "TSE",
-      "price": 189.5,
-      "volume": 241.4,
-      "avg_volume": 210.8,
-      "ratio": 1.14
-    },
-    {
-      "code": "5289",
-      "name": "5289",
-      "market": "OTC",
-      "price": 1385.0,
-      "volume": 2677.8,
-      "avg_volume": 2342.5,
-      "ratio": 1.14
-    },
-    {
-      "code": "6180",
-      "name": "6180",
-      "market": "OTC",
-      "price": 40.75,
-      "volume": 640.3,
-      "avg_volume": 560.8,
-      "ratio": 1.14
-    },
-    {
-      "code": "6284",
-      "name": "6284",
-      "market": "OTC",
-      "price": 76.0,
-      "volume": 1707.1,
-      "avg_volume": 1502.7,
-      "ratio": 1.14
-    },
-    {
-      "code": "8027",
-      "name": "8027",
-      "market": "OTC",
-      "price": 166.0,
-      "volume": 3819.5,
-      "avg_volume": 3344.0,
-      "ratio": 1.14
+      "price": 101.5,
+      "volume": 4922.7,
+      "avg_volume": 3802.2,
+      "ratio": 1.29
     },
     {
       "code": "1802",
       "name": "台玻",
       "market": "TSE",
-      "price": 47.55,
-      "volume": 31705.2,
-      "avg_volume": 27988.5,
-      "ratio": 1.13
+      "price": 52.3,
+      "volume": 40568.3,
+      "avg_volume": 31804.6,
+      "ratio": 1.28
     },
     {
-      "code": "2102",
-      "name": "泰豐",
+      "code": "2241",
+      "name": "艾姆勒",
       "market": "TSE",
-      "price": 19.25,
-      "volume": 423.9,
-      "avg_volume": 374.1,
-      "ratio": 1.13
+      "price": 34.6,
+      "volume": 1085.4,
+      "avg_volume": 850.9,
+      "ratio": 1.28
     },
     {
-      "code": "3545",
-      "name": "敦泰",
+      "code": "2546",
+      "name": "根基",
       "market": "TSE",
-      "price": 50.1,
-      "volume": 1731.2,
-      "avg_volume": 1536.0,
-      "ratio": 1.13
+      "price": 99.9,
+      "volume": 468.2,
+      "avg_volume": 367.2,
+      "ratio": 1.28
     },
     {
-      "code": "3653",
-      "name": "健策",
-      "market": "TSE",
-      "price": 3770.0,
-      "volume": 1819.2,
-      "avg_volume": 1610.1,
-      "ratio": 1.13
-    },
-    {
-      "code": "4755",
-      "name": "三福化",
-      "market": "TSE",
-      "price": 113.5,
-      "volume": 617.4,
-      "avg_volume": 546.1,
-      "ratio": 1.13
-    },
-    {
-      "code": "4771",
-      "name": "望隼",
-      "market": "TSE",
-      "price": 186.5,
-      "volume": 219.2,
-      "avg_volume": 193.2,
-      "ratio": 1.13
-    },
-    {
-      "code": "8422",
-      "name": "可寧衛*",
-      "market": "TSE",
-      "price": 26.8,
-      "volume": 11880.3,
-      "avg_volume": 10522.0,
-      "ratio": 1.13
-    },
-    {
-      "code": "2637",
-      "name": "慧洋-KY",
-      "market": "TSE",
-      "price": 83.0,
-      "volume": 2622.9,
-      "avg_volume": 2332.9,
-      "ratio": 1.12
-    },
-    {
-      "code": "2812",
-      "name": "台中銀",
-      "market": "TSE",
-      "price": 20.65,
-      "volume": 34367.1,
-      "avg_volume": 30764.7,
-      "ratio": 1.12
-    },
-    {
-      "code": "3135",
-      "name": "凌航",
-      "market": "TSE",
-      "price": 160.0,
-      "volume": 2126.1,
-      "avg_volume": 1893.1,
-      "ratio": 1.12
-    },
-    {
-      "code": "4585",
-      "name": "達明",
-      "market": "TSE",
-      "price": 289.5,
-      "volume": 334.6,
-      "avg_volume": 297.5,
-      "ratio": 1.12
-    },
-    {
-      "code": "4973",
-      "name": "4973",
+      "code": "4931",
+      "name": "新盛力",
       "market": "OTC",
-      "price": 139.0,
-      "volume": 1928.4,
-      "avg_volume": 1719.4,
-      "ratio": 1.12
+      "price": 196.0,
+      "volume": 5392.8,
+      "avg_volume": 4201.4,
+      "ratio": 1.28
     },
     {
-      "code": "1795",
-      "name": "美時",
-      "market": "TSE",
-      "price": 187.0,
-      "volume": 1961.8,
-      "avg_volume": 1767.7,
-      "ratio": 1.11
-    },
-    {
-      "code": "2388",
-      "name": "威盛",
-      "market": "TSE",
-      "price": 75.9,
-      "volume": 6301.7,
-      "avg_volume": 5673.0,
-      "ratio": 1.11
-    },
-    {
-      "code": "2762",
-      "name": "世界健身-KY",
-      "market": "TSE",
-      "price": 85.8,
-      "volume": 152.0,
-      "avg_volume": 137.4,
-      "ratio": 1.11
-    },
-    {
-      "code": "3017",
-      "name": "奇鋐",
-      "market": "TSE",
-      "price": 2550.0,
-      "volume": 4508.7,
-      "avg_volume": 4073.8,
-      "ratio": 1.11
-    },
-    {
-      "code": "6491",
-      "name": "晶碩",
-      "market": "TSE",
-      "price": 356.0,
-      "volume": 833.4,
-      "avg_volume": 747.9,
-      "ratio": 1.11
-    },
-    {
-      "code": "6515",
-      "name": "穎崴",
-      "market": "TSE",
-      "price": 6250.0,
-      "volume": 440.2,
-      "avg_volume": 395.0,
-      "ratio": 1.11
-    },
-    {
-      "code": "5274",
-      "name": "5274",
+      "code": "7734",
+      "name": "印能科技",
       "market": "OTC",
-      "price": 15975.0,
-      "volume": 302.3,
-      "avg_volume": 271.9,
-      "ratio": 1.11
+      "price": 3690.0,
+      "volume": 312.7,
+      "avg_volume": 245.1,
+      "ratio": 1.28
     },
     {
-      "code": "6173",
-      "name": "6173",
+      "code": "2369",
+      "name": "菱生",
+      "market": "TSE",
+      "price": 33.2,
+      "volume": 17098.3,
+      "avg_volume": 13433.4,
+      "ratio": 1.27
+    },
+    {
+      "code": "8210",
+      "name": "勤誠",
+      "market": "TSE",
+      "price": 1150.0,
+      "volume": 1521.3,
+      "avg_volume": 1197.5,
+      "ratio": 1.27
+    },
+    {
+      "code": "3441",
+      "name": "聯一光",
       "market": "OTC",
-      "price": 160.0,
-      "volume": 1137.0,
-      "avg_volume": 1023.6,
-      "ratio": 1.11
+      "price": 89.6,
+      "volume": 49208.8,
+      "avg_volume": 38839.7,
+      "ratio": 1.27
     },
     {
-      "code": "4506",
-      "name": "4506",
+      "code": "5351",
+      "name": "鈺創",
       "market": "OTC",
-      "price": 124.0,
-      "volume": 132.4,
-      "avg_volume": 120.1,
-      "ratio": 1.1
+      "price": 87.8,
+      "volume": 13848.2,
+      "avg_volume": 10888.1,
+      "ratio": 1.27
     },
     {
-      "code": "4939",
-      "name": "4939",
+      "code": "1474",
+      "name": "弘裕",
+      "market": "TSE",
+      "price": 10.0,
+      "volume": 120.5,
+      "avg_volume": 95.8,
+      "ratio": 1.26
+    },
+    {
+      "code": "1537",
+      "name": "廣隆",
+      "market": "TSE",
+      "price": 125.5,
+      "volume": 131.8,
+      "avg_volume": 104.4,
+      "ratio": 1.26
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "market": "TSE",
+      "price": 149.5,
+      "volume": 19510.5,
+      "avg_volume": 15530.1,
+      "ratio": 1.26
+    },
+    {
+      "code": "2426",
+      "name": "鼎元",
+      "market": "TSE",
+      "price": 60.8,
+      "volume": 12266.9,
+      "avg_volume": 9755.5,
+      "ratio": 1.26
+    },
+    {
+      "code": "2516",
+      "name": "新建",
+      "market": "TSE",
+      "price": 13.9,
+      "volume": 160.0,
+      "avg_volume": 127.4,
+      "ratio": 1.26
+    },
+    {
+      "code": "2801",
+      "name": "彰銀",
+      "market": "TSE",
+      "price": 25.2,
+      "volume": 68666.3,
+      "avg_volume": 54324.1,
+      "ratio": 1.26
+    },
+    {
+      "code": "5525",
+      "name": "順天",
+      "market": "TSE",
+      "price": 23.0,
+      "volume": 185.4,
+      "avg_volume": 146.7,
+      "ratio": 1.26
+    },
+    {
+      "code": "6442",
+      "name": "光聖",
+      "market": "TSE",
+      "price": 1395.0,
+      "volume": 2289.2,
+      "avg_volume": 1813.0,
+      "ratio": 1.26
+    },
+    {
+      "code": "6449",
+      "name": "鈺邦",
+      "market": "TSE",
+      "price": 227.5,
+      "volume": 1812.7,
+      "avg_volume": 1440.2,
+      "ratio": 1.26
+    },
+    {
+      "code": "4123",
+      "name": "晟德",
       "market": "OTC",
-      "price": 55.8,
-      "volume": 9270.3,
-      "avg_volume": 8434.7,
-      "ratio": 1.1
+      "price": 38.95,
+      "volume": 3010.3,
+      "avg_volume": 2381.8,
+      "ratio": 1.26
     },
     {
-      "code": "1465",
-      "name": "偉全",
-      "market": "TSE",
-      "price": 12.6,
-      "volume": 132.7,
-      "avg_volume": 122.2,
-      "ratio": 1.09
-    },
-    {
-      "code": "5701",
-      "name": "5701",
+      "code": "6223",
+      "name": "旺矽",
       "market": "OTC",
-      "price": 4.23,
-      "volume": 120.7,
-      "avg_volume": 111.0,
-      "ratio": 1.09
-    },
-    {
-      "code": "6175",
-      "name": "6175",
-      "market": "OTC",
-      "price": 72.8,
-      "volume": 2310.0,
-      "avg_volume": 2116.4,
-      "ratio": 1.09
-    },
-    {
-      "code": "1101",
-      "name": "台泥",
-      "market": "TSE",
-      "price": 23.8,
-      "volume": 40966.5,
-      "avg_volume": 37762.3,
-      "ratio": 1.08
-    },
-    {
-      "code": "1321",
-      "name": "大洋",
-      "market": "TSE",
-      "price": 31.95,
-      "volume": 192.8,
-      "avg_volume": 178.0,
-      "ratio": 1.08
-    },
-    {
-      "code": "2360",
-      "name": "致茂",
-      "market": "TSE",
-      "price": 1960.0,
-      "volume": 4876.3,
-      "avg_volume": 4532.4,
-      "ratio": 1.08
-    },
-    {
-      "code": "3450",
-      "name": "聯鈞",
-      "market": "TSE",
-      "price": 409.0,
-      "volume": 8045.7,
-      "avg_volume": 7466.0,
-      "ratio": 1.08
-    },
-    {
-      "code": "5534",
-      "name": "長虹",
-      "market": "TSE",
-      "price": 77.6,
-      "volume": 954.8,
-      "avg_volume": 885.2,
-      "ratio": 1.08
-    },
-    {
-      "code": "6672",
-      "name": "騰輝電子-KY",
-      "market": "TSE",
-      "price": 211.5,
-      "volume": 2823.1,
-      "avg_volume": 2617.5,
-      "ratio": 1.08
-    },
-    {
-      "code": "6768",
-      "name": "志強-KY",
-      "market": "TSE",
-      "price": 69.0,
-      "volume": 384.9,
-      "avg_volume": 357.2,
-      "ratio": 1.08
+      "price": 5900.0,
+      "volume": 936.2,
+      "avg_volume": 740.3,
+      "ratio": 1.26
     },
     {
       "code": "4195",
       "name": "基米-創",
       "market": "TSE",
       "price": 15.0,
-      "volume": 147.0,
-      "avg_volume": 136.6,
-      "ratio": 1.08
+      "volume": 158.1,
+      "avg_volume": 126.8,
+      "ratio": 1.25
     },
     {
-      "code": "6534",
-      "name": "正瀚-創",
-      "market": "TSE",
-      "price": 93.0,
-      "volume": 142.5,
-      "avg_volume": 132.3,
-      "ratio": 1.08
-    },
-    {
-      "code": "3624",
-      "name": "3624",
+      "code": "3066",
+      "name": "李洲",
       "market": "OTC",
-      "price": 64.4,
-      "volume": 1904.9,
-      "avg_volume": 1764.4,
-      "ratio": 1.08
-    },
-    {
-      "code": "6435",
-      "name": "6435",
-      "market": "OTC",
-      "price": 249.5,
-      "volume": 784.9,
-      "avg_volume": 725.7,
-      "ratio": 1.08
-    },
-    {
-      "code": "2369",
-      "name": "菱生",
-      "market": "TSE",
-      "price": 32.0,
-      "volume": 12317.8,
-      "avg_volume": 11499.0,
-      "ratio": 1.07
-    },
-    {
-      "code": "2527",
-      "name": "宏璟",
-      "market": "TSE",
-      "price": 45.05,
-      "volume": 1385.8,
-      "avg_volume": 1297.4,
-      "ratio": 1.07
-    },
-    {
-      "code": "2801",
-      "name": "彰銀",
-      "market": "TSE",
-      "price": 25.4,
-      "volume": 50191.4,
-      "avg_volume": 46889.5,
-      "ratio": 1.07
-    },
-    {
-      "code": "2929",
-      "name": "淘帝-KY",
-      "market": "TSE",
-      "price": 5.6,
-      "volume": 144.5,
-      "avg_volume": 135.4,
-      "ratio": 1.07
-    },
-    {
-      "code": "3029",
-      "name": "零壹",
-      "market": "TSE",
-      "price": 104.0,
-      "volume": 2008.8,
-      "avg_volume": 1885.3,
-      "ratio": 1.07
-    },
-    {
-      "code": "3048",
-      "name": "益登",
-      "market": "TSE",
-      "price": 50.8,
-      "volume": 2807.6,
-      "avg_volume": 2634.0,
-      "ratio": 1.07
-    },
-    {
-      "code": "4977",
-      "name": "眾達-KY",
-      "market": "TSE",
-      "price": 121.5,
-      "volume": 2454.3,
-      "avg_volume": 2299.7,
-      "ratio": 1.07
-    },
-    {
-      "code": "6706",
-      "name": "惠特",
-      "market": "TSE",
-      "price": 98.3,
-      "volume": 1642.4,
-      "avg_volume": 1531.8,
-      "ratio": 1.07
-    },
-    {
-      "code": "4542",
-      "name": "4542",
-      "market": "OTC",
-      "price": 254.0,
-      "volume": 990.4,
-      "avg_volume": 929.2,
-      "ratio": 1.07
-    },
-    {
-      "code": "5498",
-      "name": "5498",
-      "market": "OTC",
-      "price": 44.5,
-      "volume": 2397.5,
-      "avg_volume": 2246.8,
-      "ratio": 1.07
+      "price": 22.25,
+      "volume": 538.2,
+      "avg_volume": 429.3,
+      "ratio": 1.25
     },
     {
       "code": "6174",
-      "name": "6174",
+      "name": "安碁",
       "market": "OTC",
-      "price": 40.3,
-      "volume": 2149.5,
-      "avg_volume": 2008.3,
-      "ratio": 1.07
-    },
-    {
-      "code": "6574",
-      "name": "6574",
-      "market": "OTC",
-      "price": 120.5,
-      "volume": 103.9,
-      "avg_volume": 96.7,
-      "ratio": 1.07
-    },
-    {
-      "code": "1527",
-      "name": "鑽全",
-      "market": "TSE",
-      "price": 32.25,
-      "volume": 433.8,
-      "avg_volume": 410.9,
-      "ratio": 1.06
-    },
-    {
-      "code": "1762",
-      "name": "中化生",
-      "market": "TSE",
-      "price": 32.1,
-      "volume": 256.2,
-      "avg_volume": 241.8,
-      "ratio": 1.06
+      "price": 42.4,
+      "volume": 2968.5,
+      "avg_volume": 2380.7,
+      "ratio": 1.25
     },
     {
       "code": "1808",
       "name": "潤隆",
       "market": "TSE",
-      "price": 33.1,
-      "volume": 2088.0,
-      "avg_volume": 1977.9,
-      "ratio": 1.06
+      "price": 32.45,
+      "volume": 3032.9,
+      "avg_volume": 2447.4,
+      "ratio": 1.24
     },
     {
-      "code": "2611",
-      "name": "志信",
+      "code": "2449",
+      "name": "京元電子",
       "market": "TSE",
-      "price": 13.45,
-      "volume": 286.6,
-      "avg_volume": 271.6,
-      "ratio": 1.06
+      "price": 245.5,
+      "volume": 31565.6,
+      "avg_volume": 25423.1,
+      "ratio": 1.24
     },
     {
-      "code": "3528",
-      "name": "安馳",
+      "code": "8039",
+      "name": "台虹",
       "market": "TSE",
-      "price": 87.2,
-      "volume": 408.1,
-      "avg_volume": 386.2,
-      "ratio": 1.06
+      "price": 200.0,
+      "volume": 30964.9,
+      "avg_volume": 24993.2,
+      "ratio": 1.24
     },
     {
-      "code": "3617",
-      "name": "碩天",
+      "code": "8996",
+      "name": "高力",
       "market": "TSE",
-      "price": 219.0,
-      "volume": 428.9,
-      "avg_volume": 404.9,
-      "ratio": 1.06
+      "price": 1030.0,
+      "volume": 3449.4,
+      "avg_volume": 2786.9,
+      "ratio": 1.24
     },
     {
-      "code": "4551",
-      "name": "智伸科",
-      "market": "TSE",
-      "price": 160.0,
-      "volume": 903.1,
-      "avg_volume": 851.9,
-      "ratio": 1.06
-    },
-    {
-      "code": "5225",
-      "name": "東科-KY",
-      "market": "TSE",
-      "price": 74.3,
-      "volume": 257.2,
-      "avg_volume": 242.3,
-      "ratio": 1.06
-    },
-    {
-      "code": "6139",
-      "name": "亞翔",
-      "market": "TSE",
-      "price": 765.0,
-      "volume": 5347.1,
-      "avg_volume": 5048.8,
-      "ratio": 1.06
-    },
-    {
-      "code": "6217",
-      "name": "6217",
+      "code": "5289",
+      "name": "宜鼎",
       "market": "OTC",
-      "price": 122.0,
-      "volume": 1018.1,
-      "avg_volume": 962.1,
-      "ratio": 1.06
+      "price": 1415.0,
+      "volume": 3318.0,
+      "avg_volume": 2678.7,
+      "ratio": 1.24
     },
     {
-      "code": "2059",
-      "name": "川湖",
-      "market": "TSE",
-      "price": 8635.0,
-      "volume": 613.2,
-      "avg_volume": 582.4,
-      "ratio": 1.05
-    },
-    {
-      "code": "2301",
-      "name": "光寶科",
-      "market": "TSE",
-      "price": 229.5,
-      "volume": 23295.1,
-      "avg_volume": 22239.0,
-      "ratio": 1.05
-    },
-    {
-      "code": "2359",
-      "name": "所羅門",
-      "market": "TSE",
-      "price": 132.5,
-      "volume": 7741.9,
-      "avg_volume": 7365.9,
-      "ratio": 1.05
-    },
-    {
-      "code": "2421",
-      "name": "建準",
-      "market": "TSE",
-      "price": 136.5,
-      "volume": 2305.3,
-      "avg_volume": 2189.9,
-      "ratio": 1.05
-    },
-    {
-      "code": "2484",
-      "name": "希華",
-      "market": "TSE",
-      "price": 63.6,
-      "volume": 19080.7,
-      "avg_volume": 18157.4,
-      "ratio": 1.05
-    },
-    {
-      "code": "5521",
-      "name": "工信",
-      "market": "TSE",
-      "price": 10.15,
-      "volume": 4036.8,
-      "avg_volume": 3856.6,
-      "ratio": 1.05
-    },
-    {
-      "code": "3306",
-      "name": "3306",
+      "code": "5432",
+      "name": "新門",
       "market": "OTC",
-      "price": 43.1,
-      "volume": 234.6,
-      "avg_volume": 223.3,
-      "ratio": 1.05
+      "price": 108.0,
+      "volume": 101.1,
+      "avg_volume": 81.7,
+      "ratio": 1.24
     },
     {
-      "code": "5609",
-      "name": "5609",
-      "market": "OTC",
-      "price": 78.0,
-      "volume": 189.4,
-      "avg_volume": 181.0,
-      "ratio": 1.05
-    },
-    {
-      "code": "6532",
-      "name": "6532",
-      "market": "OTC",
-      "price": 69.8,
-      "volume": 289.2,
-      "avg_volume": 275.3,
-      "ratio": 1.05
-    },
-    {
-      "code": "7703",
-      "name": "7703",
-      "market": "OTC",
-      "price": 162.5,
-      "volume": 161.9,
-      "avg_volume": 154.4,
-      "ratio": 1.05
-    },
-    {
-      "code": "3036",
-      "name": "文曄",
+      "code": "1714",
+      "name": "和桐",
       "market": "TSE",
-      "price": 204.5,
-      "volume": 9178.6,
-      "avg_volume": 8830.0,
-      "ratio": 1.04
-    },
-    {
-      "code": "3416",
-      "name": "融程電",
-      "market": "TSE",
-      "price": 173.5,
-      "volume": 596.6,
-      "avg_volume": 574.8,
-      "ratio": 1.04
-    },
-    {
-      "code": "4763",
-      "name": "材料*-KY",
-      "market": "TSE",
-      "price": 49.85,
-      "volume": 10293.7,
-      "avg_volume": 9893.8,
-      "ratio": 1.04
-    },
-    {
-      "code": "6191",
-      "name": "精成科",
-      "market": "TSE",
-      "price": 82.2,
-      "volume": 5136.3,
-      "avg_volume": 4936.3,
-      "ratio": 1.04
-    },
-    {
-      "code": "8131",
-      "name": "福懋科",
-      "market": "TSE",
-      "price": 60.0,
-      "volume": 5722.9,
-      "avg_volume": 5515.1,
-      "ratio": 1.04
-    },
-    {
-      "code": "3217",
-      "name": "3217",
-      "market": "OTC",
-      "price": 141.0,
-      "volume": 743.9,
-      "avg_volume": 713.0,
-      "ratio": 1.04
-    },
-    {
-      "code": "4707",
-      "name": "4707",
-      "market": "OTC",
-      "price": 25.5,
-      "volume": 3942.3,
-      "avg_volume": 3790.8,
-      "ratio": 1.04
-    },
-    {
-      "code": "1218",
-      "name": "泰山",
-      "market": "TSE",
-      "price": 15.7,
-      "volume": 1876.6,
-      "avg_volume": 1820.9,
-      "ratio": 1.03
-    },
-    {
-      "code": "1225",
-      "name": "福懋油",
-      "market": "TSE",
-      "price": 24.7,
-      "volume": 320.3,
-      "avg_volume": 312.5,
-      "ratio": 1.03
-    },
-    {
-      "code": "2032",
-      "name": "新鋼",
-      "market": "TSE",
-      "price": 15.45,
-      "volume": 281.4,
-      "avg_volume": 274.3,
-      "ratio": 1.03
-    },
-    {
-      "code": "2880",
-      "name": "華南金",
-      "market": "TSE",
-      "price": 43.05,
-      "volume": 32002.0,
-      "avg_volume": 30978.2,
-      "ratio": 1.03
-    },
-    {
-      "code": "2905",
-      "name": "三商",
-      "market": "TSE",
-      "price": 17.05,
-      "volume": 1773.1,
-      "avg_volume": 1721.5,
-      "ratio": 1.03
-    },
-    {
-      "code": "6168",
-      "name": "宏齊",
-      "market": "TSE",
-      "price": 23.5,
-      "volume": 1945.4,
-      "avg_volume": 1889.0,
-      "ratio": 1.03
-    },
-    {
-      "code": "3219",
-      "name": "3219",
-      "market": "OTC",
-      "price": 60.8,
-      "volume": 160.4,
-      "avg_volume": 156.0,
-      "ratio": 1.03
-    },
-    {
-      "code": "3227",
-      "name": "3227",
-      "market": "OTC",
-      "price": 197.0,
-      "volume": 1310.3,
-      "avg_volume": 1275.4,
-      "ratio": 1.03
-    },
-    {
-      "code": "5210",
-      "name": "5210",
-      "market": "OTC",
-      "price": 28.0,
-      "volume": 419.4,
-      "avg_volume": 409.1,
-      "ratio": 1.03
-    },
-    {
-      "code": "8071",
-      "name": "8071",
-      "market": "OTC",
-      "price": 22.25,
-      "volume": 1162.3,
-      "avg_volume": 1129.2,
-      "ratio": 1.03
+      "price": 14.55,
+      "volume": 21348.5,
+      "avg_volume": 17293.4,
+      "ratio": 1.23
     },
     {
       "code": "2838",
       "name": "聯邦銀",
       "market": "TSE",
-      "price": 20.9,
-      "volume": 3194.4,
-      "avg_volume": 3124.3,
-      "ratio": 1.02
+      "price": 20.45,
+      "volume": 4317.7,
+      "avg_volume": 3499.8,
+      "ratio": 1.23
     },
     {
-      "code": "2906",
-      "name": "高林",
+      "code": "3017",
+      "name": "奇鋐",
       "market": "TSE",
-      "price": 12.8,
-      "volume": 288.8,
-      "avg_volume": 282.0,
-      "ratio": 1.02
+      "price": 2600.0,
+      "volume": 5541.3,
+      "avg_volume": 4501.1,
+      "ratio": 1.23
     },
     {
-      "code": "4104",
-      "name": "佳醫",
+      "code": "3021",
+      "name": "鴻名",
       "market": "TSE",
-      "price": 70.0,
-      "volume": 229.9,
-      "avg_volume": 226.0,
-      "ratio": 1.02
+      "price": 21.3,
+      "volume": 379.6,
+      "avg_volume": 308.9,
+      "ratio": 1.23
     },
     {
-      "code": "4414",
-      "name": "如興",
+      "code": "6781",
+      "name": "AES-KY",
       "market": "TSE",
-      "price": 8.35,
-      "volume": 222.4,
-      "avg_volume": 217.9,
-      "ratio": 1.02
+      "price": 1010.0,
+      "volume": 776.8,
+      "avg_volume": 631.9,
+      "ratio": 1.23
     },
     {
-      "code": "4737",
-      "name": "華廣",
+      "code": "9904",
+      "name": "寶成",
       "market": "TSE",
-      "price": 54.9,
-      "volume": 101.0,
-      "avg_volume": 99.2,
-      "ratio": 1.02
+      "price": 23.75,
+      "volume": 28023.6,
+      "avg_volume": 22780.5,
+      "ratio": 1.23
     },
     {
-      "code": "6177",
-      "name": "達麗",
-      "market": "TSE",
-      "price": 47.35,
-      "volume": 1696.3,
-      "avg_volume": 1659.8,
-      "ratio": 1.02
-    },
-    {
-      "code": "6271",
-      "name": "同欣電",
-      "market": "TSE",
-      "price": 168.0,
-      "volume": 7756.9,
-      "avg_volume": 7641.1,
-      "ratio": 1.02
-    },
-    {
-      "code": "5299",
-      "name": "5299",
+      "code": "6570",
+      "name": "維田",
       "market": "OTC",
-      "price": 101.5,
-      "volume": 1258.6,
-      "avg_volume": 1239.0,
-      "ratio": 1.02
+      "price": 54.7,
+      "volume": 247.4,
+      "avg_volume": 201.1,
+      "ratio": 1.23
     },
     {
-      "code": "6568",
-      "name": "6568",
-      "market": "OTC",
-      "price": 131.0,
-      "volume": 215.3,
-      "avg_volume": 211.1,
-      "ratio": 1.02
-    },
-    {
-      "code": "6584",
-      "name": "6584",
-      "market": "OTC",
-      "price": 452.0,
-      "volume": 576.8,
-      "avg_volume": 567.2,
-      "ratio": 1.02
-    },
-    {
-      "code": "8043",
-      "name": "8043",
-      "market": "OTC",
-      "price": 139.0,
-      "volume": 4455.9,
-      "avg_volume": 4352.0,
-      "ratio": 1.02
-    },
-    {
-      "code": "2491",
-      "name": "吉祥全",
+      "code": "3004",
+      "name": "豐達科",
       "market": "TSE",
-      "price": 24.05,
-      "volume": 523.7,
-      "avg_volume": 518.1,
-      "ratio": 1.01
+      "price": 125.5,
+      "volume": 1308.7,
+      "avg_volume": 1074.0,
+      "ratio": 1.22
     },
     {
-      "code": "3044",
-      "name": "健鼎",
+      "code": "6669",
+      "name": "緯穎",
       "market": "TSE",
-      "price": 374.0,
-      "volume": 3554.0,
-      "avg_volume": 3533.5,
-      "ratio": 1.01
+      "price": 6205.0,
+      "volume": 2965.5,
+      "avg_volume": 2432.5,
+      "ratio": 1.22
     },
     {
-      "code": "6862",
-      "name": "三集瑞-KY",
+      "code": "6770",
+      "name": "力積電",
       "market": "TSE",
-      "price": 137.5,
-      "volume": 363.4,
-      "avg_volume": 358.9,
-      "ratio": 1.01
+      "price": 60.1,
+      "volume": 186355.1,
+      "avg_volume": 153302.6,
+      "ratio": 1.22
     },
     {
-      "code": "3131",
-      "name": "3131",
+      "code": "3339",
+      "name": "泰谷",
       "market": "OTC",
-      "price": 2420.0,
-      "volume": 401.1,
-      "avg_volume": 399.0,
-      "ratio": 1.01
+      "price": 37.4,
+      "volume": 980.5,
+      "avg_volume": 801.6,
+      "ratio": 1.22
     },
     {
-      "code": "8109",
-      "name": "8109",
+      "code": "3455",
+      "name": "由田",
       "market": "OTC",
-      "price": 122.5,
-      "volume": 427.7,
-      "avg_volume": 422.0,
-      "ratio": 1.01
+      "price": 182.5,
+      "volume": 1440.5,
+      "avg_volume": 1182.7,
+      "ratio": 1.22
+    },
+    {
+      "code": "6492",
+      "name": "生華科",
+      "market": "OTC",
+      "price": 41.1,
+      "volume": 367.8,
+      "avg_volume": 301.6,
+      "ratio": 1.22
+    },
+    {
+      "code": "7777",
+      "name": "能率亞洲",
+      "market": "OTC",
+      "price": 39.6,
+      "volume": 1939.3,
+      "avg_volume": 1587.6,
+      "ratio": 1.22
+    },
+    {
+      "code": "1414",
+      "name": "東和",
+      "market": "TSE",
+      "price": 19.8,
+      "volume": 447.6,
+      "avg_volume": 370.1,
+      "ratio": 1.21
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "market": "TSE",
+      "price": 157.0,
+      "volume": 121604.9,
+      "avg_volume": 100850.3,
+      "ratio": 1.21
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "market": "TSE",
+      "price": 332.0,
+      "volume": 10151.5,
+      "avg_volume": 8372.8,
+      "ratio": 1.21
+    },
+    {
+      "code": "5225",
+      "name": "東科-KY",
+      "market": "TSE",
+      "price": 73.6,
+      "volume": 330.0,
+      "avg_volume": 272.8,
+      "ratio": 1.21
     },
     {
       "code": "1229",
       "name": "聯華",
       "market": "TSE",
-      "price": 40.2,
-      "volume": 2345.2,
-      "avg_volume": 2344.0,
-      "ratio": 1.0
+      "price": 40.1,
+      "volume": 2729.5,
+      "avg_volume": 2282.0,
+      "ratio": 1.2
     },
     {
-      "code": "6207",
-      "name": "6207",
+      "code": "5471",
+      "name": "松翰",
+      "market": "TSE",
+      "price": 55.2,
+      "volume": 4125.7,
+      "avg_volume": 3438.9,
+      "ratio": 1.2
+    },
+    {
+      "code": "6885",
+      "name": "全福生技",
+      "market": "TSE",
+      "price": 20.7,
+      "volume": 322.4,
+      "avg_volume": 269.3,
+      "ratio": 1.2
+    },
+    {
+      "code": "8112",
+      "name": "至上",
+      "market": "TSE",
+      "price": 85.2,
+      "volume": 17200.9,
+      "avg_volume": 14286.4,
+      "ratio": 1.2
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "market": "TSE",
+      "price": 82.5,
+      "volume": 39208.3,
+      "avg_volume": 32635.5,
+      "ratio": 1.2
+    },
+    {
+      "code": "8940",
+      "name": "新天地",
+      "market": "TSE",
+      "price": 15.35,
+      "volume": 110.2,
+      "avg_volume": 91.6,
+      "ratio": 1.2
+    },
+    {
+      "code": "3498",
+      "name": "陽程",
       "market": "OTC",
-      "price": 96.5,
-      "volume": 6092.8,
-      "avg_volume": 6077.7,
-      "ratio": 1.0
+      "price": 103.5,
+      "volume": 1901.7,
+      "avg_volume": 1585.2,
+      "ratio": 1.2
+    },
+    {
+      "code": "2360",
+      "name": "致茂",
+      "market": "TSE",
+      "price": 1925.0,
+      "volume": 6050.5,
+      "avg_volume": 5101.2,
+      "ratio": 1.19
+    },
+    {
+      "code": "2434",
+      "name": "統懋",
+      "market": "TSE",
+      "price": 54.7,
+      "volume": 736.7,
+      "avg_volume": 620.0,
+      "ratio": 1.19
+    },
+    {
+      "code": "2704",
+      "name": "國賓",
+      "market": "TSE",
+      "price": 45.3,
+      "volume": 200.0,
+      "avg_volume": 167.7,
+      "ratio": 1.19
+    },
+    {
+      "code": "3706",
+      "name": "神達",
+      "market": "TSE",
+      "price": 91.3,
+      "volume": 14237.1,
+      "avg_volume": 11962.0,
+      "ratio": 1.19
+    },
+    {
+      "code": "6706",
+      "name": "惠特",
+      "market": "TSE",
+      "price": 106.0,
+      "volume": 1914.7,
+      "avg_volume": 1609.7,
+      "ratio": 1.19
+    },
+    {
+      "code": "6534",
+      "name": "正瀚-創",
+      "market": "TSE",
+      "price": 94.5,
+      "volume": 169.6,
+      "avg_volume": 142.5,
+      "ratio": 1.19
+    },
+    {
+      "code": "1722",
+      "name": "台肥",
+      "market": "TSE",
+      "price": 45.1,
+      "volume": 3696.6,
+      "avg_volume": 3137.3,
+      "ratio": 1.18
+    },
+    {
+      "code": "2812",
+      "name": "台中銀",
+      "market": "TSE",
+      "price": 18.9,
+      "volume": 41648.0,
+      "avg_volume": 35304.3,
+      "ratio": 1.18
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "market": "TSE",
+      "price": 88.4,
+      "volume": 15087.2,
+      "avg_volume": 12743.3,
+      "ratio": 1.18
+    },
+    {
+      "code": "7689",
+      "name": "大鵬科CLMX",
+      "market": "TSE",
+      "price": 167.0,
+      "volume": 270.4,
+      "avg_volume": 228.9,
+      "ratio": 1.18
+    },
+    {
+      "code": "6179",
+      "name": "亞通",
+      "market": "OTC",
+      "price": 25.8,
+      "volume": 1227.2,
+      "avg_volume": 1036.9,
+      "ratio": 1.18
+    },
+    {
+      "code": "6922",
+      "name": "宸曜",
+      "market": "OTC",
+      "price": 178.0,
+      "volume": 200.9,
+      "avg_volume": 169.6,
+      "ratio": 1.18
+    },
+    {
+      "code": "7715",
+      "name": "裕山",
+      "market": "OTC",
+      "price": 34.45,
+      "volume": 199.1,
+      "avg_volume": 168.0,
+      "ratio": 1.18
+    },
+    {
+      "code": "1789",
+      "name": "神隆",
+      "market": "TSE",
+      "price": 19.0,
+      "volume": 925.4,
+      "avg_volume": 790.5,
+      "ratio": 1.17
+    },
+    {
+      "code": "8341",
+      "name": "日友",
+      "market": "TSE",
+      "price": 75.3,
+      "volume": 239.3,
+      "avg_volume": 205.0,
+      "ratio": 1.17
+    },
+    {
+      "code": "1419",
+      "name": "新紡",
+      "market": "TSE",
+      "price": 66.5,
+      "volume": 309.1,
+      "avg_volume": 266.7,
+      "ratio": 1.16
+    },
+    {
+      "code": "2477",
+      "name": "美隆電",
+      "market": "TSE",
+      "price": 21.65,
+      "volume": 155.9,
+      "avg_volume": 134.2,
+      "ratio": 1.16
+    },
+    {
+      "code": "2340",
+      "name": "台亞",
+      "market": "TSE",
+      "price": 31.7,
+      "volume": 4173.7,
+      "avg_volume": 3615.9,
+      "ratio": 1.15
+    },
+    {
+      "code": "2427",
+      "name": "三商電",
+      "market": "TSE",
+      "price": 23.05,
+      "volume": 682.9,
+      "avg_volume": 591.6,
+      "ratio": 1.15
+    },
+    {
+      "code": "8111",
+      "name": "立碁",
+      "market": "OTC",
+      "price": 65.5,
+      "volume": 20152.6,
+      "avg_volume": 17548.6,
+      "ratio": 1.15
+    },
+    {
+      "code": "1597",
+      "name": "直得",
+      "market": "TSE",
+      "price": 131.0,
+      "volume": 1344.5,
+      "avg_volume": 1176.7,
+      "ratio": 1.14
+    },
+    {
+      "code": "1736",
+      "name": "喬山",
+      "market": "TSE",
+      "price": 122.5,
+      "volume": 971.0,
+      "avg_volume": 851.7,
+      "ratio": 1.14
+    },
+    {
+      "code": "2009",
+      "name": "第一銅",
+      "market": "TSE",
+      "price": 37.55,
+      "volume": 1571.0,
+      "avg_volume": 1377.9,
+      "ratio": 1.14
+    },
+    {
+      "code": "2414",
+      "name": "精技",
+      "market": "TSE",
+      "price": 59.6,
+      "volume": 432.6,
+      "avg_volume": 380.1,
+      "ratio": 1.14
+    },
+    {
+      "code": "6743",
+      "name": "安普新",
+      "market": "TSE",
+      "price": 26.2,
+      "volume": 523.2,
+      "avg_volume": 458.2,
+      "ratio": 1.14
+    },
+    {
+      "code": "6877",
+      "name": "鏵友益",
+      "market": "OTC",
+      "price": 119.5,
+      "volume": 210.2,
+      "avg_volume": 185.0,
+      "ratio": 1.14
+    },
+    {
+      "code": "8088",
+      "name": "品安",
+      "market": "OTC",
+      "price": 46.8,
+      "volume": 987.7,
+      "avg_volume": 869.6,
+      "ratio": 1.14
+    },
+    {
+      "code": "6525",
+      "name": "捷敏-KY",
+      "market": "TSE",
+      "price": 136.0,
+      "volume": 2594.9,
+      "avg_volume": 2306.5,
+      "ratio": 1.13
+    },
+    {
+      "code": "9905",
+      "name": "大華",
+      "market": "TSE",
+      "price": 20.6,
+      "volume": 121.0,
+      "avg_volume": 107.3,
+      "ratio": 1.13
+    },
+    {
+      "code": "1815",
+      "name": "富喬",
+      "market": "OTC",
+      "price": 80.1,
+      "volume": 18896.9,
+      "avg_volume": 16672.9,
+      "ratio": 1.13
+    },
+    {
+      "code": "5274",
+      "name": "信驊",
+      "market": "OTC",
+      "price": 15500.0,
+      "volume": 298.4,
+      "avg_volume": 263.1,
+      "ratio": 1.13
+    },
+    {
+      "code": "5340",
+      "name": "建榮",
+      "market": "OTC",
+      "price": 70.6,
+      "volume": 1678.8,
+      "avg_volume": 1480.5,
+      "ratio": 1.13
+    },
+    {
+      "code": "6138",
+      "name": "茂達",
+      "market": "OTC",
+      "price": 295.5,
+      "volume": 1236.6,
+      "avg_volume": 1094.1,
+      "ratio": 1.13
+    },
+    {
+      "code": "6584",
+      "name": "南俊國際",
+      "market": "OTC",
+      "price": 475.5,
+      "volume": 756.4,
+      "avg_volume": 666.8,
+      "ratio": 1.13
+    },
+    {
+      "code": "6811",
+      "name": "宏碁資訊",
+      "market": "OTC",
+      "price": 236.0,
+      "volume": 313.4,
+      "avg_volume": 277.3,
+      "ratio": 1.13
+    },
+    {
+      "code": "8086",
+      "name": "宏捷科",
+      "market": "OTC",
+      "price": 122.5,
+      "volume": 3267.0,
+      "avg_volume": 2887.6,
+      "ratio": 1.13
+    },
+    {
+      "code": "8096",
+      "name": "擎亞",
+      "market": "OTC",
+      "price": 126.5,
+      "volume": 5687.5,
+      "avg_volume": 5035.8,
+      "ratio": 1.13
+    },
+    {
+      "code": "1909",
+      "name": "榮成",
+      "market": "TSE",
+      "price": 10.1,
+      "volume": 3688.3,
+      "avg_volume": 3297.5,
+      "ratio": 1.12
+    },
+    {
+      "code": "2206",
+      "name": "三陽工業",
+      "market": "TSE",
+      "price": 60.1,
+      "volume": 2262.2,
+      "avg_volume": 2014.2,
+      "ratio": 1.12
+    },
+    {
+      "code": "2236",
+      "name": "百達-KY",
+      "market": "TSE",
+      "price": 137.0,
+      "volume": 1034.7,
+      "avg_volume": 922.0,
+      "ratio": 1.12
+    },
+    {
+      "code": "3015",
+      "name": "全漢",
+      "market": "TSE",
+      "price": 56.3,
+      "volume": 941.5,
+      "avg_volume": 842.6,
+      "ratio": 1.12
+    },
+    {
+      "code": "3229",
+      "name": "晟鈦",
+      "market": "TSE",
+      "price": 47.75,
+      "volume": 1138.2,
+      "avg_volume": 1014.2,
+      "ratio": 1.12
+    },
+    {
+      "code": "6112",
+      "name": "邁達特",
+      "market": "TSE",
+      "price": 41.55,
+      "volume": 528.3,
+      "avg_volume": 470.3,
+      "ratio": 1.12
+    },
+    {
+      "code": "6282",
+      "name": "康舒",
+      "market": "TSE",
+      "price": 47.9,
+      "volume": 14811.9,
+      "avg_volume": 13247.7,
+      "ratio": 1.12
+    },
+    {
+      "code": "8261",
+      "name": "富鼎",
+      "market": "TSE",
+      "price": 180.0,
+      "volume": 10979.5,
+      "avg_volume": 9782.0,
+      "ratio": 1.12
+    },
+    {
+      "code": "5324",
+      "name": "士開",
+      "market": "OTC",
+      "price": 12.25,
+      "volume": 444.0,
+      "avg_volume": 395.3,
+      "ratio": 1.12
+    },
+    {
+      "code": "6823",
+      "name": "濾能",
+      "market": "OTC",
+      "price": 65.4,
+      "volume": 110.2,
+      "avg_volume": 98.0,
+      "ratio": 1.12
+    },
+    {
+      "code": "1713",
+      "name": "國化",
+      "market": "TSE",
+      "price": 46.1,
+      "volume": 236.5,
+      "avg_volume": 213.4,
+      "ratio": 1.11
+    },
+    {
+      "code": "2485",
+      "name": "兆赫",
+      "market": "TSE",
+      "price": 40.8,
+      "volume": 7326.7,
+      "avg_volume": 6573.0,
+      "ratio": 1.11
+    },
+    {
+      "code": "7730",
+      "name": "暉盛-創",
+      "market": "TSE",
+      "price": 157.0,
+      "volume": 104.5,
+      "avg_volume": 93.9,
+      "ratio": 1.11
+    },
+    {
+      "code": "3147",
+      "name": "大綜",
+      "market": "OTC",
+      "price": 247.0,
+      "volume": 1019.9,
+      "avg_volume": 919.3,
+      "ratio": 1.11
+    },
+    {
+      "code": "2062",
+      "name": "橋椿",
+      "market": "TSE",
+      "price": 19.25,
+      "volume": 313.3,
+      "avg_volume": 284.3,
+      "ratio": 1.1
+    },
+    {
+      "code": "2461",
+      "name": "光群雷",
+      "market": "TSE",
+      "price": 16.85,
+      "volume": 991.3,
+      "avg_volume": 904.2,
+      "ratio": 1.1
+    },
+    {
+      "code": "2849",
+      "name": "安泰銀",
+      "market": "TSE",
+      "price": 14.65,
+      "volume": 537.9,
+      "avg_volume": 489.5,
+      "ratio": 1.1
+    },
+    {
+      "code": "6944",
+      "name": "兆聯實業",
+      "market": "TSE",
+      "price": 786.0,
+      "volume": 796.9,
+      "avg_volume": 727.6,
+      "ratio": 1.1
+    },
+    {
+      "code": "6642",
+      "name": "富致",
+      "market": "OTC",
+      "price": 74.5,
+      "volume": 338.6,
+      "avg_volume": 308.7,
+      "ratio": 1.1
+    },
+    {
+      "code": "1217",
+      "name": "愛之味",
+      "market": "TSE",
+      "price": 9.79,
+      "volume": 838.5,
+      "avg_volume": 770.1,
+      "ratio": 1.09
+    },
+    {
+      "code": "1437",
+      "name": "勤益控",
+      "market": "TSE",
+      "price": 30.85,
+      "volume": 324.7,
+      "avg_volume": 297.5,
+      "ratio": 1.09
+    },
+    {
+      "code": "6415",
+      "name": "矽力*-KY",
+      "market": "TSE",
+      "price": 424.0,
+      "volume": 5923.4,
+      "avg_volume": 5459.2,
+      "ratio": 1.09
+    },
+    {
+      "code": "4973",
+      "name": "廣穎",
+      "market": "OTC",
+      "price": 144.0,
+      "volume": 2080.1,
+      "avg_volume": 1899.8,
+      "ratio": 1.09
+    },
+    {
+      "code": "5609",
+      "name": "中菲行",
+      "market": "OTC",
+      "price": 78.1,
+      "volume": 221.3,
+      "avg_volume": 202.2,
+      "ratio": 1.09
     },
     {
       "code": "6727",
-      "name": "6727",
+      "name": "亞泰金屬",
       "market": "OTC",
-      "price": 336.5,
-      "volume": 223.4,
-      "avg_volume": 222.4,
+      "price": 370.0,
+      "volume": 267.6,
+      "avg_volume": 245.2,
+      "ratio": 1.09
+    },
+    {
+      "code": "2439",
+      "name": "美律",
+      "market": "TSE",
+      "price": 81.2,
+      "volume": 1941.9,
+      "avg_volume": 1794.6,
+      "ratio": 1.08
+    },
+    {
+      "code": "2495",
+      "name": "普安",
+      "market": "TSE",
+      "price": 37.5,
+      "volume": 2472.1,
+      "avg_volume": 2281.5,
+      "ratio": 1.08
+    },
+    {
+      "code": "3026",
+      "name": "禾伸堂",
+      "market": "TSE",
+      "price": 498.0,
+      "volume": 3757.8,
+      "avg_volume": 3492.1,
+      "ratio": 1.08
+    },
+    {
+      "code": "3042",
+      "name": "晶技",
+      "market": "TSE",
+      "price": 169.5,
+      "volume": 18716.6,
+      "avg_volume": 17321.3,
+      "ratio": 1.08
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "market": "TSE",
+      "price": 195.0,
+      "volume": 147595.0,
+      "avg_volume": 136386.4,
+      "ratio": 1.08
+    },
+    {
+      "code": "4540",
+      "name": "全球傳動",
+      "market": "TSE",
+      "price": 50.0,
+      "volume": 1684.7,
+      "avg_volume": 1558.8,
+      "ratio": 1.08
+    },
+    {
+      "code": "6197",
+      "name": "佳必琪",
+      "market": "TSE",
+      "price": 308.0,
+      "volume": 2282.6,
+      "avg_volume": 2104.9,
+      "ratio": 1.08
+    },
+    {
+      "code": "4582",
+      "name": "聚恆-創",
+      "market": "TSE",
+      "price": 27.5,
+      "volume": 138.0,
+      "avg_volume": 128.2,
+      "ratio": 1.08
+    },
+    {
+      "code": "4442",
+      "name": "竣邦-KY",
+      "market": "OTC",
+      "price": 58.9,
+      "volume": 1699.8,
+      "avg_volume": 1578.1,
+      "ratio": 1.08
+    },
+    {
+      "code": "4542",
+      "name": "科嶠",
+      "market": "OTC",
+      "price": 279.0,
+      "volume": 1234.6,
+      "avg_volume": 1141.4,
+      "ratio": 1.08
+    },
+    {
+      "code": "2351",
+      "name": "順德",
+      "market": "TSE",
+      "price": 165.5,
+      "volume": 4147.6,
+      "avg_volume": 3859.7,
+      "ratio": 1.07
+    },
+    {
+      "code": "2881",
+      "name": "富邦金",
+      "market": "TSE",
+      "price": 128.5,
+      "volume": 29275.8,
+      "avg_volume": 27430.8,
+      "ratio": 1.07
+    },
+    {
+      "code": "3036",
+      "name": "文曄",
+      "market": "TSE",
+      "price": 212.5,
+      "volume": 9841.9,
+      "avg_volume": 9165.1,
+      "ratio": 1.07
+    },
+    {
+      "code": "7786",
+      "name": "東方風能",
+      "market": "TSE",
+      "price": 122.0,
+      "volume": 202.7,
+      "avg_volume": 189.2,
+      "ratio": 1.07
+    },
+    {
+      "code": "3388",
+      "name": "崇越電",
+      "market": "OTC",
+      "price": 73.2,
+      "volume": 604.6,
+      "avg_volume": 565.0,
+      "ratio": 1.07
+    },
+    {
+      "code": "4105",
+      "name": "東洋",
+      "market": "OTC",
+      "price": 76.5,
+      "volume": 1226.3,
+      "avg_volume": 1144.0,
+      "ratio": 1.07
+    },
+    {
+      "code": "1104",
+      "name": "環泥",
+      "market": "TSE",
+      "price": 26.45,
+      "volume": 986.4,
+      "avg_volume": 933.6,
+      "ratio": 1.06
+    },
+    {
+      "code": "2231",
+      "name": "為升",
+      "market": "TSE",
+      "price": 94.2,
+      "volume": 369.0,
+      "avg_volume": 347.2,
+      "ratio": 1.06
+    },
+    {
+      "code": "6854",
+      "name": "錼創科技-KY創",
+      "market": "TSE",
+      "price": 94.1,
+      "volume": 470.5,
+      "avg_volume": 442.9,
+      "ratio": 1.06
+    },
+    {
+      "code": "1446",
+      "name": "宏和",
+      "market": "TSE",
+      "price": 13.6,
+      "volume": 259.1,
+      "avg_volume": 245.9,
+      "ratio": 1.05
+    },
+    {
+      "code": "2486",
+      "name": "一詮",
+      "market": "TSE",
+      "price": 221.0,
+      "volume": 8705.0,
+      "avg_volume": 8304.2,
+      "ratio": 1.05
+    },
+    {
+      "code": "2923",
+      "name": "鼎固-KY",
+      "market": "TSE",
+      "price": 29.75,
+      "volume": 572.1,
+      "avg_volume": 544.4,
+      "ratio": 1.05
+    },
+    {
+      "code": "3605",
+      "name": "宏致",
+      "market": "TSE",
+      "price": 92.6,
+      "volume": 7966.7,
+      "avg_volume": 7573.3,
+      "ratio": 1.05
+    },
+    {
+      "code": "6202",
+      "name": "盛群",
+      "market": "TSE",
+      "price": 58.1,
+      "volume": 5822.4,
+      "avg_volume": 5564.6,
+      "ratio": 1.05
+    },
+    {
+      "code": "6491",
+      "name": "晶碩",
+      "market": "TSE",
+      "price": 365.5,
+      "volume": 856.1,
+      "avg_volume": 813.5,
+      "ratio": 1.05
+    },
+    {
+      "code": "6919",
+      "name": "康霈*",
+      "market": "TSE",
+      "price": 108.0,
+      "volume": 6756.8,
+      "avg_volume": 6406.8,
+      "ratio": 1.05
+    },
+    {
+      "code": "3188",
+      "name": "鑫龍騰",
+      "market": "OTC",
+      "price": 23.1,
+      "volume": 203.4,
+      "avg_volume": 193.5,
+      "ratio": 1.05
+    },
+    {
+      "code": "3276",
+      "name": "宇環",
+      "market": "OTC",
+      "price": 15.05,
+      "volume": 395.5,
+      "avg_volume": 375.6,
+      "ratio": 1.05
+    },
+    {
+      "code": "3362",
+      "name": "先進光",
+      "market": "OTC",
+      "price": 179.5,
+      "volume": 19442.1,
+      "avg_volume": 18556.4,
+      "ratio": 1.05
+    },
+    {
+      "code": "3577",
+      "name": "泓格",
+      "market": "OTC",
+      "price": 131.5,
+      "volume": 1406.9,
+      "avg_volume": 1341.4,
+      "ratio": 1.05
+    },
+    {
+      "code": "6147",
+      "name": "頎邦",
+      "market": "OTC",
+      "price": 144.5,
+      "volume": 34225.3,
+      "avg_volume": 32600.2,
+      "ratio": 1.05
+    },
+    {
+      "code": "6683",
+      "name": "雍智科技",
+      "market": "OTC",
+      "price": 1090.0,
+      "volume": 250.1,
+      "avg_volume": 238.7,
+      "ratio": 1.05
+    },
+    {
+      "code": "7714",
+      "name": "創泓科技",
+      "market": "OTC",
+      "price": 155.0,
+      "volume": 404.8,
+      "avg_volume": 386.6,
+      "ratio": 1.05
+    },
+    {
+      "code": "1477",
+      "name": "聚陽",
+      "market": "TSE",
+      "price": 222.0,
+      "volume": 2220.1,
+      "avg_volume": 2135.2,
+      "ratio": 1.04
+    },
+    {
+      "code": "2006",
+      "name": "東和鋼鐵",
+      "market": "TSE",
+      "price": 82.5,
+      "volume": 5561.3,
+      "avg_volume": 5372.2,
+      "ratio": 1.04
+    },
+    {
+      "code": "2834",
+      "name": "臺企銀",
+      "market": "TSE",
+      "price": 16.9,
+      "volume": 76971.0,
+      "avg_volume": 74271.7,
+      "ratio": 1.04
+    },
+    {
+      "code": "6589",
+      "name": "台康生技",
+      "market": "TSE",
+      "price": 47.4,
+      "volume": 678.5,
+      "avg_volume": 654.5,
+      "ratio": 1.04
+    },
+    {
+      "code": "3218",
+      "name": "大學光",
+      "market": "OTC",
+      "price": 136.0,
+      "volume": 271.2,
+      "avg_volume": 261.0,
+      "ratio": 1.04
+    },
+    {
+      "code": "3230",
+      "name": "錦明",
+      "market": "OTC",
+      "price": 40.2,
+      "volume": 911.2,
+      "avg_volume": 878.6,
+      "ratio": 1.04
+    },
+    {
+      "code": "3675",
+      "name": "德微",
+      "market": "OTC",
+      "price": 252.5,
+      "volume": 204.6,
+      "avg_volume": 197.1,
+      "ratio": 1.04
+    },
+    {
+      "code": "2331",
+      "name": "精英",
+      "market": "TSE",
+      "price": 19.3,
+      "volume": 1883.7,
+      "avg_volume": 1830.5,
+      "ratio": 1.03
+    },
+    {
+      "code": "2617",
+      "name": "台航",
+      "market": "TSE",
+      "price": 28.4,
+      "volume": 622.7,
+      "avg_volume": 607.2,
+      "ratio": 1.03
+    },
+    {
+      "code": "3665",
+      "name": "貿聯-KY",
+      "market": "TSE",
+      "price": 2300.0,
+      "volume": 3961.5,
+      "avg_volume": 3838.6,
+      "ratio": 1.03
+    },
+    {
+      "code": "4919",
+      "name": "新唐",
+      "market": "TSE",
+      "price": 129.5,
+      "volume": 8046.8,
+      "avg_volume": 7800.9,
+      "ratio": 1.03
+    },
+    {
+      "code": "5288",
+      "name": "豐祥-KY",
+      "market": "TSE",
+      "price": 193.5,
+      "volume": 239.4,
+      "avg_volume": 232.4,
+      "ratio": 1.03
+    },
+    {
+      "code": "5706",
+      "name": "鳳凰",
+      "market": "TSE",
+      "price": 43.85,
+      "volume": 215.8,
+      "avg_volume": 208.8,
+      "ratio": 1.03
+    },
+    {
+      "code": "9919",
+      "name": "康那香",
+      "market": "TSE",
+      "price": 13.9,
+      "volume": 409.2,
+      "avg_volume": 395.5,
+      "ratio": 1.03
+    },
+    {
+      "code": "5483",
+      "name": "中美晶",
+      "market": "OTC",
+      "price": 181.0,
+      "volume": 43318.4,
+      "avg_volume": 42254.6,
+      "ratio": 1.03
+    },
+    {
+      "code": "6510",
+      "name": "精測",
+      "market": "OTC",
+      "price": 2795.0,
+      "volume": 664.3,
+      "avg_volume": 646.2,
+      "ratio": 1.03
+    },
+    {
+      "code": "6538",
+      "name": "倉和",
+      "market": "OTC",
+      "price": 148.5,
+      "volume": 2686.8,
+      "avg_volume": 2613.9,
+      "ratio": 1.03
+    },
+    {
+      "code": "6945",
+      "name": "圓祥生技",
+      "market": "OTC",
+      "price": 94.8,
+      "volume": 214.1,
+      "avg_volume": 207.1,
+      "ratio": 1.03
+    },
+    {
+      "code": "1416",
+      "name": "廣豐",
+      "market": "TSE",
+      "price": 10.75,
+      "volume": 211.5,
+      "avg_volume": 207.1,
+      "ratio": 1.02
+    },
+    {
+      "code": "1618",
+      "name": "合機",
+      "market": "TSE",
+      "price": 38.85,
+      "volume": 636.5,
+      "avg_volume": 622.8,
+      "ratio": 1.02
+    },
+    {
+      "code": "2038",
+      "name": "海光",
+      "market": "TSE",
+      "price": 12.25,
+      "volume": 284.9,
+      "avg_volume": 279.5,
+      "ratio": 1.02
+    },
+    {
+      "code": "3701",
+      "name": "大眾控",
+      "market": "TSE",
+      "price": 39.1,
+      "volume": 840.3,
+      "avg_volume": 823.3,
+      "ratio": 1.02
+    },
+    {
+      "code": "4956",
+      "name": "光鋐",
+      "market": "TSE",
+      "price": 29.7,
+      "volume": 1670.2,
+      "avg_volume": 1638.5,
+      "ratio": 1.02
+    },
+    {
+      "code": "6226",
+      "name": "光鼎",
+      "market": "TSE",
+      "price": 22.0,
+      "volume": 25347.6,
+      "avg_volume": 24826.7,
+      "ratio": 1.02
+    },
+    {
+      "code": "1591",
+      "name": "駿吉-KY",
+      "market": "OTC",
+      "price": 36.4,
+      "volume": 340.3,
+      "avg_volume": 334.1,
+      "ratio": 1.02
+    },
+    {
+      "code": "5347",
+      "name": "世界",
+      "market": "OTC",
+      "price": 154.5,
+      "volume": 31659.8,
+      "avg_volume": 31161.5,
+      "ratio": 1.02
+    },
+    {
+      "code": "2020",
+      "name": "美亞",
+      "market": "TSE",
+      "price": 21.05,
+      "volume": 278.1,
+      "avg_volume": 274.4,
+      "ratio": 1.01
+    },
+    {
+      "code": "2905",
+      "name": "三商",
+      "market": "TSE",
+      "price": 16.35,
+      "volume": 1828.6,
+      "avg_volume": 1815.3,
+      "ratio": 1.01
+    },
+    {
+      "code": "3052",
+      "name": "夆典",
+      "market": "TSE",
+      "price": 10.55,
+      "volume": 368.9,
+      "avg_volume": 365.9,
+      "ratio": 1.01
+    },
+    {
+      "code": "6412",
+      "name": "群電",
+      "market": "TSE",
+      "price": 81.8,
+      "volume": 1415.6,
+      "avg_volume": 1397.4,
+      "ratio": 1.01
+    },
+    {
+      "code": "6541",
+      "name": "泰福-KY",
+      "market": "TSE",
+      "price": 37.15,
+      "volume": 363.9,
+      "avg_volume": 361.4,
+      "ratio": 1.01
+    },
+    {
+      "code": "7780",
+      "name": "大研生醫*",
+      "market": "TSE",
+      "price": 16.6,
+      "volume": 985.7,
+      "avg_volume": 973.6,
+      "ratio": 1.01
+    },
+    {
+      "code": "2230",
+      "name": "泰茂",
+      "market": "OTC",
+      "price": 24.25,
+      "volume": 220.8,
+      "avg_volume": 219.0,
+      "ratio": 1.01
+    },
+    {
+      "code": "2641",
+      "name": "正德",
+      "market": "OTC",
+      "price": 17.05,
+      "volume": 1077.4,
+      "avg_volume": 1066.8,
+      "ratio": 1.01
+    },
+    {
+      "code": "4726",
+      "name": "永昕",
+      "market": "OTC",
+      "price": 24.85,
+      "volume": 150.8,
+      "avg_volume": 149.2,
+      "ratio": 1.01
+    },
+    {
+      "code": "5468",
+      "name": "凱鈺",
+      "market": "OTC",
+      "price": 25.0,
+      "volume": 185.1,
+      "avg_volume": 183.5,
+      "ratio": 1.01
+    },
+    {
+      "code": "8277",
+      "name": "商丞",
+      "market": "OTC",
+      "price": 8.19,
+      "volume": 128.6,
+      "avg_volume": 127.2,
+      "ratio": 1.01
+    },
+    {
+      "code": "3703",
+      "name": "欣陸",
+      "market": "TSE",
+      "price": 20.4,
+      "volume": 1838.2,
+      "avg_volume": 1833.4,
       "ratio": 1.0
     },
     {
-      "code": "8064",
-      "name": "8064",
+      "code": "1785",
+      "name": "光洋科",
       "market": "OTC",
-      "price": 97.6,
-      "volume": 3677.9,
-      "avg_volume": 3668.0,
+      "price": 111.0,
+      "volume": 9713.0,
+      "avg_volume": 9687.3,
+      "ratio": 1.0
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "market": "OTC",
+      "price": 944.0,
+      "volume": 2388.3,
+      "avg_volume": 2387.0,
+      "ratio": 1.0
+    },
+    {
+      "code": "5386",
+      "name": "青雲",
+      "market": "OTC",
+      "price": 248.5,
+      "volume": 1144.0,
+      "avg_volume": 1139.3,
+      "ratio": 1.0
+    },
+    {
+      "code": "8099",
+      "name": "大世科",
+      "market": "OTC",
+      "price": 55.6,
+      "volume": 158.3,
+      "avg_volume": 157.5,
       "ratio": 1.0
     }
   ]
