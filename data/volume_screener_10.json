@@ -443,15 +443,6 @@
       "ratio": 2.09
     },
     {
-      "code": "2049",
-      "name": "上銀",
-      "market": "TSE",
-      "price": 332.0,
-      "volume": 5559.9,
-      "avg_volume": 2670.4,
-      "ratio": 2.08
-    },
-    {
       "code": "3504",
       "name": "揚明光",
       "market": "TSE",
@@ -3833,15 +3824,6 @@
       "price": 13.6,
       "volume": 259.1,
       "avg_volume": 253.8,
-      "ratio": 1.02
-    },
-    {
-      "code": "1737",
-      "name": "臺鹽",
-      "market": "TSE",
-      "price": 32.05,
-      "volume": 144.0,
-      "avg_volume": 140.7,
       "ratio": 1.02
     },
     {
