@@ -1241,6 +1241,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const rulesList = document.getElementById('alert-rules-list');
         if (rulesList) rulesList.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;"><i class="fa-solid fa-spinner fa-spin"></i> 載入監控規則中...</div>`;
         
+        if (!isLocal) {
+            if (rulesList) {
+                rulesList.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;">
+                    <i class="fa-solid fa-bell-slash" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i><br>
+                    <strong>網頁版功能限制：</strong><br>
+                    自選股 Telegram 實時監控需要 Python 後端與 Telegram Bot 伺服器支援。<br>
+                    請在本機端（<a href="http://localhost:5001" target="_blank" style="color: #00cec9; text-decoration: underline;">http://localhost:5001</a>）開啟此頁面以設定或查看監控規則。
+                </div>`;
+            }
+            return;
+        }
+        
         try {
             const response = await fetch('/api/alerts');
             if (response.status === 200) {
@@ -1300,6 +1312,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.saveAlertRule = async function() {
+        if (!isLocal) {
+            alert("⚠️ 網頁版功能限制：新增自選股監控必須在本機端 (localhost) 進行！");
+            return;
+        }
         const codeInput = document.getElementById('alert-stock-code');
         const nameInput = document.getElementById('alert-stock-name');
         const aboveInput = document.getElementById('alert-price-above');
@@ -1363,6 +1379,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.toggleAlertRule = async function(id, isChecked) {
+        if (!isLocal) {
+            alert("⚠️ 網頁版功能限制：啟用/停用規則必須在本機端 (localhost) 進行！");
+            return;
+        }
         try {
             // Get original rule
             const getResp = await fetch('/api/alerts');
@@ -1384,6 +1404,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.deleteAlertRule = async function(id) {
+        if (!isLocal) {
+            alert("⚠️ 網頁版功能限制：刪除監控規則必須在本機端 (localhost) 進行！");
+            return;
+        }
         if (!confirm("確定要刪除此條監控規則嗎？")) return;
         try {
             const response = await fetch(`/api/alerts/${id}`, { method: 'DELETE' });
@@ -1510,6 +1534,13 @@ document.addEventListener('DOMContentLoaded', () => {
         txtError.style.display = 'none';
         panelDashboardGrid.style.display = 'none';
         panelReportCard.style.display = 'none';
+        
+        if (!isLocal) {
+            txtError.innerHTML = `⚠️ <strong>網頁版不開放：</strong><br>「個股研究與法說會 AI 評估」需要本機 Python 後端與 Selenium 自動化瀏覽器支援，目前網頁版不開放。<br>請改在您的電腦本機端造訪 <a href="http://localhost:5001/" target="_blank" style="color: #00cec9; text-decoration: underline;">http://localhost:5001</a> 使用本功能。`;
+            txtError.style.display = 'block';
+            return;
+        }
+        
         panelLoading.style.display = 'block';
         lblLoadingStatus.innerText = '正在透過 Selenium 搜尋觀測站法說會簡報，並獲取估值與營收數據...';
         
@@ -1670,6 +1701,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function triggerGenerateReport() {
+        if (!isLocal) {
+            alert('⚠️ 網頁版不開放：\n「個股研究加碼評估 AI 報告」需要本機 Python 後端支援。\n請在您的電腦本機端造訪 http://localhost:5001 使用此功能。');
+            return;
+        }
         if (!currentStockData || !currentStockData.briefing.pdf_filename) {
             alert("無法生成報告: 缺少簡報資訊");
             return;
@@ -1683,7 +1718,7 @@ document.addEventListener('DOMContentLoaded', () => {
         panelDashboardGrid.style.display = 'none';
         panelReportCard.style.display = 'none';
         panelLoading.style.display = 'block';
-        lblLoadingStatus.innerText = '正在下載法說會簡報 PDF，抽取關鍵內容並發送至 Gemini 生成深度評估報告 (大約需要 15~20 秒)...';
+        lblLoadingStatus.innerText = '正在下載法說會簡報 PDF，抽取關鍵內容並發送至 Gemini 生成深度評估報告 (大約需要 30~60 秒)...';
         
         const code = currentStockData.stock_code;
         const payload = {
