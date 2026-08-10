@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Detect environment
+    const hasLiveServer = !window.location.hostname.endsWith('github.io');
     const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
     // Global state
@@ -23,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailTableHeaders = document.getElementById('detail-table-headers');
     const detailDataBody = document.getElementById('detail-data-body');
 
-    // UI adjustments for GitHub Pages (Non-local)
-    if (!isLocal) {
+    // UI adjustments for GitHub Pages (Non-local / No live server)
+    if (!hasLiveServer) {
         if (btnRunLong) btnRunLong.style.display = 'none';
         if (btnRunShort) btnRunShort.style.display = 'none';
         if (btnRunMargin) btnRunMargin.style.display = 'none';
@@ -128,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (isLocal) {
+    if (hasLiveServer) {
         btnRunLong.addEventListener('click', () => triggerRun('long'));
         btnRunShort.addEventListener('click', () => triggerRun('short'));
         if (btnRunMargin) btnRunMargin.addEventListener('click', () => triggerRun('margin'));
@@ -140,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             historyFilesBody.innerHTML = `<tr><td colspan="6" class="text-center">讀取歷史目錄中...</td></tr>`;
             
             // Adaptive route: Flask API locally, static index JSON on GitHub Pages
-            const url = isLocal ? '/api/history' : '../data/history_index.json';
+            const url = hasLiveServer ? '/api/history' : '../data/history_index.json';
             const response = await fetch(url);
             const data = await response.json();
             
@@ -223,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
             detailDataBody.innerHTML = `<tr><td colspan="15" class="text-center">讀取報表詳細內容中...</td></tr>`;
             
             let data = [];
-            if (isLocal) {
+            if (hasLiveServer) {
                 const response = await fetch(`/api/report/${filename}`);
                 data = await response.json();
                 if (data.status === 'error') {
@@ -309,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // LOAD STRATEGY STATS & CHARTS
     async function loadStats() {
         try {
-            const url = isLocal ? '/api/stats' : '../data/strategy_stats.json';
+            const url = hasLiveServer ? '/api/stats' : '../data/strategy_stats.json';
             const response = await fetch(url);
             const data = await response.json();
 
@@ -505,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         try {
-            const resp = await fetch(isLocal ? `/api/institutional?days=${days}` : `../data/institutional_${days}.json`);
+            const resp = await fetch(hasLiveServer ? `/api/institutional?days=${days}` : `../data/institutional_${days}.json`);
             const json = await resp.json();
             
             if (json.status === 'success') {
@@ -695,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 let json;
-                if (isLocal) {
+                if (hasLiveServer) {
                     const resp = await fetch(`/api/volume/screener?days=${days}&min_volume=${minVol}&min_ratio=${minRatio}`);
                     json = await resp.json();
                 } else {
@@ -786,7 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. 取得歷史選股列表，找出最新的籌碼報告
-            const response = await fetch(isLocal ? '/api/history' : '../data/history_index.json');
+            const response = await fetch(hasLiveServer ? '/api/history' : '../data/history_index.json');
             const history = await response.json();
             
             const latestMargin = history.find(item => item.strategy_type === 'margin');
@@ -794,7 +795,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!latestMargin) {
                 if (infoEl) infoEl.textContent = "⚠️ 目前無資券籌碼分析報告。";
                 [listSqueeze, listMajor, listRetail].forEach(el => {
-                    if (el) el.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;">無符合條件個股</div>`;
+                    if (el) el.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;">(無個股資料)</div>`;
                 });
                 [countSqueeze, countMajor, countRetail].forEach(el => { if (el) el.textContent = '0'; });
                 return;
@@ -804,7 +805,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 2. 獲取該報表的詳細內容
             let data = [];
-            if (isLocal) {
+            if (hasLiveServer) {
                 const reportResp = await fetch(`/api/report/${latestMargin.filename}`);
                 data = await reportResp.json();
             } else {
@@ -892,7 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Read from API or JSON static cache depending on env
             let response;
-            if (isLocal) {
+            if (hasLiveServer) {
                 response = await fetch('/api/market-compass');
             } else {
                 response = await fetch('../data/market_compass.json');
@@ -900,7 +901,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (response.status === 200) {
                 let data;
-                if (isLocal) {
+                if (hasLiveServer) {
                     data = await response.json();
                 } else {
                     const metrics = await response.json();
@@ -1039,7 +1040,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             let response;
-            if (isLocal) {
+            if (hasLiveServer) {
                 response = await fetch('/api/chip-horse');
             } else {
                 response = await fetch('../data/chip_horse_latest.json');
@@ -1241,7 +1242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rulesList = document.getElementById('alert-rules-list');
         if (rulesList) rulesList.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;"><i class="fa-solid fa-spinner fa-spin"></i> 載入監控規則中...</div>`;
         
-        if (!isLocal) {
+        if (!hasLiveServer) {
             if (rulesList) {
                 rulesList.innerHTML = `<div class="text-center" style="color: #8c82ab; padding: 2rem 0;">
                     <i class="fa-solid fa-bell-slash" style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;"></i><br>
@@ -1312,8 +1313,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.saveAlertRule = async function() {
-        if (!isLocal) {
-            alert("⚠️ 網頁版功能限制：新增自選股監控必須在本機端 (localhost) 進行！");
+        if (!hasLiveServer) {
+            alert("⚠️ 網頁版功能限制：新增自選股監控必須在活體伺服器端進行！");
             return;
         }
         const codeInput = document.getElementById('alert-stock-code');
@@ -1379,8 +1380,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.toggleAlertRule = async function(id, isChecked) {
-        if (!isLocal) {
-            alert("⚠️ 網頁版功能限制：啟用/停用規則必須在本機端 (localhost) 進行！");
+        if (!hasLiveServer) {
+            alert("⚠️ 網頁版功能限制：啟用/停用規則必須在活體伺服器端進行！");
             return;
         }
         try {
@@ -1404,8 +1405,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.deleteAlertRule = async function(id) {
-        if (!isLocal) {
-            alert("⚠️ 網頁版功能限制：刪除監控規則必須在本機端 (localhost) 進行！");
+        if (!hasLiveServer) {
+            alert("⚠️ 網頁版功能限制：刪除監控規則必須在活體伺服器端進行！");
             return;
         }
         if (!confirm("確定要刪除此條監控規則嗎？")) return;
