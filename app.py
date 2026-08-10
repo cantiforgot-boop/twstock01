@@ -742,7 +742,7 @@ def generate_ai_report():
         {extracted_text}
         """
         
-        response = model.generate_content(prompt)
+        response = model.generate_content(prompt, request_options={"timeout": 120, "retry": None})
         report_text = response.text
         
         reports_dir = os.path.join(base_dir, 'data', 'reports')
@@ -767,8 +767,9 @@ def generate_ai_report():
 import re
 
 
+# Start scheduler thread
+threading.Thread(target=run_scheduler_bg, daemon=True).start()
+
 if __name__ == '__main__':
-    # Start scheduler thread
-    threading.Thread(target=run_scheduler_bg, daemon=True).start()
     print("啟動 Flask Web 伺服器，造訪 http://localhost:5001")
     app.run(host='0.0.0.0', port=5001, debug=False)

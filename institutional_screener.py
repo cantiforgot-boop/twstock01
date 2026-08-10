@@ -420,6 +420,12 @@ def query_single_stock_volume(code, n_days=20):
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
             
+        # Drop rows with NaN Close or Volume to prevent NaN serialization errors
+        df.dropna(subset=['Volume', 'Close'], inplace=True)
+        
+        if df.empty:
+            return None
+            
         # Volume is in shares, convert to 張 (1000 shares)
         df['Vol_Sheets'] = df['Volume'] / 1000.0
         df['Vol_MA'] = df['Vol_Sheets'].rolling(window=n_days).mean()

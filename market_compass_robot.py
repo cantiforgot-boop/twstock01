@@ -38,7 +38,7 @@ def fetch_margin_ratio():
         if r.status_code == 200:
             data = r.json()
             if data:
-                latest = data[-1]
+                latest = data[0]
                 dt = datetime.datetime.fromtimestamp(latest['date']/1000)
                 # marginRatio e.g. 1.669 -> 166.90%
                 ratio = round(latest['marginRatio'] * 100, 2)
