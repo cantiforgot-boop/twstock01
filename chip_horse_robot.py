@@ -25,6 +25,9 @@ os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(REPORTS_DIR, exist_ok=True)
 os.makedirs(HISTORY_DIR, exist_ok=True)
 
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 def fetch_latest_tdcc_data():
     """
     下載最新的集保戶股權分散表 CSV
@@ -33,7 +36,7 @@ def fetch_latest_tdcc_data():
     url = 'https://opendata.tdcc.com.tw/getOD.ashx?id=1-5'
     headers = {'User-Agent': 'Mozilla/5.0'}
     try:
-        r = requests.get(url, headers=headers, timeout=30)
+        r = requests.get(url, headers=headers, timeout=30, verify=False)
         if r.status_code == 200:
             content = r.content.decode('utf-8-sig', errors='ignore')
             reader = csv.reader(io.StringIO(content))
