@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // POLLING STATUS (Local only)
+    // POLLING STATUS (Local only / Live Server)
     function startPollingStatus() {
-        if (!isLocal) return;
+        if (!hasLiveServer) return;
         if (pollingInterval) clearInterval(pollingInterval);
         
         btnRunLong.disabled = true;
@@ -107,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // TRIGGER RUNS (Local only)
+    // TRIGGER RUNS (Local / Live Server)
     async function triggerRun(strategy) {
-        if (!isLocal) return;
+        if (!hasLiveServer) return;
         try {
             consoleLog.textContent = "發送請求中...";
             const volInput = document.getElementById(`param-${strategy}-vol`);
@@ -754,9 +754,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Check status on load (Local only)
+    // Check status on load (Local / Live Server)
     async function checkStatusOnLoad() {
-        if (!isLocal) return;
+        if (!hasLiveServer) return;
         try {
             const response = await fetch('/api/status');
             const data = await response.json();
@@ -1488,7 +1488,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const btnCompassCrawler = document.getElementById('btn-run-compass-crawler');
     if (btnCompassCrawler) {
-        if (isLocal) {
+        if (hasLiveServer) {
             btnCompassCrawler.addEventListener('click', runMarketCompassCrawler);
         } else {
             btnCompassCrawler.style.display = 'none';
@@ -1500,7 +1500,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const btnChipHorseCrawler = document.getElementById('btn-run-chip-horse-crawler');
     if (btnChipHorseCrawler) {
-        if (isLocal) {
+        if (hasLiveServer) {
             btnChipHorseCrawler.addEventListener('click', runChipHorseCrawler);
         } else {
             btnChipHorseCrawler.style.display = 'none';
