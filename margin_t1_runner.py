@@ -32,13 +32,13 @@ load_dotenv()
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-# 決定相對目錄路徑，確保不論在哪個目錄執行，檔案都寫在 02_Margin_T1_Lab/reports/ 下
+# 決定相對目錄路徑，確保不論在哪個目錄執行，檔案都寫在 reports/ 下
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 # 網頁儀表板資料夾路徑，用於共享資料
-WEB_DATA_DIR = os.path.join(os.path.dirname(BASE_DIR), "台股量化精選與回測", "data")
+WEB_DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(WEB_DATA_DIR, exist_ok=True)
 
 
