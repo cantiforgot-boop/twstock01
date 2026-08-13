@@ -1,5 +1,27 @@
 [
   {
+    "filename": "chip_horse_screener_20260807.csv",
+    "date": "2026/08/07",
+    "raw_date": "20260807",
+    "strategy": "黑馬籌碼雷達",
+    "strategy_type": "chip_horse",
+    "count": 10,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "market_compass_report_20260813.md",
+    "date": "2026/08/13",
+    "raw_date": "20260813",
+    "strategy": "總經風向儀",
+    "strategy_type": "compass",
+    "count": 9,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
     "filename": "台股空方精選_20260813.csv",
     "date": "2026/08/13",
     "raw_date": "20260813",
