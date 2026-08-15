@@ -1,293 +1,438 @@
 {
-  "date": "20260807",
-  "update_time": "2026-08-14 18:07:09",
+  "date": "20260814",
+  "update_time": "2026-08-15 15:43:06",
   "candidates": [
+    {
+      "code": "5351",
+      "name": "鈺創",
+      "current_price": 0.0,
+      "w0_large": 40.07,
+      "w1_large": 32.89,
+      "w2_large": 23.03,
+      "large_diff_2w": 17.04,
+      "w0_retail": 55.37,
+      "w1_retail": 62.39,
+      "w2_retail": 70.95,
+      "retail_diff_2w": -15.58,
+      "w0_shareholders": 102641,
+      "w1_shareholders": 109133,
+      "w2_shareholders": 115550,
+      "shareholders_diff_2w": -12909,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "120.1",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 23.03% 連續兩週爬升至 40.07%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 6,492 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "current_price": 192.0,
+      "w0_large": 45.51,
+      "w1_large": 38.2,
+      "w2_large": 33.37,
+      "large_diff_2w": 12.14,
+      "w0_retail": 51.31,
+      "w1_retail": 57.71,
+      "w2_retail": 63.43,
+      "retail_diff_2w": -12.12,
+      "w0_shareholders": 85747,
+      "w1_shareholders": 92034,
+      "w2_shareholders": 96075,
+      "shareholders_diff_2w": -10328,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "240.0",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 33.37% 連續兩週爬升至 45.51%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 6,287 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "3605",
+      "name": "宏致",
+      "current_price": 131.5,
+      "w0_large": 59.48,
+      "w1_large": 55.79,
+      "w2_large": 48.07,
+      "large_diff_2w": 11.41,
+      "w0_retail": 34.0,
+      "w1_retail": 39.66,
+      "w2_retail": 47.62,
+      "retail_diff_2w": -13.62,
+      "w0_shareholders": 38682,
+      "w1_shareholders": 41197,
+      "w2_shareholders": 44232,
+      "shareholders_diff_2w": -5550,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "160.3",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 48.07% 連續兩週爬升至 59.48%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,515 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 38.11594 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "6241",
+      "name": "鑫永洋",
+      "current_price": 0.0,
+      "w0_large": 49.86,
+      "w1_large": 39.46,
+      "w2_large": 38.85,
+      "large_diff_2w": 11.01,
+      "w0_retail": 46.07,
+      "w1_retail": 55.62,
+      "w2_retail": 56.23,
+      "retail_diff_2w": -10.16,
+      "w0_shareholders": 24311,
+      "w1_shareholders": 26331,
+      "w2_shareholders": 27588,
+      "shareholders_diff_2w": -3277,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "115.9",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 38.85% 連續兩週爬升至 49.86%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,020 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "6538",
+      "name": "倉和",
+      "current_price": 0.0,
+      "w0_large": 20.45,
+      "w1_large": 12.58,
+      "w2_large": 10.48,
+      "large_diff_2w": 9.97,
+      "w0_retail": 62.35,
+      "w1_retail": 65.77,
+      "w2_retail": 69.93,
+      "retail_diff_2w": -7.58,
+      "w0_shareholders": 37774,
+      "w1_shareholders": 38376,
+      "w2_shareholders": 38691,
+      "shareholders_diff_2w": -917,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "117.0",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 10.48% 連續兩週爬升至 20.45%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 602 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "4931",
+      "name": "新盛力",
+      "current_price": 0.0,
+      "w0_large": 23.1,
+      "w1_large": 13.48,
+      "w2_large": 13.24,
+      "large_diff_2w": 9.86,
+      "w0_retail": 67.92,
+      "w1_retail": 75.9,
+      "w2_retail": 78.62,
+      "retail_diff_2w": -10.7,
+      "w0_shareholders": 59370,
+      "w1_shareholders": 61537,
+      "w2_shareholders": 61862,
+      "shareholders_diff_2w": -2492,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "124.0",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 13.24% 連續兩週爬升至 23.1%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,167 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "3489",
+      "name": "森寶",
+      "current_price": 0.0,
+      "w0_large": 76.11,
+      "w1_large": 70.41,
+      "w2_large": 66.59,
+      "large_diff_2w": 9.52,
+      "w0_retail": 21.49,
+      "w1_retail": 26.23,
+      "w2_retail": 27.58,
+      "retail_diff_2w": -6.09,
+      "w0_shareholders": 2660,
+      "w1_shareholders": 2915,
+      "w2_shareholders": 3203,
+      "shareholders_diff_2w": -543,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "121.5",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 66.59% 連續兩週爬升至 76.11%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 255 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "3006",
+      "name": "晶豪科",
+      "current_price": 273.5,
+      "w0_large": 49.83,
+      "w1_large": 48.04,
+      "w2_large": 41.34,
+      "large_diff_2w": 8.49,
+      "w0_retail": 43.65,
+      "w1_retail": 45.82,
+      "w2_retail": 52.66,
+      "retail_diff_2w": -9.01,
+      "w0_shareholders": 61593,
+      "w1_shareholders": 65182,
+      "w2_shareholders": 72006,
+      "shareholders_diff_2w": -10413,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "317.6",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 41.34% 連續兩週爬升至 49.83%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 3,589 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 33.313034 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "2359",
+      "name": "所羅門",
+      "current_price": 159.5,
+      "w0_large": 46.37,
+      "w1_large": 40.13,
+      "w2_large": 37.95,
+      "large_diff_2w": 8.42,
+      "w0_retail": 46.95,
+      "w1_retail": 53.48,
+      "w2_retail": 57.45,
+      "retail_diff_2w": -10.5,
+      "w0_shareholders": 56762,
+      "w1_shareholders": 62386,
+      "w2_shareholders": 64097,
+      "shareholders_diff_2w": -7335,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "198.4",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 37.95% 連續兩週爬升至 46.37%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 5,624 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 81.79487 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "current_price": 480.0,
+      "w0_large": 60.72,
+      "w1_large": 55.92,
+      "w2_large": 52.84,
+      "large_diff_2w": 7.88,
+      "w0_retail": 33.36,
+      "w1_retail": 37.73,
+      "w2_retail": 41.43,
+      "retail_diff_2w": -8.07,
+      "w0_shareholders": 62893,
+      "w1_shareholders": 71429,
+      "w2_shareholders": 77227,
+      "shareholders_diff_2w": -14334,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "569.2",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 52.84% 連續兩週爬升至 60.72%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 8,536 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 117.647064 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "6265",
+      "name": "方土昶",
+      "current_price": 0.0,
+      "w0_large": 47.53,
+      "w1_large": 40.0,
+      "w2_large": 39.87,
+      "large_diff_2w": 7.66,
+      "w0_retail": 50.44,
+      "w1_retail": 55.87,
+      "w2_retail": 58.62,
+      "retail_diff_2w": -8.18,
+      "w0_shareholders": 36424,
+      "w1_shareholders": 38072,
+      "w2_shareholders": 38417,
+      "shareholders_diff_2w": -1993,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "116.4",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 39.87% 連續兩週爬升至 47.53%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 1,648 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "4967",
+      "name": "十銓",
+      "current_price": 275.0,
+      "w0_large": 17.74,
+      "w1_large": 13.59,
+      "w2_large": 12.21,
+      "large_diff_2w": 5.53,
+      "w0_retail": 77.06,
+      "w1_retail": 79.29,
+      "w2_retail": 83.92,
+      "retail_diff_2w": -6.86,
+      "w0_shareholders": 64604,
+      "w1_shareholders": 65015,
+      "w2_shareholders": 66042,
+      "shareholders_diff_2w": -1438,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "344.5",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 12.21% 連續兩週爬升至 17.74%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 411 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 7.794785 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "current_price": 159.0,
+      "w0_large": 63.63,
+      "w1_large": 61.45,
+      "w2_large": 58.97,
+      "large_diff_2w": 4.66,
+      "w0_retail": 31.99,
+      "w1_retail": 34.85,
+      "w2_retail": 36.69,
+      "retail_diff_2w": -4.7,
+      "w0_shareholders": 93659,
+      "w1_shareholders": 99285,
+      "w2_shareholders": 104149,
+      "shareholders_diff_2w": -10490,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "194.7",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 58.97% 連續兩週爬升至 63.63%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 5,626 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 16.754478 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
+    {
+      "code": "4546",
+      "name": "未命名",
+      "current_price": 0.0,
+      "w0_large": 64.49,
+      "w1_large": 60.5,
+      "w2_large": 59.84,
+      "large_diff_2w": 4.65,
+      "w0_retail": 31.01,
+      "w1_retail": 32.05,
+      "w2_retail": 35.67,
+      "retail_diff_2w": -4.66,
+      "w0_shareholders": 965,
+      "w1_shareholders": 977,
+      "w2_shareholders": 1076,
+      "shareholders_diff_2w": -111,
+      "foreign_buy_days": 0,
+      "sitc_buy_days": 0,
+      "ai_diagnosis": {
+        "rating": "買進",
+        "target_price": "116.3",
+        "key_reasons": [
+          "籌碼顯著集中：千張大戶持股比率由 59.84% 連續兩週爬升至 64.49%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 12 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 15.0 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+        ],
+        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
+      }
+    },
     {
       "code": "3231",
       "name": "緯創",
       "current_price": 193.5,
-      "w0_large": 64.89,
-      "w1_large": 62.08,
-      "w2_large": 60.61,
-      "large_diff_2w": 4.28,
-      "w0_retail": 32.7,
-      "w1_retail": 35.57,
-      "w2_retail": 37.01,
-      "retail_diff_2w": -4.31,
-      "w0_shareholders": 340890,
-      "w1_shareholders": 369950,
-      "w2_shareholders": 378119,
-      "shareholders_diff_2w": -37229,
+      "w0_large": 66.34,
+      "w1_large": 64.89,
+      "w2_large": 62.08,
+      "large_diff_2w": 4.26,
+      "w0_retail": 31.43,
+      "w1_retail": 32.7,
+      "w2_retail": 35.57,
+      "retail_diff_2w": -4.14,
+      "w0_shareholders": 325475,
+      "w1_shareholders": 340890,
+      "w2_shareholders": 369950,
+      "shareholders_diff_2w": -44475,
       "foreign_buy_days": 0,
       "sitc_buy_days": 0,
       "ai_diagnosis": {
         "rating": "買進",
-        "target_price": "233.2",
+        "target_price": "223.8",
         "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 60.61% 連續兩週爬升至 64.89%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 29,060 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 20.368422 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "3037",
-      "name": "欣興",
-      "current_price": 1020.0,
-      "w0_large": 68.18,
-      "w1_large": 66.89,
-      "w2_large": 65.21,
-      "large_diff_2w": 2.97,
-      "w0_retail": 27.28,
-      "w1_retail": 28.65,
-      "w2_retail": 30.33,
-      "retail_diff_2w": -3.05,
-      "w0_shareholders": 358580,
-      "w1_shareholders": 394099,
-      "w2_shareholders": 404031,
-      "shareholders_diff_2w": -45451,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "1284.0",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 65.21% 連續兩週爬升至 68.18%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 35,519 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 145.71428 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2610",
-      "name": "華航",
-      "current_price": 19.9,
-      "w0_large": 71.57,
-      "w1_large": 70.67,
-      "w2_large": 68.7,
-      "large_diff_2w": 2.87,
-      "w0_retail": 26.83,
-      "w1_retail": 27.73,
-      "w2_retail": 29.65,
-      "retail_diff_2w": -2.82,
-      "w0_shareholders": 238005,
-      "w1_shareholders": 244054,
-      "w2_shareholders": 251270,
-      "shareholders_diff_2w": -13265,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "24.4",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 68.7% 連續兩週爬升至 71.57%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 6,049 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 7.8346457 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2618",
-      "name": "長榮航",
-      "current_price": 39.9,
-      "w0_large": 78.27,
-      "w1_large": 77.54,
-      "w2_large": 75.71,
-      "large_diff_2w": 2.56,
-      "w0_retail": 19.69,
-      "w1_retail": 20.35,
-      "w2_retail": 22.15,
-      "retail_diff_2w": -2.46,
-      "w0_shareholders": 203079,
-      "w1_shareholders": 208411,
-      "w2_shareholders": 214128,
-      "shareholders_diff_2w": -11049,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "49.5",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 75.71% 連續兩週爬升至 78.27%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 5,332 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 7.629063 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2883",
-      "name": "凱基金",
-      "current_price": 31.65,
-      "w0_large": 64.57,
-      "w1_large": 64.22,
-      "w2_large": 62.14,
-      "large_diff_2w": 2.43,
-      "w0_retail": 33.26,
-      "w1_retail": 33.59,
-      "w2_retail": 35.63,
-      "retail_diff_2w": -2.37,
-      "w0_shareholders": 727733,
-      "w1_shareholders": 731269,
-      "w2_shareholders": 754129,
-      "shareholders_diff_2w": -26396,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "37.7",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 62.14% 連續兩週爬升至 64.57%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 3,536 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 18.189655 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2317",
-      "name": "鴻海",
-      "current_price": 259.5,
-      "w0_large": 67.04,
-      "w1_large": 66.22,
-      "w2_large": 64.88,
-      "large_diff_2w": 2.16,
-      "w0_retail": 31.29,
-      "w1_retail": 32.12,
-      "w2_retail": 33.44,
-      "retail_diff_2w": -2.15,
-      "w0_shareholders": 1133408,
-      "w1_shareholders": 1169534,
-      "w2_shareholders": 1192970,
-      "shareholders_diff_2w": -59562,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "331.0",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 64.88% 連續兩週爬升至 67.04%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 36,126 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 18.615496 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2891",
-      "name": "中信金",
-      "current_price": 65.8,
-      "w0_large": 79.0,
-      "w1_large": 78.95,
-      "w2_large": 76.87,
-      "large_diff_2w": 2.13,
-      "w0_retail": 19.24,
-      "w1_retail": 19.36,
-      "w2_retail": 21.4,
-      "retail_diff_2w": -2.16,
-      "w0_shareholders": 581638,
-      "w1_shareholders": 583640,
-      "w2_shareholders": 601868,
-      "shareholders_diff_2w": -20230,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "81.2",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 76.87% 連續兩週爬升至 79.0%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,002 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 16.206898 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2603",
-      "name": "長榮",
-      "current_price": 219.0,
-      "w0_large": 66.95,
-      "w1_large": 66.94,
-      "w2_large": 64.94,
-      "large_diff_2w": 2.01,
-      "w0_retail": 29.78,
-      "w1_retail": 29.97,
-      "w2_retail": 32.01,
-      "retail_diff_2w": -2.23,
-      "w0_shareholders": 301145,
-      "w1_shareholders": 303388,
-      "w2_shareholders": 312506,
-      "shareholders_diff_2w": -11361,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "買進",
-        "target_price": "266.9",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 64.94% 連續兩週爬升至 66.95%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,243 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 9.588441 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2881",
-      "name": "富邦金",
-      "current_price": 129.5,
-      "w0_large": 84.28,
-      "w1_large": 84.23,
-      "w2_large": 82.34,
-      "large_diff_2w": 1.94,
-      "w0_retail": 14.4,
-      "w1_retail": 14.44,
-      "w2_retail": 16.36,
-      "retail_diff_2w": -1.96,
-      "w0_shareholders": 384975,
-      "w1_shareholders": 385924,
-      "w2_shareholders": 396890,
-      "shareholders_diff_2w": -11915,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "中立",
-        "target_price": "163.3",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 82.34% 連續兩週爬升至 84.28%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 949 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 15.471924 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
-        ],
-        "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
-      }
-    },
-    {
-      "code": "2887",
-      "name": "台新新光金",
-      "current_price": 37.75,
-      "w0_large": 70.97,
-      "w1_large": 70.84,
-      "w2_large": 69.17,
-      "large_diff_2w": 1.8,
-      "w0_retail": 26.73,
-      "w1_retail": 26.84,
-      "w2_retail": 28.52,
-      "retail_diff_2w": -1.79,
-      "w0_shareholders": 702596,
-      "w1_shareholders": 704762,
-      "w2_shareholders": 722417,
-      "shareholders_diff_2w": -19821,
-      "foreign_buy_days": 0,
-      "sitc_buy_days": 0,
-      "ai_diagnosis": {
-        "rating": "中立",
-        "target_price": "47.6",
-        "key_reasons": [
-          "籌碼顯著集中：千張大戶持股比率由 69.17% 連續兩週爬升至 70.97%，顯示主力吸籌企圖強烈。",
-          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 2,166 人，浮額清洗完畢。",
-          "基本面支撐力道佳：本益比為 19.973545 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
+          "籌碼顯著集中：千張大戶持股比率由 62.08% 連續兩週爬升至 66.34%，顯示主力吸籌企圖強烈。",
+          "散戶退場沉澱：400張以下散戶持股率下降，且總股東人數顯著減少 15,415 人，浮額清洗完畢。",
+          "基本面支撐力道佳：本益比為 20.411394 倍，評價處於合理偏低區間，有助於季線附近的防守支撐。"
         ],
         "risk_note": "短期股價可能受大盤季線保衛戰震盪影響，融資利息負擔與國際美債利差變化為潛在波動來源，建議分批佈局。"
       }
