@@ -1,8 +1,8 @@
 [
   {
-    "filename": "chip_horse_screener_20260821.csv",
-    "date": "2026/08/21",
-    "raw_date": "20260821",
+    "filename": "chip_horse_screener_20260828.csv",
+    "date": "2026/08/28",
+    "raw_date": "20260828",
     "strategy": "黑馬籌碼雷達",
     "strategy_type": "chip_horse",
     "count": 15,
@@ -17,6 +17,17 @@
     "strategy": "總經風向儀",
     "strategy_type": "compass",
     "count": 9,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
+    "filename": "chip_horse_screener_20260821.csv",
+    "date": "2026/08/21",
+    "raw_date": "20260821",
+    "strategy": "黑馬籌碼雷達",
+    "strategy_type": "chip_horse",
+    "count": 15,
     "t5": "N/A",
     "t10": "N/A",
     "t20": "N/A"
