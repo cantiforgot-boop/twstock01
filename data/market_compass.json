@@ -1,9 +1,9 @@
 {
-  "update_date": "2026-09-12",
+  "update_date": "2026-09-13",
   "margin_ratio": 0.0,
   "margin_ratio_date": "N/A",
-  "futures_net_position": 0,
-  "futures_date": "N/A",
+  "futures_net_position": -85067,
+  "futures_date": "20260911",
   "ndc_score": 41,
   "ndc_light": "紅",
   "ndc_date": "202607",
