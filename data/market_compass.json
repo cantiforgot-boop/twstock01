@@ -1,5 +1,5 @@
 {
-  "update_date": "2026-10-26",
+  "update_date": "2026-10-27",
   "margin_ratio": 0.0,
   "margin_ratio_date": "N/A",
   "futures_net_position": -87297,
@@ -7,10 +7,10 @@
   "ndc_score": 41,
   "ndc_light": "紅",
   "ndc_date": "202608",
-  "usd_twd": 32.57,
-  "us_10y_yield": 4.986,
-  "tsmc_price": 2385.0,
-  "nvda_price": 216.0,
-  "vix": 18.49,
-  "oil": 101.57
+  "usd_twd": 32.395,
+  "us_10y_yield": 4.993,
+  "tsmc_price": 2400.0,
+  "nvda_price": 218.11,
+  "vix": 17.58,
+  "oil": 99.73
 }
