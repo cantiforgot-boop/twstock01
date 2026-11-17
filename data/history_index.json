@@ -11,6 +11,17 @@
     "t20": "N/A"
   },
   {
+    "filename": "market_compass_report_20261117.md",
+    "date": "2026/11/17",
+    "raw_date": "20261117",
+    "strategy": "總經風向儀",
+    "strategy_type": "compass",
+    "count": 9,
+    "t5": "N/A",
+    "t10": "N/A",
+    "t20": "N/A"
+  },
+  {
     "filename": "market_compass_report_20261116.md",
     "date": "2026/11/16",
     "raw_date": "20261116",
